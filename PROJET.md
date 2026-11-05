@@ -55,15 +55,28 @@
 Photos de chantiers (originaux, avant/après) · texte de présentation · horaires ·
 zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
 
+## Page d'accueil (validée le 05/11/2026 – maquette E)
+- Direction graphique « C + B » : bandeau photo à droite, bloc vert forêt incliné à gauche, mosaïque de 6 vignettes inclinées
+  avec pictogrammes, encart « Et aussi », bandeau géographique (Theux • Spa • Jalhay / arrondissement de Verviers /
+  province de Liège / particuliers • entreprises • collectivités).
+- Titre : « Des extérieurs durables et soignés, à votre image. » ; ton « nous ».
+- Typographie : Merriweather 700 (titres) et Fira Sans 400/500/600 (texte), hébergées localement (`public/fonts/`, licences OFL).
+- Palette : vert forêt #1e4a2b, blanc cassé #f7f4ec, pierre #ebe5d8, vert végétal #a6cd47, vert bouton #2e6b30.
+- Ordre des activités : Jardins & plantations, Entretien & arbres, Piscines, Terrassement, Terrasses & allées, Portails & clôtures.
+- Photos : voir `PHOTOS.md` (bandeau P021, vignettes P193, P202, P256, P070, P105, P137).
+- Téléphone : 6 cartes « Nos savoir-faire » puis « Voir les 12 services » ; bouton fixe « Appeler Arno » masqué tant que les
+  boutons du bandeau sont visibles.
+
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
-  - index.html : le site, une page
+  - index.html : page d'accueil
   - mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
   - 404.html : page introuvable
-  - robots.txt, sitemap.xml, img/
-- vercel.json : dossier publié, adresses sans .html, en-tête X-Robots-Tag (pré-lancement)
+  - polices.css + fonts/ : polices locales et licences ; img/photos/ (accueil), img/cartes/ (savoir-faire), robots.txt, sitemap.xml
+- vercel.json : dossier publié, adresses sans .html, en-tête X-Robots-Tag (pré-lancement), cache long des polices
 - .vercelignore : deuxième protection pour les fichiers internes
 - LANCEMENT.md : procédure pour réactiver l'indexation et finaliser la mise en ligne
+- PHOTOS.md : correspondance images publiées ↔ photos originales et retouches
 - Les adresses https://arno-franco.vercel.app sont à remplacer par https://arnofranco.be une fois le domaine relié
   (public/index.html : canonical, og:*, JSON-LD ; public/sitemap.xml ; ligne Sitemap de robots.txt)
 
@@ -72,7 +85,7 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Tant qu'il vaut `mailto:info@arnofranco.be`, l'envoi ouvre la messagerie du visiteur (avec ou sans JavaScript).
 
 ## Ajouter une photo de réalisation
-1. Mettre le fichier dans `public/img/realisations/` (JPG, ~1600 px de large, < 400 Ko).
+1. Partir de l'original dans `photos-originales/`, appliquer la retouche douce, exporter en WebP sans métadonnées dans `public/img/realisations/` (~1600 px max), et noter la correspondance dans PHOTOS.md.
 2. Dans la galerie de public/index.html, remplacer un cadre par :
    `<div class="photo" data-c="jardin"><img src="img/realisations/xxx.jpg" alt="description" loading="lazy"><span>Légende – commune</span></div>`
    (data-c : jardin, pierre, abattage, cloture, piscine)

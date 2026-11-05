@@ -8,19 +8,20 @@
 <!-- PRÉ-LANCEMENT : indexation bloquée. À retirer au lancement (voir LANCEMENT.md). -->
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="/img/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/polices.css">
 <style>
-  :root{--vert-fonce:#153e35;--mousse:#609e4b;--clair:#b8eea4;--sable:#f6f7f2;--encre:#16231f;--gris:#56625d;--note:#c8873a}
+  :root{--vert-fonce:#1e4a2b;--mousse:#609e4b;--clair:#bfe08a;--sable:#f7f4ec;--encre:#16231f;--gris:#56625d;--note:#c8873a}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.65;font-size:17px}
-  header{background:#fff;border-bottom:1px solid #e1e6dc}
+  body{font-family:'Fira Sans',system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.65;font-size:17px}
+  header{background:#f7f4ec;border-bottom:1px solid #e6e0d2}
   .wrap{max-width:820px;margin:0 auto;padding:0 16px}
   header .wrap{display:flex;align-items:center;gap:.65rem;height:70px}
-  header a{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--vert-fonce);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.15rem}
+  header a{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--vert-fonce);font-family:Merriweather,Georgia,serif;font-weight:700;font-size:1.15rem}
   header img{height:42px}
   main{padding:56px 0 80px}
-  h1{font-family:Fraunces,Georgia,serif;font-size:clamp(1.9rem,5vw,2.6rem);color:var(--vert-fonce);margin-bottom:1.5rem;line-height:1.15}
-  h2{font-family:Fraunces,Georgia,serif;font-size:1.3rem;color:var(--vert-fonce);margin:2rem 0 .5rem}
+  h1{font-family:Merriweather,Georgia,serif;font-size:clamp(1.9rem,5vw,2.6rem);color:var(--vert-fonce);margin-bottom:1.5rem;line-height:1.15}
+  h2{font-family:Merriweather,Georgia,serif;font-size:1.3rem;color:var(--vert-fonce);margin:2rem 0 .5rem}
   p,ul{margin-bottom:.8rem}
   ul{padding-left:1.3rem}
   a{color:var(--vert-fonce)}
@@ -31,7 +32,7 @@
 </style>
 </head>
 <body>
-<header><div class="wrap"><a href="/"><img src="/img/monogramme.png" alt="">Arno Franco</a></div></header>
+<header><div class="wrap"><a href="/"><img src="/img/monogramme-80.webp" alt="" width="36" height="42">Arno Franco</a></div></header>
 <main><div class="wrap">
 <h1>Vie privée</h1>
 <p>Cette page explique quelles données sont collectées sur ce site et ce qu'il en est fait, conformément au Règlement général sur la protection des données (RGPD).</p>
@@ -46,10 +47,10 @@
 <h2>Sous-traitants</h2>
 <ul>
 <li>Vercel (hébergement du site)</li>
-<li>Google Fonts (polices de caractères) : lors du chargement des pages, votre adresse IP est transmise à Google</li>
 </ul>
 <h2>Cookies</h2>
 <p>Ce site n'utilise pas de cookies de suivi ni de publicité.</p>
+<p>Les polices de caractères sont hébergées sur le site lui-même : aucune donnée n'est transmise à un service tiers lors de l'affichage des pages.</p>
 <h2>Vos droits</h2>
 <p>Vous pouvez demander à consulter, corriger ou supprimer vos données à tout moment en écrivant à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>. Vous pouvez aussi introduire une réclamation auprès de l'Autorité de protection des données (<a href="https://www.autoriteprotectiondonnees.be" rel="noopener">autoriteprotectiondonnees.be</a>).</p>
 <a class="retour" href="/">← Retour au site</a>
