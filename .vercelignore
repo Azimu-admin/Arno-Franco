@@ -1,0 +1,7 @@
+# Deuxième protection : le site publié est uniquement le dossier public/ (voir vercel.json → outputDirectory).
+# Ces fichiers internes ne doivent jamais être envoyés à Vercel.
+/PROJET.md
+/CLAUDE.md
+/README.md
+/LANCEMENT.md
+/logo-source
