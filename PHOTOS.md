@@ -54,6 +54,40 @@ Cartes : carré 1:1 (`-400`, `-640`, ordinateur et tablette) et 16:10 (`-m480`, 
 | Espaces publics & professionnels | P134 | `espaces-professionnels-publics-p134-*` | personne de dos, non identifiable |
 | Aménagements intérieurs | P223 | `amenagements-interieurs-p223-*` | |
 
+## Page « Réalisations » (`/realisations`, direction artistique validée le 05/11/2026)
+Fichiers : `public/img/realisations/<pxxx>-<largeur>.webp` (480/640/800/1280 + native < 1280). Retouche douce standard,
+sans IA. Originaux intacts (contrôle MD5). Ordre = ordre d'affichage ; la 1re photo de chaque chantier est la dominante (provisoire).
+
+| Chantier (titre provisoire) | Photos | Particularités |
+|---|---|---|
+| 01 – Grande propriété paysagée, piscine et oliviers | P023, P020, P021, P047, P038, P024, P039, P051, P052, P022, P041, P057 |  |
+| 04 – Terrasse en bois construite autour d'un arbre | P086, P074, P080, P077 |  |
+| 02 – Piscine et aménagement des abords | P254, P256, P255, P258, P259, P257, P260, P261 |  |
+| 03 – Piscine et plage dallée | P243, P244, P245, P242 |  |
+| 21 – Piscine, citerne et gazon | P084, P081, P078, P082, P083 |  |
+| 05 – Maison en pente, terrasse et murs en pierre | P093, P095, P090 |  |
+| 06 – Escalier et allée en granit | P105, P108, P109 |  |
+| 08 – Soutènement et escalier, maison en pierre | P200, P194, P197, P199 |  |
+| 10 – Jardin avec grand saule, clôture et piscine | P160, P156, P141 |  |
+| 10b – Piscine en cours de réalisation | P163, P162 |  |
+| 07 – Portail anthracite et piliers en pierre | P137, P126, P123 | P137 numéro masqué (flou); P126 recadrée (haut retiré : voitures et plaques) |
+| 09 – Allées drainantes, maison contemporaine | P206, P198, P205 |  |
+| 11 – Terrasse, pergola et gabions | P017, P018 |  |
+| 12 – Maison blanche, empierrement et dalles alvéolées | P065, P063, P067, P068 |  |
+| 13 – Massifs devant bardage bois | P118, P114 |  |
+| 14 – Cour en pavés anciens | P151, P155, P158 |  |
+| 15 – Clôture composite et arbres palissés | P216, P221 |  |
+| 16 – Cour gravillonnée et pas en dalles | P234, P232, P233 | P234 recadrée (bord droit retiré : voitures); P232 recadrée (gauche retirée : voitures) |
+| 17 – Terrasse en grandes dalles | P238, P239 |  |
+| 18 – Allée pavée et marches | P252, P253 |  |
+| 19 – Jardin et clôture anthracite | P012, P011a, P011b | P011a moitié haute du montage P011 (avant); P011b moitié basse du montage P011 (après) |
+| 20 – Entretien des topiaires | P191, P189, P190 |  |
+| 22 – Aménagement intérieur : sol en béton dans un bâtiment ancien | P223, P213, P220, P219 |  |
+
+Écartées de la sélection de l'équipe : P204 (voiture au centre), P117, P161, P094, P064 (vues faibles) ;
+P089, P195, P016, P214 (appartenance au chantier à confirmer). Séries complémentaires non retenues : P069–P076, P085 (terre nue,
+personnes, ouvrier torse nu P076), P211 (quasi identique à P223), P209 (travail non identifiable), P025–P032, P111–P115, élagage.
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.

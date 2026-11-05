@@ -87,11 +87,26 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
   (`/savoir-faire/<catégorie>`, routes prêtes). Seule `/savoir-faire/piscines` existe. La navigation de ces cartes sera
   décidée par l'équipe avant la mise en ligne (aucun lien vers une page 404 ne doit être publié).
 
+## Page « Réalisations » (`/realisations`, direction artistique validée le 05/11/2026 – non publiée)
+- `public/realisations.html` : bandeau vert forêt « Nos réalisations », puis 23 mosaïques asymétriques, une par chantier
+  (base : les 21 groupes de l'équipe, chantier 10 scindé en 10 / 10b, + 2 groupes complémentaires : piscine-citerne-gazon
+  P078–P084, intérieur P213–P223). Titres provisoires, sans numéro affiché. Pas d'index en haut de page (demande de l'équipe).
+- Visionneuse plein écran (`<dialog>`) : navigation limitée au chantier, flèches, clavier, balayage, Échap.
+- Chargement différé maîtrisé (IntersectionObserver, marge 500 px) + images de secours `<noscript>` ; 3 premières photos
+  chargées d'emblée. Tailles 480/640/800/1280 px (+ taille native si < 1280).
+- Menu définitif : Accueil · Nos savoir-faire · Réalisations · À propos & Contact · Travaux publics ;
+  « Demander un devis » → `/a-propos-contact#devis`.
+- **Non publiable en l'état** : `/a-propos-contact` n'existe pas encore dans le dépôt (maquette prête, intégration à faire).
+  Les autres pages ont encore l'ancien menu (« Réalisations » → `/#realisations`) : harmonisation à faire sur demande.
+- À confirmer par l'équipe : P089, P195, P016, P214 (appartenance au chantier incertaine, écartées) ; accord des personnes
+  visibles (ouvriers torse nu P022, P189) ; photos en 960 px (chantiers 05, 12, piscine-citerne-gazon).
+
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
   - index.html : page d'accueil
   - mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
   - 404.html : page introuvable
+  - realisations.html + img/realisations/ : galerie des chantiers (non publiable en l'état)
   - polices.css + fonts/ : polices locales et licences ; img/photos/ (accueil), img/cartes/ (savoir-faire), robots.txt, sitemap.xml
 - vercel.json : dossier publié, adresses sans .html, en-tête X-Robots-Tag (pré-lancement), cache long des polices
 - .vercelignore : deuxième protection pour les fichiers internes
