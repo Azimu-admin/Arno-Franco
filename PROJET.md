@@ -29,6 +29,8 @@
 - Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
 - Attribution confirmée par l'équipe (05/11/2026) : les 261 photos sont des réalisations d'Arno. Restent à vérifier : nature exacte
   des interventions (intérieur, Horeca, travaux publics, entreprises), accord des clients, personnes et plaques visibles.
+- Photos confirmées : P211, P213, P219, P220, P223 = aménagement intérieur (décaissement, coffrage des socles des poteaux,
+  sol en béton dans un bâtiment ancien), 05/11/2026 ; légendes techniques à relire par Arno.
 - Photos confirmées : P124, P129, P134 = passerelle en bois (caillebotis) en fagne → famille 9, « espaces publics » (05/11/2026).
 
 ## Logo (fourni le 05/11/2026)
