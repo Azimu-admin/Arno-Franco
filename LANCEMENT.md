@@ -12,6 +12,8 @@ contient des informations provisoires. Fichier interne (non publié).
 - [ ] Domaine arnofranco.be relié dans Vercel (Settings → Domains)
 - [ ] Plan Vercel adapté à un usage commercial
 
+- [ ] Aucun lien vers une page 404 : les 10 cartes de `/savoir-faire` doivent mener à des pages existantes
+
 ## 2. Remplacer l'adresse provisoire par le domaine
 Remplacer `https://arno-franco.vercel.app` par `https://arnofranco.be` dans :
 - `public/index.html` : `<link rel="canonical">`, balises `og:url` et `og:image`, bloc JSON-LD (`url`, `logo`, `image`)

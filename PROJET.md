@@ -76,6 +76,17 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Page générale « Nos savoir-faire » : maquette spécifique en préparation par l'équipe ; ne rien concevoir sans ses instructions.
 - En attendant, les liens « Nos savoir-faire » pointent vers la section de l'accueil (`/#services`).
 
+## Page « Nos savoir-faire » (`/savoir-faire`, maquette graphique validée le 05/11/2026 – non publiée)
+- `public/savoir-faire/index.html` : bandeau vert forêt (photo P125), titre « Des savoir-faire pour tous vos extérieurs »,
+  introduction « Du jardin aux aménagements les plus techniques, découvrez les savoir-faire d'Arno Franco. »,
+  mosaïque de 10 cartes (5 × 2 / 2 colonnes / 1 colonne). Photos : voir PHOTOS.md.
+- Menu de cette page : entrée « Travaux publics » après « Contact » (demande d'Arno) ; lien provisoire vers la carte
+  « Espaces publics & professionnels » de la page (aucune page dédiée pour l'instant). L'accueil et la page Piscines n'ont
+  pas encore cette entrée : à harmoniser sur demande.
+- **Non publiable en l'état** : 9 cartes sur 10 pointent vers des pages détaillées pas encore créées
+  (`/savoir-faire/<catégorie>`, routes prêtes). Seule `/savoir-faire/piscines` existe. La navigation de ces cartes sera
+  décidée par l'équipe avant la mise en ligne (aucun lien vers une page 404 ne doit être publié).
+
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
   - index.html : page d'accueil
