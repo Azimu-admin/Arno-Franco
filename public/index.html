@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="sans-js">
 <head>
+<script>document.documentElement.className="js";</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arno Franco – Aménagement de jardins à Theux</title>
@@ -30,18 +31,90 @@
   "email": "info@arnofranco.be",
   "founder": {"@type": "Person", "name": "Arno Franco"},
   "address": {"@type": "PostalAddress", "addressLocality": "Theux", "addressRegion": "Liège", "addressCountry": "BE"},
-  "areaServed": "Province de Liège",
+  "areaServed": [
+    {"@type": "City", "name": "Theux"}, {"@type": "City", "name": "Spa"}, {"@type": "City", "name": "Jalhay"},
+    {"@type": "AdministrativeArea", "name": "Arrondissement de Verviers"}, {"@type": "AdministrativeArea", "name": "Province de Liège"}
+  ],
   "sameAs": [
     "https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/",
     "https://www.linkedin.com/in/arno-franco-606a30115/"
   ]
 }
 </script>
+<link rel="preload" as="image" type="image/webp" media="(max-width:1000px)" imagesrcset="img/photos/bandeau-p021-mobile-750.webp 750w, img/photos/bandeau-p021-mobile-1080.webp 1080w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width:1001px)" imagesrcset="img/photos/bandeau-p021-1280.webp 1280w, img/photos/bandeau-p021-1824.webp 1824w" imagesizes="66vw" fetchpriority="high">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/merriweather-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Polices locales : Merriweather et Fira Sans (SIL Open Font License 1.1) */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fira-sans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fira-sans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/fira-sans-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/fira-sans-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/fira-sans-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/fira-sans-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/merriweather-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/merriweather-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
   :root{
     /* Couleurs du logo : #153e35 (foncé), #609e4b (moyen), #b8eea4 (clair) */
     --vert:#3f7a32; --vert-fonce:#153e35; --vert-moyen:#1f4f43; --mousse:#609e4b; --mousse-texte:#38712d; --clair:#b8eea4;
@@ -52,10 +125,10 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:86px} /* 70 px d'en-tête + marge : les ancres ne passent plus sous l'en-tête */
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{font-family:Inter,system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.6;font-size:17px}
+  body{font-family:'Fira Sans',system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.6;font-size:17px}
   img{max-width:100%;display:block}
   a{color:inherit}
-  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:700}
+  h1,h2,h3{font-family:Merriweather,Georgia,serif;line-height:1.15;font-weight:700}
   h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
   section{padding:84px 0}
@@ -94,9 +167,9 @@
   /* En-tête */
   header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e1e6dc}
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .logo{display:flex;align-items:center;gap:.65rem;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;line-height:1.1;text-decoration:none;color:var(--vert-fonce)}
+  .logo{display:flex;align-items:center;gap:.65rem;font-family:Merriweather,Georgia,serif;font-weight:700;font-size:1.2rem;line-height:1.1;text-decoration:none;color:var(--vert-fonce)}
   .logo img{height:46px;width:auto}
-  .logo small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse-texte)}
+  .logo small{display:block;font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse-texte)}
   .nav ul{display:flex;gap:1.8rem;list-style:none}
   .nav ul a{text-decoration:none;font-weight:500;font-size:.95rem}
   .nav ul a:hover{color:var(--vert)}
@@ -115,17 +188,28 @@
   .tel-nav{background:var(--vert-fonce);color:#fff;padding:.55rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
 
   /* Hero */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;padding:0;color:#fff;background:linear-gradient(120deg,rgba(21,62,53,.92),rgba(21,62,53,.5)),linear-gradient(135deg,#609e4b,#2c6a4a 50%,#153e35)}
-  .hero .wrap{padding-top:60px;padding-bottom:60px}
+  .hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:center;padding:0;color:#fff;background:var(--vert-fonce);overflow:hidden;isolation:isolate}
+  .hero-photo,.hero-photo img{position:absolute;inset:0;width:100%;height:100%}
+  .hero-photo{z-index:-2}
+  .hero-photo img{object-fit:cover;object-position:50% 55%}
+  /* Dégradé pour la lisibilité du texte, placé côté pelouse (gauche) */
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(21,62,53,.86) 0%,rgba(21,62,53,.68) 38%,rgba(21,62,53,.18) 70%,rgba(21,62,53,0) 100%)}
+  .hero .wrap{padding-top:60px;padding-bottom:60px;width:100%}
+  .hero h1,.hero p{text-shadow:0 1px 12px rgba(0,0,0,.25)}
   .hero h1{font-size:clamp(2.3rem,6vw,4.2rem);max-width:780px;margin:.4rem 0 1.2rem}
   .hero p{font-size:1.15rem;max-width:560px;opacity:.92;margin-bottom:2rem}
   .hero .surtitre{color:var(--clair)}
   .boutons{display:flex;flex-wrap:wrap;gap:1rem}
+  .accroche-courte{display:none}
+  .plus-services{display:none;margin-top:28px;text-align:center}
+  .btn-contour-fonce{border-color:var(--vert-fonce);color:var(--vert-fonce);background:#fff;min-height:48px}
+  .btn-contour-fonce:hover{background:var(--vert-fonce);color:#fff}
+  .btn-contour-fonce:focus-visible{outline:3px solid var(--vert);outline-offset:3px}
 
   /* Atouts */
   .atouts{background:var(--vert-fonce);color:#fff;padding:36px 0}
   .atouts .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  .atouts strong{display:block;font-family:Fraunces,serif;font-size:1.15rem}
+  .atouts strong{display:block;font-family:Merriweather,Georgia,serif;font-size:1.15rem}
   .atouts span{opacity:.8;font-size:.92rem}
 
   /* Services */
@@ -133,6 +217,7 @@
   .carte{background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 2px 0 #e3ddd0;transition:.25s;display:flex;flex-direction:column}
   .carte:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,63,39,.12)}
   .carte .photo{height:180px;border-radius:0}
+  .carte-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--pierre)}
   .carte div.txt{padding:22px 24px 26px}
   .carte h3{font-size:1.3rem;margin-bottom:.4rem;color:var(--vert-fonce)}
   .carte p{color:var(--gris);font-size:.96rem}
@@ -150,14 +235,14 @@
   .apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
   .apropos .photo{aspect-ratio:4/5}
   .apropos p{margin-bottom:1rem;color:#3b443c}
-  .signature{font-family:Fraunces,serif;font-size:1.3rem;color:var(--vert)}
+  .signature{font-family:Merriweather,Georgia,serif;font-size:1.3rem;color:var(--vert)}
   .a-completer{color:var(--encre);background:#fff4d6;border-left:3px solid var(--note);padding:.15rem .4rem;font-size:.92em}
 
   /* Méthode */
   #methode{background:#fff}
   .etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
   .etape{position:relative;padding-top:56px}
-  .etape::before{counter-increment:e;content:counter(e);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--pierre);color:var(--vert-fonce);font-family:Fraunces,serif;font-weight:700;display:grid;place-items:center;font-size:1.2rem}
+  .etape::before{counter-increment:e;content:counter(e);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--pierre);color:var(--vert-fonce);font-family:Merriweather,Georgia,serif;font-weight:700;display:grid;place-items:center;font-size:1.2rem}
   .etape h3{font-size:1.15rem;margin-bottom:.3rem}
   .etape p{color:var(--gris);font-size:.95rem}
 
@@ -208,14 +293,148 @@
     .avis-grille{grid-template-columns:1fr}
     section{padding:64px 0}
   }
+  /* Téléphone et tablette : photo en haut (4:3), texte dessous sur fond vert foncé */
+  @media (max-width:900px){
+    .hero{display:block;min-height:0}
+    .hero::before{display:none}
+    .hero-photo{position:relative;display:block;aspect-ratio:4/3;z-index:0}
+    .hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(180deg,rgba(21,62,53,0),var(--vert-fonce))}
+    .hero-photo img{object-position:50% 50%}
+    .hero .wrap{padding-top:22px;padding-bottom:36px}
+    .hero h1{font-size:2.1rem;margin:.3rem 0 .9rem}
+    .hero p{font-size:1.02rem;margin-bottom:1.4rem}
+    .hero h1,.hero p{text-shadow:none}
+  }
+  /* Téléphone : accroche courte, 6 cartes puis bouton (sans JavaScript, les 12 cartes restent visibles) */
+  @media (max-width:700px){
+    .accroche-longue,.sans-mobile{display:none}
+    .accroche-courte{display:inline}
+    .hero-photo{aspect-ratio:16/10}
+    .hero .wrap{padding-top:16px;padding-bottom:28px}
+    .hero h1{font-size:1.95rem}
+    .boutons{gap:.6rem}
+    .boutons .btn{padding:.8rem 1.15rem}
+    .js .services-grille:not(.ouverte) .carte-plus{display:none}
+    .js .plus-services{display:block}
+  }
   @media (max-width:560px){
     .wrap{padding:0 16px}
     .services-grille{grid-template-columns:1fr}
     .atouts .grille,.etapes{grid-template-columns:1fr}
     form{grid-template-columns:1fr;padding:22px}
     .tel-nav{display:none}
+    body{padding-bottom:84px}
+    .appel-mobile{transition:opacity .2s,transform .2s}
+    .appel-mobile.cache{opacity:0;transform:translateY(120%);pointer-events:none}
     .appel-mobile{display:flex;gap:.45rem;align-items:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;background:var(--clair);color:var(--vert-fonce);text-decoration:none;font-weight:700;padding:1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
     footer{padding-bottom:90px}
+  }
+
+  /* ================= Direction C + B ================= */
+  :root{--vert-fonce:#1e4a2b;--vert-moyen:#245533;--vert:#2e6b30;--foret:#1e4a2b;--foret-2:#2b5e36;--lime:#a6cd47;--clair:#bfe08a;--sable:#f7f4ec;--pierre:#ebe5d8;--icone:#2e6b30}
+  html{scroll-padding-top:100px}
+  body{background:var(--sable)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  header{background:rgba(247,244,236,.97);border-bottom:1px solid #e6e0d2}
+  .nav{height:84px}
+  .logo{gap:.8rem;font-size:1.65rem;color:var(--foret);letter-spacing:-.01em}
+  .logo img{height:54px}
+  .logo small{font-family:'Fira Sans',system-ui,sans-serif;font-weight:400;font-size:1.02rem;letter-spacing:0;text-transform:none;color:#25352b;margin-top:2px}
+  .nav ul{gap:2.1rem}
+  .nav ul a{font-weight:500;font-size:1rem;color:#1d2a21}
+  .nav ul a:hover{color:var(--vert)}
+  .cta-entete{display:inline-flex;align-items:center;min-height:46px;padding:0 1.3rem;border-radius:8px;background:var(--vert);color:#fff;font-weight:600;text-decoration:none;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+  .cta-entete:hover{background:var(--foret)}
+  .cta-entete:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+  .btn-plein{background:var(--lime);color:#14301c}
+  .btn-plein:hover{background:#b9da6a}
+
+  .accueil{position:relative;overflow:hidden;padding:16px 0 0}
+  .ac-photo{position:absolute;top:16px;right:0;width:66%;height:var(--h-photo);z-index:0;clip-path:polygon(4.5% 0,100% 0,100% 100%,0 100%)}
+  .ac-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+  .accueil{--h-photo:clamp(380px,32vw,500px)}
+  .ac-bloc{position:relative;z-index:1;width:49%;min-height:calc(var(--h-photo) + 60px);margin-top:26px;color:#fff;background:linear-gradient(165deg,#2a5a33 0%,#1e4a2b 70%);clip-path:polygon(0 0,100% 3%,80% 100%,0 100%)}
+  .ac-texte{padding:clamp(34px,4vw,62px) 0 0 clamp(24px,4.7vw,88px);max-width:calc(100% - 9%)}
+  .ac-texte h1{font-family:Merriweather,Georgia,serif;font-weight:700;font-size:clamp(2.2rem,3.35vw,3.35rem);line-height:1.12;letter-spacing:-.01em;margin:0;max-width:13.5em;text-shadow:0 1px 10px rgba(0,0,0,.18)}
+  .ac-barre{display:block;width:clamp(120px,11vw,185px);height:6px;border-radius:3px;background:var(--lime);margin:clamp(18px,1.8vw,28px) 0}
+  .ac-texte p{font-size:clamp(1.05rem,1.55vw,1.5rem);line-height:1.38;max-width:21em;color:#f2f5ee}
+  .accueil .boutons{display:none;margin-top:1.4rem}
+
+  .mosaique{position:relative;z-index:2;list-style:none;display:grid;grid-template-columns:repeat(6,1fr) 1.5fr;gap:12px;height:clamp(220px,19vw,290px);margin:calc(-1 * clamp(56px,5vw,74px)) 0 0;padding:0 0 0 clamp(30px,2.6vw,46px)}
+  .mosaique>li{transform:skewX(-9deg);border-radius:14px;overflow:hidden;box-shadow:0 0 0 4px var(--sable),0 12px 26px rgba(20,40,25,.22);background:var(--foret)}
+  .mosaique>li.et-aussi{margin-right:-60px;border-radius:14px 0 0 14px}
+  .tuile,.tuile-plus{position:relative;display:block;height:100%;color:#fff;text-decoration:none}
+  .tuile img{position:absolute;top:0;left:-22%;width:144%;max-width:none;height:100%;object-fit:cover;transform:skewX(9deg);transition:transform .35s}
+  .tuile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,32,19,.88) 0%,rgba(14,32,19,.55) 32%,rgba(14,32,19,0) 62%)}
+  .tuile-contenu{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:0 12px clamp(16px,1.6vw,24px) clamp(22px,2vw,32px);transform:skewX(9deg)}
+  .picto{display:block;width:clamp(32px,2.9vw,44px);height:clamp(32px,2.9vw,44px);margin-bottom:10px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}
+  .tuile-titre{display:block;font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:clamp(.92rem,1.42vw,1.45rem);hyphens:auto;line-height:1.12;text-shadow:0 1px 6px rgba(0,0,0,.45)}
+  .tuile:hover img{transform:skewX(9deg) scale(1.05)}
+  .mosaique>li:focus-within{box-shadow:0 0 0 4px var(--sable),0 0 0 7px var(--vert)}
+  .tuile:focus-visible,.tuile-plus:focus-visible{outline:none}
+  .tuile-plus{background:linear-gradient(150deg,#336e3b 0%,#1e4a2b 75%)}
+  .ea-contenu{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:18px 84px 56px clamp(34px,3vw,52px);transform:skewX(9deg)}
+  .ea-titre{font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:clamp(1.3rem,1.9vw,1.85rem);color:var(--lime);margin-bottom:.55rem}
+  .ea-liste{font-size:clamp(.95rem,1.25vw,1.2rem);line-height:1.5;color:#fff}
+  .ea-fleche{position:absolute;right:78px;bottom:clamp(14px,1.4vw,22px);width:clamp(38px,3.3vw,50px);height:clamp(38px,3.3vw,50px);flex-shrink:0;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+  .tuile-plus:hover .ea-fleche{transform:translateX(4px)}
+
+  .zone-bandeau{padding:clamp(22px,2.4vw,34px) 0 clamp(28px,3vw,44px)}
+  .zone-bandeau .wrap{max-width:1400px}
+  .zone-liste{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px 22px}
+  .zone-liste li{display:flex;align-items:center;gap:12px;font-size:clamp(.95rem,1.2vw,1.12rem);color:#1d2a21}
+  .zone-liste li+li:not(.zone-clients){border-left:1.5px solid #c9c1ae;padding-left:22px}
+  .zone-picto{width:34px;height:34px;flex-shrink:0;fill:none;stroke:var(--icone);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .zone-clients{background:var(--pierre);border-radius:999px;padding:12px 24px}
+  .zone-clients .zone-picto{width:40px;height:40px}
+
+  @media (prefers-reduced-motion:reduce){.tuile img,.ea-fleche{transition:none}}
+  @media (min-width:1001px) and (max-width:1220px){
+    .nav ul{gap:1.15rem}.nav ul a{font-size:.95rem}
+    .logo{font-size:1.35rem;gap:.6rem}.logo img{height:46px}.logo small{font-size:.88rem}
+    .cta-entete{padding:0 1rem}
+    .zone-liste li{font-size:.92rem;gap:9px}.zone-liste li+li:not(.zone-clients){padding-left:14px}.zone-clients{padding:10px 16px}
+  }
+
+  .mention-ia{position:absolute;z-index:3;right:14px;top:28px;margin:0;padding:4px 10px;border-radius:6px;background:rgba(14,32,19,.78);color:#fff;font-size:.78rem;line-height:1.3}
+  /* ---------- tablette et téléphone : vraie composition empilée ---------- */
+  @media (max-width:1000px){
+    .nav{height:72px}
+    .logo{font-size:1.3rem}.logo img{height:46px}.logo small{font-size:.88rem}
+    .menu{top:72px}
+    .accueil{padding:0;overflow:visible}
+    .ac-photo{position:relative;top:0;width:100%;height:auto;aspect-ratio:16/10;display:block;clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
+    .ac-photo img{object-position:50% 50%}
+    .ac-bloc{width:100%;min-height:0;margin-top:-40px;clip-path:polygon(0 34px,100% 0,100% 100%,0 100%)}
+    .ac-texte{padding:58px 24px 34px;max-width:none}
+    .ac-texte h1{font-size:clamp(1.95rem,5.2vw,2.7rem);max-width:15em}
+    .ac-barre{margin:16px 0}
+    .ac-texte p{font-size:clamp(1.02rem,2.6vw,1.25rem);max-width:30em}
+    .accueil .boutons{display:flex}
+    .mention-ia{top:8px;right:8px;font-size:.72rem}
+    .mention-longue{display:none}
+    .mosaique{grid-template-columns:repeat(3,1fr);height:auto;gap:14px;margin:22px 0 0;padding:0 24px}
+    .mosaique>li{transform:none;aspect-ratio:4/5;border-radius:0;box-shadow:none;clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
+    .mosaique>li:focus-within{box-shadow:none;outline:3px solid var(--vert);outline-offset:3px}
+    .mosaique>li.et-aussi{grid-column:1/-1;aspect-ratio:auto;margin-right:0;clip-path:polygon(0 10%,100% 0,100% 90%,0 100%)}
+    .tuile img{left:0;width:100%;transform:none}
+    .tuile:hover img{transform:scale(1.04)}
+    .tuile-contenu{transform:none;padding:0 14px 20px}
+    .ea-contenu{position:relative;transform:none;padding:34px 84px 34px 24px}
+    .ea-fleche{right:24px;bottom:auto;top:50%;margin-top:-22px;width:44px;height:44px}
+    .zone-liste{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+    .zone-liste li+li:not(.zone-clients){border-left:0;padding-left:0}
+    .zone-clients{grid-column:1/-1}
+  }
+  @media (max-width:700px){
+    .ac-texte{padding:52px 20px 28px}
+    .boutons .btn{padding:.8rem 1.1rem}
+    .mosaique{grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+    .picto{width:34px;height:34px;margin-bottom:8px}
+    .tuile-titre{font-size:1.08rem}
+    .zone-liste{grid-template-columns:1fr}
+    .zone-clients{border-radius:16px}
+    .cta-entete{display:none}
   }
 </style>
 </head>
@@ -225,17 +444,18 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#contenu" class="logo"><img src="img/monogramme.png" alt="" width="40" height="46"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
+    <a href="#contenu" class="logo"><img src="img/monogramme-80.webp" alt="" width="46" height="54"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
     <nav class="menu" id="menu" aria-label="Navigation principale">
       <ul>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#contenu">Accueil</a></li>
+        <li><a href="#services">Nos savoir-faire</a></li>
         <li><a href="#realisations">Réalisations</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
-      <a class="tel-nav" href="tel:+32479184282"><span aria-hidden="true">📞 </span>0479 18 42 82</a>
+      <a class="cta-entete" href="#contact">Demander un devis</a>
       <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span>Menu</button>
     </div>
   </div>
@@ -243,43 +463,65 @@
 
 <main id="contenu" tabindex="-1">
 
-<section class="hero">
-  <div class="wrap">
-    <p class="surtitre">Theux · La Reid · Province de Liège</p>
-    <h1>Votre jardin, aménagé et entretenu avec soin.</h1>
-    <p>Création, entretien, élagage, abattage, terrassement, terrasses et allées, pierre naturelle, clôtures et abords de piscine : un seul interlocuteur pour tout votre extérieur.</p>
-    <div class="boutons">
-      <a href="#contact" class="btn btn-plein">Demander un devis</a>
-      <a href="tel:+32479184282" class="btn btn-contour">Appeler Arno</a>
+<section class="accueil" aria-labelledby="titre-accueil">
+  <picture class="ac-photo">
+    <source media="(max-width:1000px)" type="image/webp" srcset="img/photos/bandeau-p021-mobile-750.webp 750w, img/photos/bandeau-p021-mobile-1080.webp 1080w" sizes="100vw">
+    <source type="image/webp" srcset="img/photos/bandeau-p021-1280.webp 1280w, img/photos/bandeau-p021-1824.webp 1824w" sizes="66vw">
+    <img src="img/photos/bandeau-p021-1280.webp" alt="Terrasse et pelouse aménagées par Arno Franco autour de grands oliviers en bacs, en plein soleil" width="1280" height="720" fetchpriority="high">
+  </picture>
+  <div class="ac-bloc">
+    <div class="ac-texte">
+      <h1 id="titre-accueil">Des extérieurs durables et soignés, à votre image.</h1>
+      <span class="ac-barre" aria-hidden="true"></span>
+      <p>Du jardin privé aux aménagements plus techniques, nous réalisons vos projets avec professionnalisme et passion.</p>
+      <div class="boutons">
+        <a href="#contact" class="btn btn-plein">Demander un devis</a>
+        <a href="tel:+32479184282" class="btn btn-contour">Appeler Arno</a>
+      </div>
     </div>
   </div>
+  <ul class="mosaique" aria-label="Nos principales activités">
+    <li><a class="tuile" href="#sf-jardins"><img src="img/photos/jardins-p193-360.webp" srcset="img/photos/jardins-p193-360.webp 360w, img/photos/jardins-p193-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Massif fleuri de tulipes et de primevères planté par Arno Franco" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 19.5C4.5 11 9.5 5 19.5 4.5 19.5 14 13.5 19.5 5 19.5Z"/><path d="M5 19.5 14 10.5"/><path d="M9.5 15h4.2M12 12.4V9"/></svg><span class="tuile-titre">Jardins &amp; plantations</span></span></a></li>
+    <li><a class="tuile" href="#sf-entretien"><img src="img/photos/arbres-p202-360.webp" srcset="img/photos/arbres-p202-360.webp 360w, img/photos/arbres-p202-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Élagueur d'Arno Franco encordé, coupant une branche à la tronçonneuse" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21v-6.5"/><path d="M12 14.5c-4.3 0-7-2.4-7-5.6C5 5.8 8.1 3 12 3s7 2.8 7 5.9c0 3.2-2.7 5.6-7 5.6Z"/><path d="M12 17.5 9.3 15M12 16.5l2.6-2.3"/><path d="M8.5 21h7"/></svg><span class="tuile-titre">Entretien &amp; arbres</span></span></a></li>
+    <li><a class="tuile" href="#sf-piscines"><img src="img/photos/piscines-p256-360.webp" srcset="img/photos/piscines-p256-360.webp 360w, img/photos/piscines-p256-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Piscine réalisée par Arno Franco, bordée de bacs en acier corten au milieu d'une pelouse" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 8.5c2 0 2-1.5 4.5-1.5S9.5 8.5 12 8.5s2-1.5 4.5-1.5 2.5 1.5 4.5 1.5"/><path d="M3 13c2 0 2-1.5 4.5-1.5S9.5 13 12 13s2-1.5 4.5-1.5S19 13 21 13"/><path d="M3 17.5c2 0 2-1.5 4.5-1.5s2 1.5 4.5 1.5 2-1.5 4.5-1.5 2.5 1.5 4.5 1.5"/></svg><span class="tuile-titre">Piscines</span></span></a></li>
+    <li><a class="tuile" href="#sf-terrassement"><img src="img/photos/terrassement-p070-360.webp" srcset="img/photos/terrassement-p070-360.webp 360w, img/photos/terrassement-p070-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Pelleteuse d'Arno Franco en terrassement dans un jardin ensoleillé" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="16" width="11" height="4" rx="2"/><path d="M4.5 16v-4h5.5l1.5 4"/><path d="M10 12l5.5-6 4 4.5"/><path d="M19.5 10.5l1.2 4.3h-3.4z"/></svg><span class="tuile-titre">Terrassement</span></span></a></li>
+    <li><a class="tuile" href="#sf-terrasses"><img src="img/photos/terrasses-p105-360.webp" srcset="img/photos/terrasses-p105-360.webp 360w, img/photos/terrasses-p105-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Escalier en pavés de pierre posé par Arno Franco dans un talus planté" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="14" width="8.5" height="5" rx=".6"/><rect x="12.5" y="14" width="8.5" height="5" rx=".6"/><rect x="7.7" y="8" width="8.6" height="5" rx=".6"/></svg><span class="tuile-titre">Terrasses &amp; allées</span></span></a></li>
+    <li><a class="tuile" href="#sf-portails"><img src="img/photos/portails-p137-360.webp" srcset="img/photos/portails-p137-360.webp 360w, img/photos/portails-p137-540.webp 540w" sizes="(max-width:700px) 46vw, (max-width:1000px) 31vw, 15vw" width="360" height="480" loading="lazy" fetchpriority="low" alt="Portail anthracite posé par Arno Franco, fixé à un pilier en pierre" decoding="async"><span class="tuile-contenu"><svg class="picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 21V5.5M20.5 21V5.5M3.5 8.5h17M3.5 18h17M7.8 8.5V18M12 8.5V18M16.2 8.5V18"/><path d="M2.5 5.5h2M19.5 5.5h2"/></svg><span class="tuile-titre">Portails &amp; clôtures</span></span></a></li>
+    <li class="et-aussi"><a class="tuile-plus" href="#services"><span class="ea-contenu"><span class="ea-titre">Et aussi :</span><span class="ea-liste">sports &amp; loisirs, espaces publics, espaces professionnels, aménagements intérieurs…</span><span class="sr-only"> – voir tous nos savoir-faire</span><svg class="ea-fleche" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22"/><path d="M15 24h17M25.5 16.5 33 24l-7.5 7.5"/></svg></span></a></li>
+  </ul>
 </section>
 
-<div class="atouts">
-  <div class="wrap grille">
-    <div><strong>Artisan local</strong><span>Basé à Theux / La Reid</span></div>
-    <div><strong>Un seul interlocuteur</strong><span>Du premier contact à la fin du chantier</span></div>
-    <div><strong>Tous travaux extérieurs</strong><span>Du jardin à la terrasse, de l'arbre à la clôture</span></div>
-    <div><strong>Devis sur demande</strong><span>Par téléphone, e-mail ou formulaire</span></div>
+<div class="zone-bandeau">
+  <div class="wrap">
+    <ul class="zone-liste" aria-label="Zone d'intervention et clientèle">
+      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></svg><span><span class="sr-only">Basés à </span>Theux <span aria-hidden="true">•</span> Spa <span aria-hidden="true">•</span> Jalhay</span></li>
+      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6.2 9 4l6 2.2L21 4v13.8L15 20l-6-2.2L3 20Z"/><path d="M9 4v13.8M15 6.2V20"/></svg><span><span class="sr-only">Zone principale : </span>Arrondissement de Verviers</span></li>
+      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 9.5 7 6.2l3.4.6 2.4-2.2 3.3 1.6 3.6-.4 1.1 3.4-1.6 2.6 1.3 3-2.7 2.2-3.6-.5-2.4 2.3-3.4-1.3-3.4.7-1.2-3.3 1.6-2.6Z"/></svg><span><span class="sr-only">Rayonnement : </span>Toute la province de Liège</span></li>
+      <li class="zone-clients"><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.5-3.6 2.8-5.6 6-5.6s5.5 2 6 5.6"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.2c3-.4 5 1.4 5.4 4.8"/></svg><span><span class="sr-only">Pour les </span>Particuliers <span aria-hidden="true">•</span> Entreprises <span aria-hidden="true">•</span> Collectivités</span></li>
+    </ul>
   </div>
 </div>
 
 <section id="services">
   <div class="wrap">
     <p class="surtitre">Services</p>
-    <h2>Ce que je fais pour votre extérieur</h2>
-    <p class="intro">Que ce soit pour créer un nouveau jardin, l'entretenir au fil des saisons ou réaliser des travaux plus lourds, chaque chantier est mené de bout en bout avec le même soin.</p>
-    <div class="services-grille">
-      <article class="carte"><div class="photo"><span>Photo : création de jardin</span></div><div class="txt"><h3>Création de jardins</h3><p>Conception et aménagement complet : plantations, pelouses, massifs et allées, pensés selon votre terrain et vos envies.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : entretien</span></div><div class="txt"><h3>Entretien de jardins et d'espaces verts</h3><p>Tonte, taille des haies et arbustes, désherbage, nettoyage de saison.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : élagage</span></div><div class="txt"><h3>Élagage</h3><p>Taille des arbres pour les alléger, les sécuriser ou dégager une vue, une toiture ou une ligne, en préservant leur santé.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : abattage</span></div><div class="txt"><h3>Abattage d'arbres dangereux</h3><p>Abattage et démontage d'arbres qui menacent votre maison, une route ou une ligne, en toute sécurité.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : terrassement</span></div><div class="txt"><h3>Terrassement</h3><p>Préparation du terrain, nivellement, déblais et remblais avant vos aménagements.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : terrasse</span></div><div class="txt"><h3>Terrasses et allées</h3><p>Création de terrasses et d'allées pour profiter de votre extérieur et y circuler facilement, du terrassement aux finitions.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : pierre naturelle</span></div><div class="txt"><h3>Pierre naturelle</h3><p>Murets, dallages, escaliers et bordures en pierre pour un extérieur durable et élégant.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : clôture</span></div><div class="txt"><h3>Clôtures</h3><p>Pose de clôtures et portails adaptés à votre terrain, pour délimiter et sécuriser votre propriété.</p></div></article>
-      <article class="carte"><div class="photo"><span>Photo : espace piscine</span></div><div class="txt"><h3>Espaces piscine</h3><p>Aménagement des abords : terrasses, plantations et finitions autour de votre piscine.</p></div></article>
+    <h2>Nos savoir-faire</h2>
+    <p class="intro">Que ce soit pour créer un nouveau jardin, l'entretenir au fil des saisons ou réaliser des travaux plus lourds, nous menons chaque chantier de bout en bout avec le même soin.</p>
+    <div class="services-grille" id="services-grille">
+      <article class="carte" id="sf-jardins"><img class="carte-img" src="img/cartes/carte-p132-480.webp" srcset="img/cartes/carte-p132-480.webp 480w, img/cartes/carte-p132-640.webp 640w, img/cartes/carte-p132-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Jardin aménagé : massif de gravier planté, érable rouge et hortensias, terrasse en bois et mobilier de jardin"><div class="txt"><h3>Création et aménagement de jardins</h3><p>Plantations, pelouses, massifs et allées, pensés selon votre terrain et vos envies.</p></div></article>
+      <article class="carte" id="sf-entretien"><img class="carte-img" src="img/cartes/carte-p191-480.webp" srcset="img/cartes/carte-p191-480.webp 480w, img/cartes/carte-p191-640.webp 640w, img/cartes/carte-p191-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Jardin entretenu : pelouse, haies et buis taillés en boule"><div class="txt"><h3>Entretien de jardins et d'espaces verts</h3><p>Tonte, taille et désherbage, en ponctuel ou sous contrat, pour les particuliers, les entreprises et les copropriétés.</p></div></article>
+      <article class="carte" id="sf-arbres"><img class="carte-img" src="img/cartes/carte-p202-480.webp" srcset="img/cartes/carte-p202-480.webp 480w, img/cartes/carte-p202-640.webp 640w, img/cartes/carte-p202-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Élagueur encordé, casque et tenue de protection, coupant une branche à la tronçonneuse"><div class="txt"><h3>Élagage et abattage</h3><p>Taille des arbres, abattage d'arbres dangereux, évacuation du bois et fraisage des souches.</p></div></article>
+      <article class="carte" id="sf-piscines"><img class="carte-img" src="img/cartes/carte-p256-480.webp" srcset="img/cartes/carte-p256-480.webp 480w, img/cartes/carte-p256-640.webp 640w, img/cartes/carte-p256-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Piscine bordée de bacs en acier corten, au milieu d'une pelouse"><div class="txt"><h3>Piscines</h3><p>Construction de piscines et aménagement de leurs abords : plages, bordures, plantations.</p></div></article>
+      <article class="carte" id="sf-terrassement"><img class="carte-img" src="img/cartes/carte-p194-480.webp" srcset="img/cartes/carte-p194-480.webp 480w, img/cartes/carte-p194-640.webp 640w, img/cartes/carte-p194-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Terrain préparé et mur de soutènement en éléments béton en courbe, devant une maison"><div class="txt"><h3>Terrassement</h3><p>Préparation et nivellement du terrain avant une terrasse, une allée ou un jardin, murs de soutènement compris.</p></div></article>
+      <article class="carte" id="sf-terrasses"><img class="carte-img" src="img/cartes/carte-p109-480.webp" srcset="img/cartes/carte-p109-480.webp 480w, img/cartes/carte-p109-640.webp 640w, img/cartes/carte-p109-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Allée en pavés de granit qui serpente entre des massifs dans un jardin en pente"><div class="txt"><h3>Terrasses, allées et pierre naturelle</h3><p>Terrasses, allées, escaliers et murets en pierre naturelle ou en pavés.</p></div></article>
+      <article class="carte carte-plus" id="sf-citernes"><img class="carte-img" src="img/cartes/carte-p082-480.webp" srcset="img/cartes/carte-p082-480.webp 480w, img/cartes/carte-p082-640.webp 640w, img/cartes/carte-p082-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Citerne en béton soulevée par une pelleteuse au-dessus d'une haie, à côté d'une maison"><div class="txt"><h3 id="premier-service-plus" tabindex="-1">Pose de citernes</h3><p>Terrassement et mise en place de votre citerne, de la fouille au remblai.</p></div></article>
+      <article class="carte carte-plus" id="sf-portails"><img class="carte-img" src="img/cartes/carte-p137-480.webp" srcset="img/cartes/carte-p137-480.webp 480w, img/cartes/carte-p137-640.webp 640w, img/cartes/carte-p137-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Portail anthracite fixé à un pilier en pierre, à côté d'une clôture rigide"><div class="txt"><h3>Portails et clôtures</h3><p>Pose de portails et de clôtures pour délimiter et sécuriser votre terrain.</p></div></article>
+      <article class="carte carte-plus" id="sf-sport"><img class="carte-img" src="img/cartes/carte-p179-480.webp" srcset="img/cartes/carte-p179-480.webp 480w, img/cartes/carte-p179-640.webp 640w, img/cartes/carte-p179-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Court de tennis en gazon synthétique terminé, entouré de prairies"><div class="txt"><h3>Terrains de sport</h3><p>Terrains de tennis et de pétanque, du terrassement aux finitions.</p></div></article>
+      <article class="carte carte-plus" id="sf-jeux"><img class="carte-img" src="img/cartes/carte-p175-480.webp" srcset="img/cartes/carte-p175-480.webp 480w, img/cartes/carte-p175-640.webp 640w, img/cartes/carte-p175-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Aire de jeux avec balançoire, toboggan et jeux à ressort sur un sol en copeaux"><div class="txt"><h3>Aires de jeux</h3><p>Plaines de jeux et espaces de loisirs extérieurs.</p></div></article>
+      <article class="carte carte-plus" id="sf-publics"><img class="carte-img" src="img/cartes/carte-p129-480.webp" srcset="img/cartes/carte-p129-480.webp 480w, img/cartes/carte-p129-640.webp 640w, img/cartes/carte-p129-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Passerelle en bois sur pilotis en construction dans une fagne"><div class="txt"><h3>Espaces publics</h3><p>Aménagements pour les collectivités : passerelles, plantations en ville, espaces verts.</p></div></article>
+      <article class="carte carte-plus" id="sf-interieurs"><img class="carte-img" src="img/cartes/carte-p223-480.webp" srcset="img/cartes/carte-p223-480.webp 480w, img/cartes/carte-p223-640.webp 640w, img/cartes/carte-p223-800.webp 800w" sizes="(max-width:560px) calc(100vw - 32px), (max-width:900px) 45vw, 360px" width="480" height="360" loading="lazy" decoding="async" alt="Nouveau sol en béton coulé autour des poteaux en bois d'un bâtiment ancien aux murs en pierre"><div class="txt"><h3>Aménagements intérieurs</h3><p>Travaux de sol dans des bâtiments existants, par exemple décaissement et nouveau sol en béton.</p></div></article>
     </div>
+    <p class="plus-services"><button type="button" class="btn btn-contour-fonce" id="voir-services" aria-expanded="false" aria-controls="services-grille">Voir les 12 services</button></p>
   </div>
 </section>
 
@@ -339,8 +581,8 @@
 <section id="zone">
   <div class="wrap">
     <p class="surtitre">Zone d'intervention</p>
-    <h2>Theux, La Reid et environs</h2>
-    <p class="intro" style="margin-bottom:0">Arno est basé à Theux / La Reid, en province de Liège. Votre projet se situe ailleurs ? Contactez-le pour en parler.</p>
+    <h2>Theux, Spa, Jalhay et toute la province de Liège</h2>
+    <p class="intro" style="margin-bottom:0">Basés à Theux, nous intervenons principalement dans l'arrondissement de Verviers et dans toute la province de Liège, pour les particuliers, les entreprises et les collectivités.</p>
   </div>
 </section>
 
@@ -349,7 +591,7 @@
     <div>
       <p class="surtitre" style="color:var(--clair)">Contact</p>
       <h2>Parlons de votre projet</h2>
-      <p class="intro">Décrivez votre projet en quelques mots, Arno vous recontacte rapidement.</p>
+      <p class="intro">Décrivez votre projet en quelques mots : nous vous recontactons.</p>
       <div class="coord">
         <a href="tel:+32479184282"><span class="ico">📞</span>+32 479 18 42 82</a>
         <a href="https://wa.me/32479184282"><span class="ico">💬</span>WhatsApp</a>
@@ -385,7 +627,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-marque"><img src="img/logo-arno-franco.png" alt="Logo Arno Franco – Naturellement Professionnel"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège</div></div>
+    <div class="footer-marque"><img src="img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège</div></div>
     <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
   <a class="appel-mobile" href="tel:+32479184282"><span aria-hidden="true">📞 </span>Appeler Arno</a>
@@ -438,6 +680,37 @@
     if (e.key === 'ArrowLeft') montrer(courant - 1);
     if (e.key === 'ArrowRight') montrer(courant + 1);
   });
+
+  // Services : 6 cartes puis « Voir les 12 services » (téléphone)
+  const grille = document.getElementById('services-grille');
+  const boutonServices = document.getElementById('voir-services');
+  boutonServices.addEventListener('click', () => {
+    const ouvrir = !grille.classList.contains('ouverte');
+    grille.classList.toggle('ouverte', ouvrir);
+    boutonServices.setAttribute('aria-expanded', String(ouvrir));
+    boutonServices.textContent = ouvrir ? 'Afficher moins de services' : 'Voir les 12 services';
+    if (ouvrir) document.getElementById('premier-service-plus').focus({ preventScroll: false });
+  });
+
+  // Liens de la mosaïque vers une carte masquée sur téléphone : on déplie d'abord la liste
+  document.querySelectorAll('.mosaique a').forEach(a => a.addEventListener('click', () => {
+    const cible = document.querySelector(a.getAttribute('href'));
+    const plus = a.classList.contains('tuile-plus') || (cible && cible.classList.contains('carte-plus'));
+    if (plus && boutonServices.offsetParent !== null && !grille.classList.contains('ouverte')) {
+      grille.classList.add('ouverte'); boutonServices.setAttribute('aria-expanded', 'true'); boutonServices.textContent = 'Afficher moins de services';
+    }
+  }));
+
+  // Bouton fixe « Appeler Arno » : masqué tant que les boutons du bandeau sont à l'écran
+  const appel = document.querySelector('.appel-mobile');
+  const boutonsHero = document.querySelector('.accueil .boutons');
+  if ('IntersectionObserver' in window && appel && boutonsHero) {
+    new IntersectionObserver(([e]) => {
+      appel.classList.toggle('cache', e.isIntersecting);
+      appel.setAttribute('aria-hidden', String(e.isIntersecting));
+      appel.tabIndex = e.isIntersecting ? -1 : 0;
+    }).observe(boutonsHero);
+  }
 
   // Navigation mobile (sous 900 px)
   const entete = document.querySelector('header');
@@ -493,7 +766,7 @@
     try {
       const r = await fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (!r.ok) throw new Error(r.status);
-      form.reset(); statut.textContent = 'Merci ! Votre demande a bien été envoyée à Arno.'; statut.classList.add('ok');
+      form.reset(); statut.textContent = 'Merci ! Votre demande nous a bien été transmise.'; statut.classList.add('ok');
     } catch {
       statut.innerHTML = 'L\'envoi n\'a pas fonctionné. Appelez le <a href="tel:+32479184282">0479 18 42 82</a> ou écrivez à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>.'; statut.classList.add('erreur');
     } finally { bouton.disabled = false; }
