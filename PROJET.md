@@ -10,9 +10,11 @@
 - LinkedIn : https://www.linkedin.com/in/arno-franco-606a30115/
 - Domaine visé : arnofranco.be (aucun site existant trouvé)
 
-## Services
-Création de jardins · Entretien de jardins · Abattage d'arbres dangereux · Terrassement ·
-Pierre naturelle · Clôtures · Espaces piscine
+## Services (confirmés le 05/11/2026)
+Création de jardins · Entretien de jardins et d'espaces verts (particuliers et professionnels) ·
+Élagage · Abattage d'arbres dangereux · Terrassement · Terrasses et allées · Pierre naturelle ·
+Clôtures · Espaces piscine
+- À demander à Arno : évacuation des déchets verts, broyage, dessouchage, pose de gazon, arrosage automatique ?
 
 ## Logo (fourni le 05/11/2026)
 - Source : logo-source/Arno_franco_Logo_final_10x10.pdf (Illustrator, 10 x 10 cm, vectoriel)
@@ -24,9 +26,9 @@ Pierre naturelle · Clôtures · Espaces piscine
 ## Infos à confirmer (reçues via une autre session, non vérifiées)
 - Téléphone fixe : 087 71 16 00
 - Code postal : 4910 Theux
-- Intro Facebook : « Spécialiste en aménagement extérieur et entretien d'espaces verts.
-  Création de jardins, terrasses, allées, clôtures, élagage et entretien : nous valorisons
-  vos extérieurs avec expertise et passion. »
+- Intro Facebook (activités confirmées, texte lui-même non utilisé tel quel) : « Spécialiste en aménagement
+  extérieur et entretien d'espaces verts. Création de jardins, terrasses, allées, clôtures, élagage et
+  entretien : nous valorisons vos extérieurs avec expertise et passion. »
 
 ## Encore à obtenir d'Arno
 Photos de chantiers (originaux, avant/après) · texte de présentation · horaires ·
