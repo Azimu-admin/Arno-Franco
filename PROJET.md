@@ -10,17 +10,38 @@
 - LinkedIn : https://www.linkedin.com/in/arno-franco-606a30115/
 - Domaine visé : arnofranco.be (aucun site existant trouvé)
 
-## Services (confirmés le 05/11/2026)
-Création de jardins · Entretien de jardins et d'espaces verts (particuliers et professionnels) ·
-Élagage · Abattage d'arbres dangereux · Terrassement · Terrasses et allées · Pierre naturelle ·
-Clôtures · Espaces piscine
-- À demander à Arno : évacuation des déchets verts, broyage, dessouchage, pose de gazon, arrosage automatique ?
+## Activités (10 familles, toutes confirmées le 05/11/2026)
+1. **Création et aménagement de jardins** : création de jardins ; aménagement de jardins et d'espaces extérieurs ;
+   fourniture et plantation d'arbres et d'arbustes ; fourniture et pose de gazon en rouleaux ; réalisation de plans d'eau
+2. **Entretien de jardins et d'espaces verts** : entretien ponctuel ou sous contrat ; pour particuliers, entreprises et copropriétés
+3. **Travaux arboricoles** : élagage ; abattage d'arbres, y compris dangereux ; évacuation des chutes d'arbres ; fraisage de souches
+4. **Terrassement et travaux de sol** : terrassement ; préparation de terrains ; pose de citernes ; terrassements liés aux aménagements
+5. **Piscines et aménagements aquatiques** : réalisation et construction complète de piscines ; aménagement des abords ; plans d'eau
+6. **Terrasses, allées et pierre naturelle** : terrasses (dont terrasses Horeca) ; allées ; travaux et aménagements en pierre naturelle
+7. **Portails et clôtures** : pose de clôtures (fourniture à confirmer) ; pose de portails ; délimitation d'espaces extérieurs
+8. **Terrains de sport et aires de jeux** : pétanque ; tennis ; terrains de jeux ; fourniture et installation de plaines de jeux ; espaces de loisirs
+9. **Aménagements professionnels et travaux publics** : espaces publics ; travaux publics ; espaces extérieurs d'entreprises ;
+   espaces verts de copropriétés ; terrasses pour établissements Horeca
+10. **Aménagements intérieurs** : travaux d'aménagement intérieur
+
+- Encore à confirmer : la **fourniture** des clôtures (point 7) ; l'**égouttage** (écrit sur la camionnette, absent de la liste).
+- Zone d'intervention (confirmée le 05/11/2026) : ancrage Theux, Spa, Jalhay ; zone principale arrondissement de Verviers ;
+  rayonnement toute la province de Liège. Clientèles : particuliers, entreprises, collectivités.
+- Toujours non confirmés : devis gratuit, horaires.
+- Règle photo : uniquement les vraies photos d'Arno, retouches légères seulement (voir CLAUDE.md). Les visuels IA de la
+  maquette D sont une référence de design, jamais une source photographique.
+- Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
+- Attribution confirmée par l'équipe (05/11/2026) : les 261 photos sont des réalisations d'Arno. Restent à vérifier : nature exacte
+  des interventions (intérieur, Horeca, travaux publics, entreprises), accord des clients, personnes et plaques visibles.
+- Photos confirmées : P211, P213, P219, P220, P223 = aménagement intérieur (décaissement, coffrage des socles des poteaux,
+  sol en béton dans un bâtiment ancien), 05/11/2026 ; légendes techniques à relire par Arno.
+- Photos confirmées : P124, P129, P134 = passerelle en bois (caillebotis) en fagne → famille 9, « espaces publics » (05/11/2026).
 
 ## Logo (fourni le 05/11/2026)
 - Source : logo-source/Arno_franco_Logo_final_10x10.pdf (Illustrator, 10 x 10 cm, vectoriel)
 - Vectoriel : logo-source/logo-arno-franco.svg
-- Pour le web : img/logo-arno-franco.png (complet, fond transparent),
-  img/monogramme.png (« AF » seul), img/favicon.png, img/apple-touch-icon.png
+- Pour le web : public/img/logo-arno-franco.png (complet, fond transparent),
+  public/img/monogramme.png (« AF » seul), public/img/favicon.png, public/img/apple-touch-icon.png
 - Couleurs : vert foncé #153e35 · vert moyen #609e4b · vert clair #b8eea4
 
 ## Infos à confirmer (reçues via une autre session, non vérifiées)
@@ -35,20 +56,24 @@ Photos de chantiers (originaux, avant/après) · texte de présentation · horai
 zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
 
 ## Fichiers
-- index.html : le site, une page (zones jaunes = à compléter)
-- mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
-- 404.html : page introuvable
-- vercel.json (adresses sans .html), robots.txt, sitemap.xml
+- `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
+  - index.html : le site, une page
+  - mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
+  - 404.html : page introuvable
+  - robots.txt, sitemap.xml, img/
+- vercel.json : dossier publié, adresses sans .html, en-tête X-Robots-Tag (pré-lancement)
+- .vercelignore : deuxième protection pour les fichiers internes
+- LANCEMENT.md : procédure pour réactiver l'indexation et finaliser la mise en ligne
 - Les adresses https://arno-franco.vercel.app sont à remplacer par https://arnofranco.be une fois le domaine relié
-  (index.html : canonical, og:*, JSON-LD ; robots.txt ; sitemap.xml)
+  (public/index.html : canonical, og:*, JSON-LD ; public/sitemap.xml ; ligne Sitemap de robots.txt)
 
 ## Formulaire de devis
-- Prêt pour Formspree : mettre l'identifiant dans `data-formspree="..."` sur `<form id="form-devis">`.
-- Tant qu'il est vide, l'envoi ouvre un e-mail prérempli vers info@arnofranco.be.
+- Prêt pour Formspree : un seul réglage, l'attribut `action` de `<form id="form-devis">` (procédure : LANCEMENT.md, section Formspree).
+- Tant qu'il vaut `mailto:info@arnofranco.be`, l'envoi ouvre la messagerie du visiteur (avec ou sans JavaScript).
 
 ## Ajouter une photo de réalisation
-1. Mettre le fichier dans `img/realisations/` (JPG, ~1600 px de large, < 400 Ko).
-2. Dans la galerie de index.html, remplacer un cadre par :
+1. Mettre le fichier dans `public/img/realisations/` (JPG, ~1600 px de large, < 400 Ko).
+2. Dans la galerie de public/index.html, remplacer un cadre par :
    `<div class="photo" data-c="jardin"><img src="img/realisations/xxx.jpg" alt="description" loading="lazy"><span>Légende – commune</span></div>`
    (data-c : jardin, pierre, abattage, cloture, piscine)
 
