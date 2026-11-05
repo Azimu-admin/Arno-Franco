@@ -25,7 +25,11 @@
 10. **Aménagements intérieurs** : travaux d'aménagement intérieur
 
 - Encore à confirmer : la **fourniture** des clôtures (point 7) ; l'**égouttage** (écrit sur la camionnette, absent de la liste).
-- Toujours non confirmés : devis gratuit, liste des communes desservies, horaires.
+- Zone d'intervention (confirmée le 05/11/2026) : ancrage Theux, Spa, Jalhay ; zone principale arrondissement de Verviers ;
+  rayonnement toute la province de Liège. Clientèles : particuliers, entreprises, collectivités.
+- Toujours non confirmés : devis gratuit, horaires.
+- Règle photo : uniquement les vraies photos d'Arno, retouches légères seulement (voir CLAUDE.md). Les visuels IA de la
+  maquette D sont une référence de design, jamais une source photographique.
 - Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
 - Attribution confirmée par l'équipe (05/11/2026) : les 261 photos sont des réalisations d'Arno. Restent à vérifier : nature exacte
   des interventions (intérieur, Horeca, travaux publics, entreprises), accord des clients, personnes et plaques visibles.
