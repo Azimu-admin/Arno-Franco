@@ -479,6 +479,11 @@
     .cta-bloc h2{white-space:normal}
     .cta-bloc .cta-entete{width:100%;justify-content:center}
   }
+
+  /* En-tête : menu définitif à cinq onglets, sans retour à la ligne (même réglage que les autres pages) */
+  .nav ul a,.logo small,.logo span{white-space:nowrap}
+  @media (min-width:1001px){.nav ul{gap:1.5rem}}
+  @media (min-width:1001px) and (max-width:1280px){.nav ul{gap:1rem}.nav ul a{font-size:.9rem}.logo{font-size:1.25rem}.logo small{font-size:.82rem}.logo img{height:42px}.cta-entete{padding:0 .9rem;font-size:.92rem}}
 </style>
 </head>
 <body>
@@ -491,14 +496,14 @@
     <nav class="menu" id="menu" aria-label="Navigation principale">
       <ul>
         <li><a href="/">Accueil</a></li>
-        <li><a href="/#services" aria-current="page">Nos savoir-faire</a></li>
-        <li><a href="/#realisations">Réalisations</a></li>
-        <li><a href="/#apropos">À propos</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/savoir-faire" aria-current="page">Nos savoir-faire</a></li>
+        <li><a href="/realisations">Réalisations</a></li>
+        <li><a href="/a-propos-contact">À propos &amp; Contact</a></li>
+        <li><a href="/travaux-publics">Travaux publics</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
-      <a class="cta-entete" href="/#contact">Demander un devis</a>
+      <a class="cta-entete" href="/a-propos-contact#devis">Demander un devis</a>
       <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span>Menu</button>
     </div>
   </div>
@@ -560,7 +565,7 @@
   <div class="cta-bloc">
     <h2 id="titre-cta">Un projet de piscine ?</h2>
     <p>Parlons-en ensemble et obtenez un devis personnalisé.</p>
-    <a class="cta-entete" href="/#contact">Demander un devis <svg class="f" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="cta-entete" href="/a-propos-contact#devis">Demander un devis <svg class="f" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 </main>

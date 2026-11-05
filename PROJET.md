@@ -96,17 +96,36 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
   chargées d'emblée. Tailles 480/640/800/1280 px (+ taille native si < 1280).
 - Menu définitif : Accueil · Nos savoir-faire · Réalisations · À propos & Contact · Travaux publics ;
   « Demander un devis » → `/a-propos-contact#devis`.
-- **Non publiable en l'état** : `/a-propos-contact` n'existe pas encore dans le dépôt (maquette prête, intégration à faire).
-  Les autres pages ont encore l'ancien menu (« Réalisations » → `/#realisations`) : harmonisation à faire sur demande.
 - À confirmer par l'équipe : P089, P195, P016, P214 (appartenance au chantier incertaine, écartées) ; accord des personnes
   visibles (ouvriers torse nu P022, P189) ; photos en 960 px (chantiers 05, 12, piscine-citerne-gazon).
+
+## Intégration du site complet (branche `feat/integration-site`, 05/11/2026 – non publiée)
+- Menu définitif sur toutes les pages : Accueil · Nos savoir-faire · Réalisations · À propos & Contact · Travaux publics
+  (`/`, `/savoir-faire`, `/realisations`, `/a-propos-contact`, `/travaux-publics`). Bouton « Demander un devis » →
+  `/a-propos-contact#devis` (en-tête de toutes les pages, bouton du bandeau de l'accueil, bouton de la page Piscines).
+- Pages validées intégrées : `/a-propos-contact` (direction artistique validée), `/realisations`, `/travaux-publics` (V3 validée).
+- Accueil, Nos savoir-faire, Piscines : seuls les liens et le menu ont changé (+ règle CSS d'en-tête sans retour à la ligne,
+  identique à celle des autres pages). Composition, photos, textes inchangés (comparaison avant/après au pixel).
+- **Provisoire, à décider par l'équipe** : les 9 cartes de `/savoir-faire` sans page détaillée ne mènent plus à une 404 :
+  « Espaces publics & professionnels » → `/travaux-publics` ; les 8 autres → `/realisations`. Remplacer par
+  `/savoir-faire/<catégorie>` quand les pages détaillées existeront.
+- L'accueil garde ses sections internes (#realisations, #apropos, #contact avec formulaire) : elles ne sont plus dans le menu.
+
+## Page « Travaux publics » (`/travaux-publics`, V3 validée le 05/11/2026)
+- Bandeau P092, 5 chantiers : mur de soutènement, ensemble patrimonial (8 vues affichées / 11 dans la visionneuse),
+  passerelle en fagne, plantations en voirie, bâtisse à la vasque. Titres neutres : aucun lieu ni commanditaire cité.
+- À confirmer avec Arno : contexte ferroviaire du mur (TP1), commanditaire des plantations (TP3), nom exact de l'ensemble
+  patrimonial (« ancienne abbaye » ?), accord des personnes visibles ; obtenir les originaux HD de l'ensemble patrimonial
+  et des photos en 960 px.
 
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
   - index.html : page d'accueil
   - mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
   - 404.html : page introuvable
-  - realisations.html + img/realisations/ : galerie des chantiers (non publiable en l'état)
+  - realisations.html + img/realisations/ : galerie des chantiers
+  - a-propos-contact.html + img/a-propos/ : présentation, équipe, coordonnées, formulaire de devis
+  - travaux-publics.html + img/travaux-publics/ : chantiers publics et patrimoniaux
   - polices.css + fonts/ : polices locales et licences ; img/photos/ (accueil), img/cartes/ (savoir-faire), robots.txt, sitemap.xml
 - vercel.json : dossier publié, adresses sans .html, en-tête X-Robots-Tag (pré-lancement), cache long des polices
 - .vercelignore : deuxième protection pour les fichiers internes

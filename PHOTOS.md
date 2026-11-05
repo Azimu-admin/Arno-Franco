@@ -88,6 +88,25 @@ sans IA. Originaux intacts (contrôle MD5). Ordre = ordre d'affichage ; la 1re p
 P089, P195, P016, P214 (appartenance au chantier à confirmer). Séries complémentaires non retenues : P069–P076, P085 (terre nue,
 personnes, ouvrier torse nu P076), P211 (quasi identique à P223), P209 (travail non identifiable), P025–P032, P111–P115, élagage.
 
+## Page « À propos & Contact » (`/a-propos-contact`)
+- `img/a-propos/portrait-arno-*.webp` : P001 (« Arno Franco.jpg »), recadrage seul, aucune retouche.
+- `img/a-propos/equipe-*.webp` : P224 (fichier identique à celui fourni par l'équipe le 05/11/2026),
+  recadrée au-dessus du bandeau de vœux ; aucune retouche.
+
+## Page « Travaux publics » (`/travaux-publics`, V3 validée le 05/11/2026)
+Retouche douce standard sur les originaux ; plaques masquées (flou) : P227. Bandeau : P092.
+
+| Chantier (titre provisoire) | Photos | Particularités |
+|---|---|---|
+| Grand mur de soutènement | P097, P092, P091, P088 |  |
+| Restauration d'un ensemble patrimonial | P187, P188b, P185, P181b, P186, P182b, P183b, P188a | visionneuse seule : P183a, P182a, P181a ; vues extraites des montages P181–P188 par simple recadrage (a = vue gauche, b = vue droite), sans retouche couleur ; P184b écartée (doublon de P187), P184a écartée (voile) |
+| Passerelle en bois dans la fagne | P134, P129, P124 |  |
+| Plantations et aménagements en voirie | P227, P226, P225 |  |
+| Ancienne bâtisse et grande vasque en pierre | P002 |  |
+
+Montages P181–P188 : aucun original séparé trouvé (dépôt et fichiers accessibles, comparaison d'empreintes). Les vues
+extraites sont des recadrages des photos réelles d'Arno (conforme à la règle photo). À remplacer par les originaux HD dès réception.
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.

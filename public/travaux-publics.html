@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="fr" class="sans-js">
+<head>
+<script>document.documentElement.className="js";</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travaux publics – Arno Franco</title>
+<meta name="description" content="Voirie, aménagements collectifs et ouvrages techniques réalisés par l'équipe d'Arno Franco.">
+<!-- PRÉ-LANCEMENT : indexation bloquée. À retirer au lancement (voir LANCEMENT.md). -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://arno-franco.vercel.app/travaux-publics">
+<meta name="theme-color" content="#153e35">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/merriweather-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Polices locales : Merriweather et Fira Sans (SIL Open Font License 1.1) */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/fira-sans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/fira-sans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/fira-sans-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/fira-sans-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/fira-sans-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/fira-sans-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/fonts/merriweather-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(/fonts/merriweather-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  :root{
+    /* Couleurs du logo : #153e35 (foncé), #609e4b (moyen), #b8eea4 (clair) */
+    --vert:#3f7a32; --vert-fonce:#153e35; --vert-moyen:#1f4f43; --mousse:#609e4b; --mousse-texte:#38712d; --clair:#b8eea4;
+    /* --mousse-texte : vert du logo assombri pour le petit texte (contraste ≥ 4,5:1 sur blanc, sable et pierre) */ --pierre:#ece6da;
+    --sable:#f6f7f2; --encre:#16231f; --gris:#56625d; --blanc:#fff; --note:#c8873a;
+    --rayon:14px; --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:86px} /* 70 px d'en-tête + marge : les ancres ne passent plus sous l'en-tête */
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:'Fira Sans',system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.6;font-size:17px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:Merriweather,Georgia,serif;line-height:1.15;font-weight:700}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:84px 0}
+  .surtitre{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--mousse-texte);margin-bottom:.5rem}
+  .intro{color:var(--gris);max-width:640px;margin-bottom:2.5rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;transition:.2s;cursor:pointer;font-size:1rem}
+  .btn-plein{background:var(--clair);color:var(--vert-fonce)}
+  .btn-plein:hover{background:#a3df8c}
+  .btn-contour{border-color:#fff;color:#fff}
+  .btn-contour:hover{background:#fff;color:var(--vert-fonce)}
+
+  /* Placeholder photo : à remplacer par les vraies photos d'Arno */
+  .photo{position:relative;background:linear-gradient(135deg,#609e4b,#2c6a4a 55%,#153e35);border-radius:var(--rayon);overflow:hidden;display:flex;align-items:flex-end;color:#fff}
+  .photo::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(circle at 20% 30%,rgba(255,255,255,.12) 0 18%,transparent 19%),
+     radial-gradient(circle at 75% 65%,rgba(255,255,255,.08) 0 25%,transparent 26%)}
+  .photo span{position:relative;z-index:1;font-size:.8rem;padding:.6rem .9rem;background:rgba(0,0,0,.35);border-top-right-radius:10px}
+  /* Quand une vraie photo est ajoutée : <div class="photo"><img src="..." alt="..."><span>légende</span></div> */
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .galerie .photo{cursor:zoom-in}
+  .visionneuse{position:fixed;inset:0;z-index:50;background:rgba(10,25,20,.92);display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px}
+  .visionneuse.ouverte{display:flex}
+  #v-contenu{width:min(1100px,100%);display:flex;justify-content:center}
+  .visionneuse img{max-width:min(1100px,100%);max-height:80vh;border-radius:10px}
+  .visionneuse p{color:#fff;font-size:.95rem}
+  .visionneuse .zone-vide{width:min(700px,100%);aspect-ratio:4/3;border-radius:10px;background:linear-gradient(135deg,#609e4b,#2c6a4a 55%,#153e35);display:grid;place-items:center;color:#fff}
+  .visionneuse button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+  .visionneuse button:hover{background:rgba(255,255,255,.25)}
+  .v-fermer{top:16px;right:16px}.v-prec{left:16px;top:50%}.v-suiv{right:16px;top:50%}
+  .consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;color:var(--gris)}
+  .consent input{width:auto;margin-top:.3rem}
+  .pot{position:absolute;left:-9999px}
+  .form-statut{font-size:.92rem;font-weight:600}
+  .form-statut.ok{color:var(--vert)}.form-statut.erreur{color:#a33}
+
+  /* En-tête */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e1e6dc}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:.65rem;font-family:Merriweather,Georgia,serif;font-weight:700;font-size:1.2rem;line-height:1.1;text-decoration:none;color:var(--vert-fonce)}
+  .logo img{height:46px;width:auto}
+  .logo small{display:block;font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse-texte)}
+  .nav ul{display:flex;gap:1.8rem;list-style:none}
+  .nav ul a{text-decoration:none;font-weight:500;font-size:.95rem}
+  .nav ul a:hover{color:var(--vert)}
+  .lien-evitement{position:absolute;left:12px;top:-60px;z-index:60;background:var(--vert-fonce);color:#fff;padding:.7rem 1rem;border-radius:8px;font-weight:600;text-decoration:none}
+  .lien-evitement:focus{top:12px}
+  main:focus{outline:none}
+  .nav a:focus-visible,.menu-bouton:focus-visible,.tel-nav:focus-visible{outline:3px solid var(--vert);outline-offset:3px;border-radius:6px}
+  .menu-bouton{display:none;align-items:center;gap:.55rem;min-height:44px;padding:0 1rem;border:1.5px solid var(--vert-fonce);border-radius:999px;background:#fff;color:var(--vert-fonce);font:inherit;font-weight:600;font-size:.95rem;cursor:pointer}
+  .burger,.burger::before,.burger::after{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;transition:transform .2s,opacity .2s}
+  .burger{position:relative}
+  .burger::before,.burger::after{content:"";position:absolute;left:0}
+  .burger::before{top:-6px}.burger::after{top:6px}
+  .menu-bouton[aria-expanded="true"] .burger{background:transparent}
+  .menu-bouton[aria-expanded="true"] .burger::before{transform:translateY(6px) rotate(45deg)}
+  .menu-bouton[aria-expanded="true"] .burger::after{transform:translateY(-6px) rotate(-45deg)}
+  .tel-nav{background:var(--vert-fonce);color:#fff;padding:.55rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
+
+  /* Hero */
+  .hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:center;padding:0;color:#fff;background:var(--vert-fonce);overflow:hidden;isolation:isolate}
+  .hero-photo,.hero-photo img{position:absolute;inset:0;width:100%;height:100%}
+  .hero-photo{z-index:-2}
+  .hero-photo img{object-fit:cover;object-position:50% 55%}
+  /* Dégradé pour la lisibilité du texte, placé côté pelouse (gauche) */
+  .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(21,62,53,.86) 0%,rgba(21,62,53,.68) 38%,rgba(21,62,53,.18) 70%,rgba(21,62,53,0) 100%)}
+  .hero .wrap{padding-top:60px;padding-bottom:60px;width:100%}
+  .hero h1,.hero p{text-shadow:0 1px 12px rgba(0,0,0,.25)}
+  .hero h1{font-size:clamp(2.3rem,6vw,4.2rem);max-width:780px;margin:.4rem 0 1.2rem}
+  .hero p{font-size:1.15rem;max-width:560px;opacity:.92;margin-bottom:2rem}
+  .hero .surtitre{color:var(--clair)}
+  .boutons{display:flex;flex-wrap:wrap;gap:1rem}
+  .accroche-courte{display:none}
+  .plus-services{display:none;margin-top:28px;text-align:center}
+  .btn-contour-fonce{border-color:var(--vert-fonce);color:var(--vert-fonce);background:#fff;min-height:48px}
+  .btn-contour-fonce:hover{background:var(--vert-fonce);color:#fff}
+  .btn-contour-fonce:focus-visible{outline:3px solid var(--vert);outline-offset:3px}
+
+  /* Atouts */
+  .atouts{background:var(--vert-fonce);color:#fff;padding:36px 0}
+  .atouts .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .atouts strong{display:block;font-family:Merriweather,Georgia,serif;font-size:1.15rem}
+  .atouts span{opacity:.8;font-size:.92rem}
+
+  /* Services */
+  .services-grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+  .carte{background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 2px 0 #e3ddd0;transition:.25s;display:flex;flex-direction:column}
+  .carte:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,63,39,.12)}
+  .carte .photo{height:180px;border-radius:0}
+  .carte-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--pierre)}
+  .carte div.txt{padding:22px 24px 26px}
+  .carte h3{font-size:1.3rem;margin-bottom:.4rem;color:var(--vert-fonce)}
+  .carte p{color:var(--gris);font-size:.96rem}
+
+  /* Réalisations */
+  #realisations{background:var(--pierre)}
+  .filtres{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+  .filtres button{border:1px solid #cfc6b4;background:transparent;padding:.45rem 1rem;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer}
+  .filtres button.actif{background:var(--vert);color:#fff;border-color:var(--vert)}
+  .galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .galerie .photo{aspect-ratio:4/3}
+  .galerie .photo.haut{grid-row:span 2;aspect-ratio:auto}
+
+  /* À propos */
+  .apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .apropos .photo{aspect-ratio:4/5}
+  .apropos p{margin-bottom:1rem;color:#3b443c}
+  .signature{font-family:Merriweather,Georgia,serif;font-size:1.3rem;color:var(--vert)}
+  .a-completer{color:var(--encre);background:#fff4d6;border-left:3px solid var(--note);padding:.15rem .4rem;font-size:.92em}
+
+  /* Méthode */
+  #methode{background:#fff}
+  .etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+  .etape{position:relative;padding-top:56px}
+  .etape::before{counter-increment:e;content:counter(e);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--pierre);color:var(--vert-fonce);font-family:Merriweather,Georgia,serif;font-weight:700;display:grid;place-items:center;font-size:1.2rem}
+  .etape h3{font-size:1.15rem;margin-bottom:.3rem}
+  .etape p{color:var(--gris);font-size:.95rem}
+
+  /* Avis */
+  /* Avis : réservé aux vrais avis clients, avec leur accord (section retirée de la page en attendant, voir LANCEMENT.md) */
+  .avis-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .avis{background:#fff;border:2px dashed #cfc6b4;border-radius:var(--rayon);padding:26px;color:var(--gris);font-size:.95rem}
+  .avis .etoiles{color:var(--mousse);letter-spacing:.1em;margin-bottom:.6rem}
+
+  /* Zone */
+
+  /* Contact */
+  #contact{background:var(--vert-moyen);color:#fff}
+  #contact .intro{color:#d3e9cc}
+  .contact-grille{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+  .coord a{display:flex;gap:.8rem;align-items:center;text-decoration:none;font-size:1.1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .coord a:hover{color:var(--clair)}
+  .coord .ico{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex-shrink:0}
+  form{background:#fff;color:var(--encre);border-radius:var(--rayon);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .plein{grid-column:1/-1}
+  label{font-size:.85rem;font-weight:600;display:block;margin-bottom:.25rem}
+  input,select,textarea{width:100%;padding:.75rem .9rem;border:1px solid #d6d0c3;border-radius:10px;font:inherit;font-size:.95rem;background:var(--sable)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--mousse);border-color:transparent}
+  textarea{min-height:120px;resize:vertical}
+  .rgpd{font-size:.78rem;color:var(--gris)}
+
+  footer{background:var(--vert-fonce);color:#c9d6c0;padding:40px 0;font-size:.88rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+  .footer-marque{display:flex;align-items:center;gap:18px}
+  .footer-marque img{width:96px;background:#fff;border-radius:12px;padding:8px}
+  footer a{color:#fff;display:inline-block;padding:.35rem 0} /* zones tactiles ≥ 24 px */
+
+  /* Bouton d'appel mobile */
+  .appel-mobile{display:none}
+  .nav-actions{display:flex;align-items:center;gap:.6rem}
+
+  @media (max-width:900px){
+    .menu-bouton{display:inline-flex}
+    .nav-actions{display:flex;align-items:center;gap:.6rem}
+    .menu{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid #e1e6dc;box-shadow:0 14px 24px rgba(21,62,53,.12)}
+    header.menu-ouvert .menu{display:block}
+    .nav .menu ul{flex-direction:column;gap:0;padding:.4rem 0 .8rem}
+    .nav .menu a{display:flex;align-items:center;min-height:48px;padding:0 20px;font-size:1.05rem;font-weight:600;color:var(--vert-fonce)}
+    .nav .menu a:hover{background:var(--sable)}
+    .atouts .grille,.etapes{grid-template-columns:1fr 1fr}
+    .galerie{grid-template-columns:1fr 1fr}
+    .apropos,.contact-grille{grid-template-columns:1fr;gap:32px}
+    .avis-grille{grid-template-columns:1fr}
+    section{padding:64px 0}
+  }
+  /* Téléphone et tablette : photo en haut (4:3), texte dessous sur fond vert foncé */
+  @media (max-width:900px){
+    .hero{display:block;min-height:0}
+    .hero::before{display:none}
+    .hero-photo{position:relative;display:block;aspect-ratio:4/3;z-index:0}
+    .hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(180deg,rgba(21,62,53,0),var(--vert-fonce))}
+    .hero-photo img{object-position:50% 50%}
+    .hero .wrap{padding-top:22px;padding-bottom:36px}
+    .hero h1{font-size:2.1rem;margin:.3rem 0 .9rem}
+    .hero p{font-size:1.02rem;margin-bottom:1.4rem}
+    .hero h1,.hero p{text-shadow:none}
+  }
+  /* Téléphone : accroche courte, 6 cartes puis bouton (sans JavaScript, les 12 cartes restent visibles) */
+  @media (max-width:700px){
+    .accroche-longue,.sans-mobile{display:none}
+    .accroche-courte{display:inline}
+    .hero-photo{aspect-ratio:16/10}
+    .hero .wrap{padding-top:16px;padding-bottom:28px}
+    .hero h1{font-size:1.95rem}
+    .boutons{gap:.6rem}
+    .boutons .btn{padding:.8rem 1.15rem}
+    .js .services-grille:not(.ouverte) .carte-plus{display:none}
+    .js .plus-services{display:block}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .services-grille{grid-template-columns:1fr}
+    .atouts .grille,.etapes{grid-template-columns:1fr}
+    form{grid-template-columns:1fr;padding:22px}
+    .tel-nav{display:none}
+    body{padding-bottom:84px}
+    .appel-mobile{transition:opacity .2s,transform .2s}
+    .appel-mobile.cache{opacity:0;transform:translateY(120%);pointer-events:none}
+    .appel-mobile{display:flex;gap:.45rem;align-items:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;background:var(--clair);color:var(--vert-fonce);text-decoration:none;font-weight:700;padding:1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    footer{padding-bottom:90px}
+  }
+
+  /* ================= Direction C + B ================= */
+  :root{--vert-fonce:#1e4a2b;--vert-moyen:#245533;--vert:#2e6b30;--foret:#1e4a2b;--foret-2:#2b5e36;--lime:#a6cd47;--clair:#bfe08a;--sable:#f7f4ec;--pierre:#ebe5d8;--icone:#2e6b30}
+  html{scroll-padding-top:100px}
+  body{background:var(--sable)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  header{background:rgba(247,244,236,.97);border-bottom:1px solid #e6e0d2}
+  .nav{height:84px}
+  .logo{gap:.8rem;font-size:1.65rem;color:var(--foret);letter-spacing:-.01em}
+  .logo img{height:54px}
+  .logo small{font-family:'Fira Sans',system-ui,sans-serif;font-weight:400;font-size:1.02rem;letter-spacing:0;text-transform:none;color:#25352b;margin-top:2px}
+  .nav ul{gap:2.1rem}
+  .nav ul a{font-weight:500;font-size:1rem;color:#1d2a21}
+  .nav ul a:hover{color:var(--vert)}
+  .cta-entete{display:inline-flex;align-items:center;min-height:46px;padding:0 1.3rem;border-radius:8px;background:var(--vert);color:#fff;font-weight:600;text-decoration:none;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+  .cta-entete:hover{background:var(--foret)}
+  .cta-entete:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+  .btn-plein{background:var(--lime);color:#14301c}
+  .btn-plein:hover{background:#b9da6a}
+
+  .accueil{position:relative;overflow:hidden;padding:16px 0 0}
+  .ac-photo{position:absolute;top:16px;right:0;width:66%;height:var(--h-photo);z-index:0;clip-path:polygon(4.5% 0,100% 0,100% 100%,0 100%)}
+  .ac-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+  .accueil{--h-photo:clamp(380px,32vw,500px)}
+  .ac-bloc{position:relative;z-index:1;width:49%;min-height:calc(var(--h-photo) + 60px);margin-top:26px;color:#fff;background:linear-gradient(165deg,#2a5a33 0%,#1e4a2b 70%);clip-path:polygon(0 0,100% 3%,80% 100%,0 100%)}
+  .ac-texte{padding:clamp(34px,4vw,62px) 0 0 clamp(24px,4.7vw,88px);max-width:calc(100% - 9%)}
+  .ac-texte h1{font-family:Merriweather,Georgia,serif;font-weight:700;font-size:clamp(2.2rem,3.35vw,3.35rem);line-height:1.12;letter-spacing:-.01em;margin:0;max-width:13.5em;text-shadow:0 1px 10px rgba(0,0,0,.18)}
+  .ac-barre{display:block;width:clamp(120px,11vw,185px);height:6px;border-radius:3px;background:var(--lime);margin:clamp(18px,1.8vw,28px) 0}
+  .ac-texte p{font-size:clamp(1.05rem,1.55vw,1.5rem);line-height:1.38;max-width:21em;color:#f2f5ee}
+  .accueil .boutons{display:none;margin-top:1.4rem}
+
+  .mosaique{position:relative;z-index:2;list-style:none;display:grid;grid-template-columns:repeat(6,1fr) 1.5fr;gap:12px;height:clamp(220px,19vw,290px);margin:calc(-1 * clamp(56px,5vw,74px)) 0 0;padding:0 0 0 clamp(30px,2.6vw,46px)}
+  .mosaique>li{transform:skewX(-9deg);border-radius:14px;overflow:hidden;box-shadow:0 0 0 4px var(--sable),0 12px 26px rgba(20,40,25,.22);background:var(--foret)}
+  .mosaique>li.et-aussi{margin-right:-60px;border-radius:14px 0 0 14px}
+  .tuile,.tuile-plus{position:relative;display:block;height:100%;color:#fff;text-decoration:none}
+  .tuile img{position:absolute;top:0;left:-22%;width:144%;max-width:none;height:100%;object-fit:cover;transform:skewX(9deg);transition:transform .35s}
+  .tuile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,32,19,.88) 0%,rgba(14,32,19,.55) 32%,rgba(14,32,19,0) 62%)}
+  .tuile-contenu{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:0 12px clamp(16px,1.6vw,24px) clamp(22px,2vw,32px);transform:skewX(9deg)}
+  .picto{display:block;width:clamp(32px,2.9vw,44px);height:clamp(32px,2.9vw,44px);margin-bottom:10px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 3px rgba(0,0,0,.35))}
+  .tuile-titre{display:block;font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:clamp(.92rem,1.42vw,1.45rem);hyphens:auto;line-height:1.12;text-shadow:0 1px 6px rgba(0,0,0,.45)}
+  .tuile:hover img{transform:skewX(9deg) scale(1.05)}
+  .mosaique>li:focus-within{box-shadow:0 0 0 4px var(--sable),0 0 0 7px var(--vert)}
+  .tuile:focus-visible,.tuile-plus:focus-visible{outline:none}
+  .tuile-plus{background:linear-gradient(150deg,#336e3b 0%,#1e4a2b 75%)}
+  .ea-contenu{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:18px 84px 56px clamp(34px,3vw,52px);transform:skewX(9deg)}
+  .ea-titre{font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:clamp(1.3rem,1.9vw,1.85rem);color:var(--lime);margin-bottom:.55rem}
+  .ea-liste{font-size:clamp(.95rem,1.25vw,1.2rem);line-height:1.5;color:#fff}
+  .ea-fleche{position:absolute;right:78px;bottom:clamp(14px,1.4vw,22px);width:clamp(38px,3.3vw,50px);height:clamp(38px,3.3vw,50px);flex-shrink:0;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+  .tuile-plus:hover .ea-fleche{transform:translateX(4px)}
+
+  .zone-bandeau{padding:clamp(22px,2.4vw,34px) 0 clamp(28px,3vw,44px)}
+  .zone-bandeau .wrap{max-width:1400px}
+  .zone-liste{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px 22px}
+  .zone-liste li{display:flex;align-items:center;gap:12px;font-size:clamp(.95rem,1.2vw,1.12rem);color:#1d2a21}
+  .zone-liste li+li:not(.zone-clients){border-left:1.5px solid #c9c1ae;padding-left:22px}
+  .zone-picto{width:34px;height:34px;flex-shrink:0;fill:none;stroke:var(--icone);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .zone-clients{background:var(--pierre);border-radius:999px;padding:12px 24px}
+  .zone-clients .zone-picto{width:40px;height:40px}
+
+  @media (prefers-reduced-motion:reduce){.tuile img,.ea-fleche{transition:none}}
+  @media (min-width:1001px) and (max-width:1220px){
+    .nav ul{gap:1.15rem}.nav ul a{font-size:.95rem}
+    .logo{font-size:1.35rem;gap:.6rem}.logo img{height:46px}.logo small{font-size:.88rem}
+    .cta-entete{padding:0 1rem}
+    .zone-liste li{font-size:.92rem;gap:9px}.zone-liste li+li:not(.zone-clients){padding-left:14px}.zone-clients{padding:10px 16px}
+  }
+
+  .mention-ia{position:absolute;z-index:3;right:14px;top:28px;margin:0;padding:4px 10px;border-radius:6px;background:rgba(14,32,19,.78);color:#fff;font-size:.78rem;line-height:1.3}
+  /* ---------- tablette et téléphone : vraie composition empilée ---------- */
+  @media (max-width:1000px){
+    .nav{height:72px}
+    .logo{font-size:1.3rem}.logo img{height:46px}.logo small{font-size:.88rem}
+    .menu{top:72px}
+    .accueil{padding:0;overflow:visible}
+    .ac-photo{position:relative;top:0;width:100%;height:auto;aspect-ratio:16/10;display:block;clip-path:polygon(0 0,100% 0,100% 86%,0 100%)}
+    .ac-photo img{object-position:50% 50%}
+    .ac-bloc{width:100%;min-height:0;margin-top:-40px;clip-path:polygon(0 34px,100% 0,100% 100%,0 100%)}
+    .ac-texte{padding:58px 24px 34px;max-width:none}
+    .ac-texte h1{font-size:clamp(1.95rem,5.2vw,2.7rem);max-width:15em}
+    .ac-barre{margin:16px 0}
+    .ac-texte p{font-size:clamp(1.02rem,2.6vw,1.25rem);max-width:30em}
+    .accueil .boutons{display:flex}
+    .mention-ia{top:8px;right:8px;font-size:.72rem}
+    .mention-longue{display:none}
+    .mosaique{grid-template-columns:repeat(3,1fr);height:auto;gap:14px;margin:22px 0 0;padding:0 24px}
+    .mosaique>li{transform:none;aspect-ratio:4/5;border-radius:0;box-shadow:none;clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
+    .mosaique>li:focus-within{box-shadow:none;outline:3px solid var(--vert);outline-offset:3px}
+    .mosaique>li.et-aussi{grid-column:1/-1;aspect-ratio:auto;margin-right:0;clip-path:polygon(0 10%,100% 0,100% 90%,0 100%)}
+    .tuile img{left:0;width:100%;transform:none}
+    .tuile:hover img{transform:scale(1.04)}
+    .tuile-contenu{transform:none;padding:0 14px 20px}
+    .ea-contenu{position:relative;transform:none;padding:34px 84px 34px 24px}
+    .ea-fleche{right:24px;bottom:auto;top:50%;margin-top:-22px;width:44px;height:44px}
+    .zone-liste{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+    .zone-liste li+li:not(.zone-clients){border-left:0;padding-left:0}
+    .zone-clients{grid-column:1/-1}
+  }
+  @media (max-width:700px){
+    .ac-texte{padding:52px 20px 28px}
+    .boutons .btn{padding:.8rem 1.1rem}
+    .mosaique{grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+    .picto{width:34px;height:34px;margin-bottom:8px}
+    .tuile-titre{font-size:1.08rem}
+    .zone-liste{grid-template-columns:1fr}
+    .zone-clients{border-radius:16px}
+    .cta-entete{display:none}
+  }
+
+  /* ================= Page « Nos savoir-faire » ================= */
+  section.sf-hero,section.sf-grille{padding-top:0;padding-bottom:0}
+  .menu a[aria-current]{color:var(--vert)}
+  /* En-tête avec l'entrée « Travaux publics » : aucun retour à la ligne */
+  .nav ul a,.logo small,.logo span{white-space:nowrap}
+  @media (min-width:1001px){.nav ul{gap:1.5rem}}
+  @media (min-width:1001px) and (max-width:1280px){.nav ul{gap:1rem}.nav ul a{font-size:.9rem}.logo{font-size:1.25rem}.logo small{font-size:.82rem}.logo img{height:42px}.cta-entete{padding:0 .9rem;font-size:.92rem}}
+  
+  
+  /* ================= Page « Réalisations » (maquette) ================= */
+  section.re-hero,section.re-chantier,section.re-cta{padding:0}
+  .menu a[aria-current]{color:var(--foret);font-weight:600}
+  @media (min-width:1001px){.menu a[aria-current]{box-shadow:inset 0 -3px 0 var(--lime);padding-bottom:6px}}
+  .re-hero{background:var(--foret);color:#fff;position:relative;overflow:hidden}
+  .re-hero::after{content:"";position:absolute;top:0;bottom:0;right:-6%;width:34%;background:linear-gradient(160deg,#2b5e36,#1e4a2b);clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);border-left:10px solid var(--lime)}
+  .re-hero .wrap{position:relative;z-index:1;max-width:1240px;padding-top:clamp(30px,3.4vw,52px);padding-bottom:clamp(30px,3.4vw,52px)}
+  .ariane{font-size:.9rem;color:#d7e6cf;margin-bottom:.7rem}.ariane a{color:#fff}
+  .re-hero h1{font-family:Merriweather,Georgia,serif;font-size:clamp(2rem,3.6vw,3.1rem);line-height:1.12;margin:0 0 .8rem}
+  .re-hero p.chapo{font-size:clamp(1.02rem,1.4vw,1.2rem);max-width:36em;color:#eef3ea}
+  .re-liste{padding:clamp(40px,4.5vw,72px) 0 clamp(20px,2vw,30px)}
+  .re-chantier{margin-bottom:clamp(56px,6vw,96px)}
+  .re-chantier .wrap{max-width:1240px}
+  .re-tete{display:flex;align-items:baseline;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;margin-bottom:16px;border-bottom:1px solid #ddd5c3;padding-bottom:10px}
+  .re-tete h2{font-family:'Fira Sans',system-ui,sans-serif;font-weight:600;font-size:clamp(1.12rem,1.6vw,1.4rem);line-height:1.3;margin:0;color:#1d2a21}
+  .re-tete h2 span{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mousse-texte);font-weight:600;margin-bottom:2px}
+  .re-nb{font-size:.88rem;color:var(--gris)}
+  .re-mosaique{list-style:none;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(40px,5.5vw,78px);gap:clamp(8px,.95vw,14px);grid-auto-flow:dense}
+  .re-mosaique.miroir{direction:rtl}.re-mosaique.miroir>li{direction:ltr}
+  .re-mosaique>li{grid-column:span var(--c);grid-row:span var(--r);min-width:0}
+  .re-vue{display:block;position:relative;width:100%;height:100%;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--pierre)}
+  .re-vue img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+  .re-vue:hover img{transform:scale(1.03)}
+  .re-vue:focus-visible{outline:3px solid var(--vert);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){.re-vue img{transition:none}}
+  .re-cta{background:var(--foret);color:#fff}
+  .re-cta .wrap{max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:44px;padding-bottom:44px}
+  .re-cta h2{font-size:clamp(1.5rem,2.4vw,2.1rem);margin:0}
+  /* Visionneuse */
+  .re-vis{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:rgba(10,24,16,.95);color:#fff}
+  .re-vis::backdrop{background:rgba(10,24,16,.95)}
+  .re-vis[open]{display:flex;flex-direction:column}
+  .re-vis figure{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:64px 76px 20px;min-height:0}
+  .re-vis img{max-width:100%;max-height:calc(100vh - 150px);object-fit:contain;border-radius:6px;touch-action:pan-y}
+  .re-vis figcaption{text-align:center;font-size:.95rem;color:#e6efe0;max-width:60em}
+  .re-vis figcaption b{color:var(--lime);font-weight:600}
+  .re-vis button{position:absolute;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;cursor:pointer}
+  .re-vis button:hover{background:rgba(255,255,255,.26)}
+  .re-vis button:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+  .re-vis button svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .v-fermer{top:12px;right:12px}.v-prec{left:12px;top:50%;margin-top:-26px}.v-suiv{right:12px;top:50%;margin-top:-26px}
+  @media (max-width:1000px){.re-hero::after{display:none}}
+  /* ================= Page « Travaux publics » (maquette) ================= */
+  section.tp-hero{padding:0}
+  .tp-hero{position:relative;overflow:hidden;background:var(--foret);color:#fff;min-height:clamp(340px,30vw,450px);display:flex;align-items:center}
+  .tp-photo{position:absolute;top:0;right:0;bottom:0;width:60%;clip-path:polygon(16% 0,100% 0,100% 100%,0 100%);background:var(--lime)}
+  .tp-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;clip-path:polygon(calc(16% + 12px) 0,100% 0,100% 100%,12px 100%)}
+  .tp-texte{position:relative;z-index:1;width:44%;padding:40px 0 48px clamp(24px,6vw,100px)}
+  .tp-texte h1{font-family:Merriweather,Georgia,serif;font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.08;margin:0}
+  .tp-barre{display:block;width:clamp(110px,10vw,160px);height:6px;border-radius:3px;background:var(--lime);margin:clamp(16px,1.6vw,24px) 0}
+  .tp-texte .chapo{font-size:clamp(1.05rem,1.45vw,1.3rem);line-height:1.4;max-width:22em;color:#eef3ea}
+  /* Deux petits chantiers côte à côte (sections distinctes, jamais mélangées) */
+  .tp-duo{max-width:1240px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr;gap:0 clamp(20px,2.4vw,36px)}
+  .tp-duo .re-chantier .wrap{padding:0;max-width:none}
+  .re-mosaique>li.re-cache{display:none}
+  @media (max-width:700px){.re-mosaique>li.m2.port{aspect-ratio:4/5}}
+  .tp-duo{align-items:end} /* mêmes hauteurs de photos : on aligne le bas, donc aussi le haut des photos */
+  @media (max-width:1000px){
+    .tp-hero{display:block;min-height:0}
+    .tp-photo{position:relative;width:100%;aspect-ratio:4/3;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+    .tp-photo img{clip-path:none}
+    .tp-texte{width:100%;padding:26px 24px 38px}
+  }
+  @media (max-width:700px){.tp-duo{grid-template-columns:1fr;padding:0 16px}.re-mosaique>li.m2:only-child{aspect-ratio:3/4}.tp-texte{padding:22px 20px 32px}}
+
+  @media (max-width:700px){
+    .re-mosaique{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:8px}
+    .re-mosaique>li{grid-column:span 1;grid-row:auto;aspect-ratio:1/1}
+    .re-mosaique>li.m2{grid-column:span 2;aspect-ratio:4/3}
+    .re-mosaique>li.m2.pano{aspect-ratio:16/9}
+        .re-vis figure{padding:60px 8px 84px}
+    .v-prec,.v-suiv{top:auto;bottom:16px;margin-top:0}.v-prec{left:calc(50% - 64px)}.v-suiv{right:calc(50% - 64px)}
+    .re-vis img{max-height:calc(100vh - 190px)}
+  }
+</style>
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo"><img src="/img/monogramme-80.webp" alt="" width="46" height="54"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/savoir-faire">Nos savoir-faire</a></li>
+        <li><a href="/realisations">Réalisations</a></li>
+        <li><a href="/a-propos-contact">À propos &amp; Contact</a></li>
+        <li><a href="/travaux-publics" aria-current="page">Travaux publics</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="cta-entete" href="/a-propos-contact#devis">Demander un devis</a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span>Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" tabindex="-1">
+<section class="tp-hero" aria-labelledby="titre-page">
+  <div class="tp-photo"><img src="/img/travaux-publics/p092-800.webp" srcset="/img/travaux-publics/p092-480.webp 480w, /img/travaux-publics/p092-640.webp 640w, /img/travaux-publics/p092-800.webp 800w, /img/travaux-publics/p092-960.webp 960w" sizes="(max-width:1000px) 100vw, 60vw" alt="Mur de soutènement en blocs béton le long d'un chemin, en cours de finition" width="960" height="720" fetchpriority="high"></div>
+  <div class="tp-texte">
+    <p class="ariane"><a href="/">Accueil</a> › Travaux publics</p>
+    <h1 id="titre-page">Travaux publics</h1>
+    <span class="tp-barre" aria-hidden="true"></span>
+    <p class="chapo">Voirie, aménagements collectifs et ouvrages techniques : des réalisations pensées pour durer.</p>
+  </div>
+</section>
+<div class="re-liste">
+<section class="re-chantier" id="chantier-tp1" aria-labelledby="t-chantier-tp1">
+  <div class="wrap">
+    <div class="re-tete"><h2 id="t-chantier-tp1">Grand mur de soutènement</h2><p class="re-nb">4 photos</p></div>
+    <ul class="re-mosaique" data-titre="Grand mur de soutènement">
+      <li class="m2" style="--c:7;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p097-480.webp 480w, /img/travaux-publics/p097-640.webp 640w, /img/travaux-publics/p097-800.webp 800w, /img/travaux-publics/p097-960.webp 960w" aria-label="Agrandir : Le mur de soutènement sur toute sa longueur"><img src="/img/travaux-publics/p097-640.webp" srcset="/img/travaux-publics/p097-480.webp 480w, /img/travaux-publics/p097-640.webp 640w, /img/travaux-publics/p097-800.webp 800w, /img/travaux-publics/p097-960.webp 960w" sizes="(max-width:700px) 100vw, (max-width:1280px) 58vw, 723px" alt="Le mur de soutènement sur toute sa longueur" width="960" height="720" fetchpriority="high"></button></li>
+      <li style="--c:5;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p092-480.webp 480w, /img/travaux-publics/p092-640.webp 640w, /img/travaux-publics/p092-800.webp 800w, /img/travaux-publics/p092-960.webp 960w" aria-label="Agrandir : Mur de soutènement en cours de finition"><img src="/img/travaux-publics/p092-640.webp" srcset="/img/travaux-publics/p092-480.webp 480w, /img/travaux-publics/p092-640.webp 640w, /img/travaux-publics/p092-800.webp 800w, /img/travaux-publics/p092-960.webp 960w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Mur de soutènement en cours de finition" width="960" height="720"></button></li>
+      <li style="--c:5;--r:4"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p091-480.webp 480w, /img/travaux-publics/p091-640.webp 640w, /img/travaux-publics/p091-800.webp 800w, /img/travaux-publics/p091-960.webp 960w" aria-label="Agrandir : Mur de soutènement en cours de pose"><img src="/img/travaux-publics/p091-640.webp" srcset="/img/travaux-publics/p091-480.webp 480w, /img/travaux-publics/p091-640.webp 640w, /img/travaux-publics/p091-800.webp 800w, /img/travaux-publics/p091-960.webp 960w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Mur de soutènement en cours de pose" width="960" height="720"></button></li>
+      <li class="m2" style="--c:7;--r:4"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p088-480.webp 480w, /img/travaux-publics/p088-640.webp 640w, /img/travaux-publics/p088-800.webp 800w, /img/travaux-publics/p088-960.webp 960w" aria-label="Agrandir : Détail du parement en blocs béton"><img data-src="/img/travaux-publics/p088-640.webp" data-srcset="/img/travaux-publics/p088-480.webp 480w, /img/travaux-publics/p088-640.webp 640w, /img/travaux-publics/p088-800.webp 800w, /img/travaux-publics/p088-960.webp 960w" sizes="(max-width:700px) 100vw, (max-width:1280px) 58vw, 723px" alt="Détail du parement en blocs béton" width="960" height="720" decoding="async"><noscript><img src="/img/travaux-publics/p088-640.webp" srcset="/img/travaux-publics/p088-480.webp 480w, /img/travaux-publics/p088-640.webp 640w, /img/travaux-publics/p088-800.webp 800w, /img/travaux-publics/p088-960.webp 960w" sizes="(max-width:700px) 100vw, (max-width:1280px) 58vw, 723px" alt="Détail du parement en blocs béton" width="960" height="720" loading="lazy"></noscript></button></li>
+    </ul>
+  </div>
+</section>
+<!-- Ensemble patrimonial : vues extraites des montages P181–P188 par recadrage ; à remplacer par les originaux dès réception. 8 vues affichées, 11 dans la visionneuse. -->
+<section class="re-chantier" id="chantier-tp-patrimoine" aria-labelledby="t-chantier-tp-patrimoine">
+  <div class="wrap">
+    <div class="re-tete"><h2 id="t-chantier-tp-patrimoine">Restauration d&#x27;un ensemble patrimonial</h2><p class="re-nb">11 photos</p></div>
+    <ul class="re-mosaique miroir" data-titre="Restauration d&#x27;un ensemble patrimonial">
+      <li class="m2 port" style="--c:6;--r:10"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p187-480.webp 480w, /img/travaux-publics/p187-669.webp 669w" aria-label="Agrandir : Après : la cour pavée et le pont, vus depuis l&#x27;étage"><img data-src="/img/travaux-publics/p187-480.webp" data-srcset="/img/travaux-publics/p187-480.webp 480w, /img/travaux-publics/p187-669.webp 669w" sizes="(max-width:700px) 100vw, (max-width:1280px) 50vw, 620px" alt="Après : la cour pavée et le pont, vus depuis l&#x27;étage" width="669" height="930" decoding="async"><noscript><img src="/img/travaux-publics/p187-480.webp" srcset="/img/travaux-publics/p187-480.webp 480w, /img/travaux-publics/p187-669.webp 669w" sizes="(max-width:700px) 100vw, (max-width:1280px) 50vw, 620px" alt="Après : la cour pavée et le pont, vus depuis l&#x27;étage" width="669" height="930" loading="lazy"></noscript></button></li>
+      <li style="--c:3;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p188b-415.webp 415w" aria-label="Agrandir : Après : le pont d&#x27;accès pavé"><img data-src="/img/travaux-publics/p188b-415.webp" data-srcset="/img/travaux-publics/p188b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le pont d&#x27;accès pavé" width="415" height="548" decoding="async"><noscript><img src="/img/travaux-publics/p188b-415.webp" srcset="/img/travaux-publics/p188b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le pont d&#x27;accès pavé" width="415" height="548" loading="lazy"></noscript></button></li>
+      <li style="--c:3;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p185-480.webp 480w, /img/travaux-publics/p185-673.webp 673w" aria-label="Agrandir : Après : le pont pavé vers le portail"><img data-src="/img/travaux-publics/p185-480.webp" data-srcset="/img/travaux-publics/p185-480.webp 480w, /img/travaux-publics/p185-673.webp 673w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le pont pavé vers le portail" width="673" height="942" decoding="async"><noscript><img src="/img/travaux-publics/p185-480.webp" srcset="/img/travaux-publics/p185-480.webp 480w, /img/travaux-publics/p185-673.webp 673w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le pont pavé vers le portail" width="673" height="942" loading="lazy"></noscript></button></li>
+      <li style="--c:3;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p181b-415.webp 415w" aria-label="Agrandir : Après : le nouvel escalier d&#x27;entrée en pierre"><img data-src="/img/travaux-publics/p181b-415.webp" data-srcset="/img/travaux-publics/p181b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le nouvel escalier d&#x27;entrée en pierre" width="415" height="548" decoding="async"><noscript><img src="/img/travaux-publics/p181b-415.webp" srcset="/img/travaux-publics/p181b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : le nouvel escalier d&#x27;entrée en pierre" width="415" height="548" loading="lazy"></noscript></button></li>
+      <li style="--c:3;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p186-480.webp 480w, /img/travaux-publics/p186-676.webp 676w" aria-label="Agrandir : Après : escalier et allée en gravier le long de l&#x27;eau"><img data-src="/img/travaux-publics/p186-480.webp" data-srcset="/img/travaux-publics/p186-480.webp 480w, /img/travaux-publics/p186-676.webp 676w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : escalier et allée en gravier le long de l&#x27;eau" width="676" height="948" decoding="async"><noscript><img src="/img/travaux-publics/p186-480.webp" srcset="/img/travaux-publics/p186-480.webp 480w, /img/travaux-publics/p186-676.webp 676w" sizes="(max-width:700px) 50vw, (max-width:1280px) 25vw, 310px" alt="Après : escalier et allée en gravier le long de l&#x27;eau" width="676" height="948" loading="lazy"></noscript></button></li>
+      <li style="--c:4;--r:6"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p182b-415.webp 415w" aria-label="Agrandir : Après : la cour pavée devant la façade"><img data-src="/img/travaux-publics/p182b-415.webp" data-srcset="/img/travaux-publics/p182b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 33vw, 413px" alt="Après : la cour pavée devant la façade" width="415" height="548" decoding="async"><noscript><img src="/img/travaux-publics/p182b-415.webp" srcset="/img/travaux-publics/p182b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 33vw, 413px" alt="Après : la cour pavée devant la façade" width="415" height="548" loading="lazy"></noscript></button></li>
+      <li style="--c:4;--r:6"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p183b-415.webp 415w" aria-label="Agrandir : Pendant : pose des pavés en courbe"><img data-src="/img/travaux-publics/p183b-415.webp" data-srcset="/img/travaux-publics/p183b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 33vw, 413px" alt="Pendant : pose des pavés en courbe" width="415" height="534" decoding="async"><noscript><img src="/img/travaux-publics/p183b-415.webp" srcset="/img/travaux-publics/p183b-415.webp 415w" sizes="(max-width:700px) 50vw, (max-width:1280px) 33vw, 413px" alt="Pendant : pose des pavés en courbe" width="415" height="534" loading="lazy"></noscript></button></li>
+      <li class="m2 port" style="--c:4;--r:6"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p188a-415.webp 415w" aria-label="Agrandir : Avant : le pont d&#x27;accès avant les travaux"><img data-src="/img/travaux-publics/p188a-415.webp" data-srcset="/img/travaux-publics/p188a-415.webp 415w" sizes="(max-width:700px) 100vw, (max-width:1280px) 33vw, 413px" alt="Avant : le pont d&#x27;accès avant les travaux" width="415" height="548" decoding="async"><noscript><img src="/img/travaux-publics/p188a-415.webp" srcset="/img/travaux-publics/p188a-415.webp 415w" sizes="(max-width:700px) 100vw, (max-width:1280px) 33vw, 413px" alt="Avant : le pont d&#x27;accès avant les travaux" width="415" height="548" loading="lazy"></noscript></button></li>
+      <li class="re-cache" hidden><button class="re-vue" type="button" tabindex="-1" data-grand="/img/travaux-publics/p183a-415.webp 415w" aria-label="Agrandir : Pendant : pose des pavés devant la façade"><img data-src="/img/travaux-publics/p183a-415.webp" data-srcset="/img/travaux-publics/p183a-415.webp 415w" sizes="100vw" alt="Pendant : pose des pavés devant la façade" width="415" height="534" decoding="async"></button></li>
+      <li class="re-cache" hidden><button class="re-vue" type="button" tabindex="-1" data-grand="/img/travaux-publics/p182a-415.webp 415w" aria-label="Agrandir : Avant : la cour avant les travaux"><img data-src="/img/travaux-publics/p182a-415.webp" data-srcset="/img/travaux-publics/p182a-415.webp 415w" sizes="100vw" alt="Avant : la cour avant les travaux" width="415" height="548" decoding="async"></button></li>
+      <li class="re-cache" hidden><button class="re-vue" type="button" tabindex="-1" data-grand="/img/travaux-publics/p181a-415.webp 415w" aria-label="Agrandir : Avant : l&#x27;entrée avant la pose de l&#x27;escalier"><img data-src="/img/travaux-publics/p181a-415.webp" data-srcset="/img/travaux-publics/p181a-415.webp 415w" sizes="100vw" alt="Avant : l&#x27;entrée avant la pose de l&#x27;escalier" width="415" height="548" decoding="async"></button></li>
+    </ul>
+  </div>
+</section>
+<section class="re-chantier" id="chantier-tp2" aria-labelledby="t-chantier-tp2">
+  <div class="wrap">
+    <div class="re-tete"><h2 id="t-chantier-tp2">Passerelle en bois dans la fagne</h2><p class="re-nb">3 photos</p></div>
+    <ul class="re-mosaique" data-titre="Passerelle en bois dans la fagne">
+      <li class="m2" style="--c:7;--r:8"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p134-480.webp 480w, /img/travaux-publics/p134-640.webp 640w, /img/travaux-publics/p134-800.webp 800w, /img/travaux-publics/p134-1280.webp 1280w, /img/travaux-publics/p134-1512.webp 1512w" aria-label="Agrandir : Passerelle en bois terminée dans la fagne"><img data-src="/img/travaux-publics/p134-640.webp" data-srcset="/img/travaux-publics/p134-480.webp 480w, /img/travaux-publics/p134-640.webp 640w, /img/travaux-publics/p134-800.webp 800w, /img/travaux-publics/p134-1280.webp 1280w, /img/travaux-publics/p134-1512.webp 1512w" sizes="(max-width:700px) 100vw, (max-width:1280px) 58vw, 723px" alt="Passerelle en bois terminée dans la fagne" width="1512" height="1512" decoding="async"><noscript><img src="/img/travaux-publics/p134-640.webp" srcset="/img/travaux-publics/p134-480.webp 480w, /img/travaux-publics/p134-640.webp 640w, /img/travaux-publics/p134-800.webp 800w, /img/travaux-publics/p134-1280.webp 1280w, /img/travaux-publics/p134-1512.webp 1512w" sizes="(max-width:700px) 100vw, (max-width:1280px) 58vw, 723px" alt="Passerelle en bois terminée dans la fagne" width="1512" height="1512" loading="lazy"></noscript></button></li>
+      <li style="--c:5;--r:4"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p129-480.webp 480w, /img/travaux-publics/p129-640.webp 640w, /img/travaux-publics/p129-800.webp 800w, /img/travaux-publics/p129-1280.webp 1280w, /img/travaux-publics/p129-1800.webp 1800w" aria-label="Agrandir : Le cheminement avant ou pendant les travaux"><img data-src="/img/travaux-publics/p129-640.webp" data-srcset="/img/travaux-publics/p129-480.webp 480w, /img/travaux-publics/p129-640.webp 640w, /img/travaux-publics/p129-800.webp 800w, /img/travaux-publics/p129-1280.webp 1280w, /img/travaux-publics/p129-1800.webp 1800w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Le cheminement avant ou pendant les travaux" width="2048" height="2048" decoding="async"><noscript><img src="/img/travaux-publics/p129-640.webp" srcset="/img/travaux-publics/p129-480.webp 480w, /img/travaux-publics/p129-640.webp 640w, /img/travaux-publics/p129-800.webp 800w, /img/travaux-publics/p129-1280.webp 1280w, /img/travaux-publics/p129-1800.webp 1800w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Le cheminement avant ou pendant les travaux" width="2048" height="2048" loading="lazy"></noscript></button></li>
+      <li style="--c:5;--r:4"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p124-480.webp 480w, /img/travaux-publics/p124-640.webp 640w, /img/travaux-publics/p124-800.webp 800w, /img/travaux-publics/p124-1280.webp 1280w, /img/travaux-publics/p124-1512.webp 1512w" aria-label="Agrandir : Assemblage de la structure en bois"><img data-src="/img/travaux-publics/p124-640.webp" data-srcset="/img/travaux-publics/p124-480.webp 480w, /img/travaux-publics/p124-640.webp 640w, /img/travaux-publics/p124-800.webp 800w, /img/travaux-publics/p124-1280.webp 1280w, /img/travaux-publics/p124-1512.webp 1512w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Assemblage de la structure en bois" width="1512" height="1512" decoding="async"><noscript><img src="/img/travaux-publics/p124-640.webp" srcset="/img/travaux-publics/p124-480.webp 480w, /img/travaux-publics/p124-640.webp 640w, /img/travaux-publics/p124-800.webp 800w, /img/travaux-publics/p124-1280.webp 1280w, /img/travaux-publics/p124-1512.webp 1512w" sizes="(max-width:700px) 50vw, (max-width:1280px) 42vw, 517px" alt="Assemblage de la structure en bois" width="1512" height="1512" loading="lazy"></noscript></button></li>
+    </ul>
+  </div>
+</section>
+<div class="tp-duo">
+<section class="re-chantier" id="chantier-tp3" aria-labelledby="t-chantier-tp3">
+  <div class="wrap">
+    <div class="re-tete"><h2 id="t-chantier-tp3">Plantations et aménagements en voirie</h2><p class="re-nb">3 photos</p></div>
+    <ul class="re-mosaique miroir" data-titre="Plantations et aménagements en voirie">
+      <li class="m2 port" style="--c:6;--r:9"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p227-480.webp 480w, /img/travaux-publics/p227-640.webp 640w, /img/travaux-publics/p227-800.webp 800w, /img/travaux-publics/p227-1280.webp 1280w, /img/travaux-publics/p227-1500.webp 1500w" aria-label="Agrandir : Plantations terminées le long de la voirie"><img data-src="/img/travaux-publics/p227-640.webp" data-srcset="/img/travaux-publics/p227-480.webp 480w, /img/travaux-publics/p227-640.webp 640w, /img/travaux-publics/p227-800.webp 800w, /img/travaux-publics/p227-1280.webp 1280w, /img/travaux-publics/p227-1500.webp 1500w" sizes="(max-width:700px) 100vw, (max-width:1280px) 50vw, 620px" alt="Plantations terminées le long de la voirie" width="1500" height="2000" decoding="async"><noscript><img src="/img/travaux-publics/p227-640.webp" srcset="/img/travaux-publics/p227-480.webp 480w, /img/travaux-publics/p227-640.webp 640w, /img/travaux-publics/p227-800.webp 800w, /img/travaux-publics/p227-1280.webp 1280w, /img/travaux-publics/p227-1500.webp 1500w" sizes="(max-width:700px) 100vw, (max-width:1280px) 50vw, 620px" alt="Plantations terminées le long de la voirie" width="1500" height="2000" loading="lazy"></noscript></button></li>
+      <li style="--c:6;--r:5"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p226-480.webp 480w, /img/travaux-publics/p226-640.webp 640w, /img/travaux-publics/p226-800.webp 800w, /img/travaux-publics/p226-1280.webp 1280w, /img/travaux-publics/p226-1500.webp 1500w" aria-label="Agrandir : Plantation en cours dans une bande paysagère"><img data-src="/img/travaux-publics/p226-640.webp" data-srcset="/img/travaux-publics/p226-480.webp 480w, /img/travaux-publics/p226-640.webp 640w, /img/travaux-publics/p226-800.webp 800w, /img/travaux-publics/p226-1280.webp 1280w, /img/travaux-publics/p226-1500.webp 1500w" sizes="(max-width:700px) 50vw, (max-width:1280px) 50vw, 620px" alt="Plantation en cours dans une bande paysagère" width="1500" height="2000" decoding="async"><noscript><img src="/img/travaux-publics/p226-640.webp" srcset="/img/travaux-publics/p226-480.webp 480w, /img/travaux-publics/p226-640.webp 640w, /img/travaux-publics/p226-800.webp 800w, /img/travaux-publics/p226-1280.webp 1280w, /img/travaux-publics/p226-1500.webp 1500w" sizes="(max-width:700px) 50vw, (max-width:1280px) 50vw, 620px" alt="Plantation en cours dans une bande paysagère" width="1500" height="2000" loading="lazy"></noscript></button></li>
+      <li style="--c:6;--r:4"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p225-480.webp 480w, /img/travaux-publics/p225-640.webp 640w, /img/travaux-publics/p225-800.webp 800w, /img/travaux-publics/p225-1280.webp 1280w, /img/travaux-publics/p225-1500.webp 1500w" aria-label="Agrandir : Préparation et plantation de la bande paysagère"><img data-src="/img/travaux-publics/p225-640.webp" data-srcset="/img/travaux-publics/p225-480.webp 480w, /img/travaux-publics/p225-640.webp 640w, /img/travaux-publics/p225-800.webp 800w, /img/travaux-publics/p225-1280.webp 1280w, /img/travaux-publics/p225-1500.webp 1500w" sizes="(max-width:700px) 50vw, (max-width:1280px) 50vw, 620px" alt="Préparation et plantation de la bande paysagère" width="1500" height="2000" decoding="async"><noscript><img src="/img/travaux-publics/p225-640.webp" srcset="/img/travaux-publics/p225-480.webp 480w, /img/travaux-publics/p225-640.webp 640w, /img/travaux-publics/p225-800.webp 800w, /img/travaux-publics/p225-1280.webp 1280w, /img/travaux-publics/p225-1500.webp 1500w" sizes="(max-width:700px) 50vw, (max-width:1280px) 50vw, 620px" alt="Préparation et plantation de la bande paysagère" width="1500" height="2000" loading="lazy"></noscript></button></li>
+    </ul>
+  </div>
+</section>
+<section class="re-chantier" id="chantier-tp6" aria-labelledby="t-chantier-tp6">
+  <div class="wrap">
+    <div class="re-tete"><h2 id="t-chantier-tp6">Ancienne bâtisse et grande vasque en pierre</h2><p class="re-nb">1 photo</p></div>
+    <ul class="re-mosaique" data-titre="Ancienne bâtisse et grande vasque en pierre">
+      <li class="m2 port" style="--c:12;--r:9"><button class="re-vue" type="button" data-grand="/img/travaux-publics/p002-480.webp 480w, /img/travaux-publics/p002-640.webp 640w" aria-label="Agrandir : Grande vasque en pierre plantée devant une bâtisse en briques"><img data-src="/img/travaux-publics/p002-640.webp" data-srcset="/img/travaux-publics/p002-480.webp 480w, /img/travaux-publics/p002-640.webp 640w" sizes="(max-width:700px) 100vw, (max-width:1280px) 100vw, 1240px" alt="Grande vasque en pierre plantée devant une bâtisse en briques" width="640" height="1316" decoding="async"><noscript><img src="/img/travaux-publics/p002-640.webp" srcset="/img/travaux-publics/p002-480.webp 480w, /img/travaux-publics/p002-640.webp 640w" sizes="(max-width:700px) 100vw, (max-width:1280px) 100vw, 1240px" alt="Grande vasque en pierre plantée devant une bâtisse en briques" width="640" height="1316" loading="lazy"></noscript></button></li>
+    </ul>
+  </div>
+</section>
+</div>
+</div>
+<section class="re-cta" aria-labelledby="t-cta">
+  <div class="wrap"><h2 id="t-cta">Un projet d'aménagement collectif ou de voirie ?</h2><a class="btn btn-plein" href="/a-propos-contact#devis">Demander un devis</a></div>
+</section>
+</main>
+
+<dialog class="re-vis" id="visionneuse" aria-label="Photo agrandie">
+  <figure><img id="v-img" alt=""><figcaption id="v-leg"></figcaption></figure>
+  <button class="v-fermer" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="v-prec" type="button" aria-label="Photo précédente du chantier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="v-suiv" type="button" aria-label="Photo suivante du chantier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-marque"><img src="/img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège</div></div>
+    <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
+  </div>
+  <a class="appel-mobile" href="tel:+32479184282"><span aria-hidden="true">📞 </span>Appeler Arno</a>
+</footer>
+
+<script>
+  // Bouton fixe « Appeler Arno » : masqué tant que le bandeau est à l'écran
+  const appel = document.querySelector('.appel-mobile');
+  const bandeau = document.querySelector('.tp-hero');
+  if ('IntersectionObserver' in window && appel && bandeau) {
+    new IntersectionObserver(([e]) => {
+      appel.classList.toggle('cache', e.isIntersecting);
+      appel.setAttribute('aria-hidden', String(e.isIntersecting));
+      appel.tabIndex = e.isIntersecting ? -1 : 0;
+    }).observe(bandeau);
+  }
+
+  // Navigation mobile (sous 900 px)
+  const entete = document.querySelector('header');
+  const boutonMenu = document.querySelector('.menu-bouton');
+  const liensMenu = [...document.querySelectorAll('#menu a')];
+  function basculerMenu(ouvrir, rendreFocus) {
+    entete.classList.toggle('menu-ouvert', ouvrir);
+    boutonMenu.setAttribute('aria-expanded', String(ouvrir));
+    if (ouvrir) liensMenu[0].focus();
+    else if (rendreFocus) boutonMenu.focus();
+  }
+  boutonMenu.addEventListener('click', () => basculerMenu(boutonMenu.getAttribute('aria-expanded') !== 'true'));
+  liensMenu.forEach(a => a.addEventListener('click', () => basculerMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && entete.classList.contains('menu-ouvert')) basculerMenu(false, true);
+  });
+  document.addEventListener('click', e => {
+    if (entete.classList.contains('menu-ouvert') && !entete.contains(e.target)) basculerMenu(false);
+  });
+  // Fermer le menu si on quitte le menu au clavier (Tab après le dernier lien)
+  entete.addEventListener('focusout', e => {
+    if (entete.classList.contains('menu-ouvert') && e.relatedTarget && !entete.contains(e.relatedTarget)) basculerMenu(false);
+  });
+  matchMedia('(min-width:901px)').addEventListener('change', e => { if (e.matches) basculerMenu(false); });
+
+
+  // Chargement différé : chaque photo n'est téléchargée qu'à l'approche de l'écran (marge de 500 px)
+  const differees = document.querySelectorAll('.re-vue img[data-srcset]');
+  const charger = im => { im.srcset = im.dataset.srcset; im.src = im.dataset.src; im.removeAttribute('data-srcset'); };
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { charger(e.target); io.unobserve(e.target); } }), { rootMargin: '500px 0px' });
+    differees.forEach(im => io.observe(im));
+  } else differees.forEach(charger);
+  // Visionneuse : navigation à l'intérieur de chaque chantier
+  const vis = document.getElementById('visionneuse'), vImg = document.getElementById('v-img'), vLeg = document.getElementById('v-leg');
+  let liste = [], pos = 0, origine = null;
+  function afficher(i) {
+    pos = (i + liste.length) % liste.length;
+    const b = liste[pos], im = b.querySelector('img'), m = b.closest('.re-mosaique');
+    vImg.srcset = b.dataset.grand; vImg.sizes = '100vw'; vImg.src = im.currentSrc || im.src; vImg.alt = im.alt;
+    vLeg.innerHTML = '<b>' + m.dataset.titre + '</b> — ' + im.alt + ' <span>(' + (pos + 1) + ' / ' + liste.length + ')</span>';
+    const unique = liste.length < 2;
+    vis.querySelector('.v-prec').hidden = unique; vis.querySelector('.v-suiv').hidden = unique;
+    [pos + 1, pos - 1].forEach(j => { const s = liste[(j + liste.length) % liste.length]; const p = new Image(); p.sizes = '100vw'; p.srcset = s.dataset.grand; });
+  }
+  document.querySelectorAll('.re-vue').forEach(b => b.addEventListener('click', () => {
+    liste = [...b.closest('.re-mosaique').querySelectorAll('.re-vue')]; origine = b;
+    afficher(liste.indexOf(b)); vis.showModal();
+  }));
+  vis.querySelector('.v-fermer').onclick = () => vis.close();
+  vis.querySelector('.v-prec').onclick = () => afficher(pos - 1);
+  vis.querySelector('.v-suiv').onclick = () => afficher(pos + 1);
+  vis.addEventListener('close', () => { if (origine) origine.focus(); });
+  vis.addEventListener('click', e => { if (e.target === vis || e.target.tagName === 'FIGURE') vis.close(); });
+  vis.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') afficher(pos - 1);
+    if (e.key === 'ArrowRight') afficher(pos + 1);
+  });
+  let x0 = null;
+  vImg.addEventListener('pointerdown', e => { x0 = e.clientX; });
+  vImg.addEventListener('pointerup', e => { if (x0 === null) return; const d = e.clientX - x0; x0 = null; if (Math.abs(d) > 40) afficher(pos + (d < 0 ? 1 : -1)); });
+</script>
+</body>
+</html>

@@ -436,6 +436,11 @@
     .zone-clients{border-radius:16px}
     .cta-entete{display:none}
   }
+
+  /* En-tête : menu définitif à cinq onglets, sans retour à la ligne (même réglage que les autres pages) */
+  .nav ul a,.logo small,.logo span{white-space:nowrap}
+  @media (min-width:1001px){.nav ul{gap:1.5rem}}
+  @media (min-width:1001px) and (max-width:1280px){.nav ul{gap:1rem}.nav ul a{font-size:.9rem}.logo{font-size:1.25rem}.logo small{font-size:.82rem}.logo img{height:42px}.cta-entete{padding:0 .9rem;font-size:.92rem}}
 </style>
 </head>
 <body>
@@ -447,15 +452,15 @@
     <a href="#contenu" class="logo"><img src="img/monogramme-80.webp" alt="" width="46" height="54"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
     <nav class="menu" id="menu" aria-label="Navigation principale">
       <ul>
-        <li><a href="#contenu">Accueil</a></li>
-        <li><a href="#services">Nos savoir-faire</a></li>
-        <li><a href="#realisations">Réalisations</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/" aria-current="page">Accueil</a></li>
+        <li><a href="/savoir-faire">Nos savoir-faire</a></li>
+        <li><a href="/realisations">Réalisations</a></li>
+        <li><a href="/a-propos-contact">À propos &amp; Contact</a></li>
+        <li><a href="/travaux-publics">Travaux publics</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
-      <a class="cta-entete" href="#contact">Demander un devis</a>
+      <a class="cta-entete" href="/a-propos-contact#devis">Demander un devis</a>
       <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span>Menu</button>
     </div>
   </div>
@@ -475,7 +480,7 @@
       <span class="ac-barre" aria-hidden="true"></span>
       <p>Du jardin privé aux aménagements plus techniques, nous réalisons vos projets avec professionnalisme et passion.</p>
       <div class="boutons">
-        <a href="#contact" class="btn btn-plein">Demander un devis</a>
+        <a href="/a-propos-contact#devis" class="btn btn-plein">Demander un devis</a>
         <a href="tel:+32479184282" class="btn btn-contour">Appeler Arno</a>
       </div>
     </div>

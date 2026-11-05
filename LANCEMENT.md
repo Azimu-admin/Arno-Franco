@@ -12,22 +12,22 @@ contient des informations provisoires. Fichier interne (non publié).
 - [ ] Domaine arnofranco.be relié dans Vercel (Settings → Domains)
 - [ ] Plan Vercel adapté à un usage commercial
 
-- [ ] Aucun lien vers une page 404 : les 10 cartes de `/savoir-faire` doivent mener à des pages existantes
-- [ ] `/a-propos-contact` intégrée (cible du menu et de « Demander un devis » sur `/realisations`)
-- [ ] Menu des cinq onglets définitifs harmonisé sur toutes les pages
+- [ ] Aucun lien vers une page 404 (contrôle : explorer le site depuis `/`) ; décider la cible définitive des cartes de `/savoir-faire`
+  (provisoirement `/realisations` et `/travaux-publics`)
+- [x] `/a-propos-contact` intégrée ; menu des cinq onglets harmonisé (branche `feat/integration-site`)
 
 ## 2. Remplacer l'adresse provisoire par le domaine
 Remplacer `https://arno-franco.vercel.app` par `https://arnofranco.be` dans :
 - `public/index.html` : `<link rel="canonical">`, balises `og:url` et `og:image`, bloc JSON-LD (`url`, `logo`, `image`)
 - `public/sitemap.xml` : toutes les balises `<loc>`
-- `public/savoir-faire/*.html` et `public/realisations.html` : `<link rel="canonical">`
+- `public/savoir-faire/*.html`, `public/realisations.html`, `public/a-propos-contact.html`, `public/travaux-publics.html` : `<link rel="canonical">`
 
 Contrôle : `grep -rn "vercel.app" public/` ne doit plus rien renvoyer.
 
 ## 3. Réactiver l'indexation (les 3 éléments, dans le même commit)
 1. **Balises meta** : supprimer le commentaire « PRÉ-LANCEMENT » et la ligne
    `<meta name="robots" content="noindex">` dans `public/index.html`, `public/mentions-legales.html`, `public/vie-privee.html`
-   `public/realisations.html` et toutes les pages de `public/savoir-faire/`.
+   `public/realisations.html`, `public/a-propos-contact.html`, `public/travaux-publics.html` et toutes les pages de `public/savoir-faire/`.
    ⚠️ Ne PAS la retirer de `public/404.html` (la page d'erreur doit rester non indexée).
 2. **En-tête HTTP** : dans `vercel.json`, supprimer uniquement l'entrée `"source": "/(.*)"` qui ajoute `X-Robots-Tag: noindex`
    (garder l'entrée `/fonts/(.*)` qui gère le cache des polices).
