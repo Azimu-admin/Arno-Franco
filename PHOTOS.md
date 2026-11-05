@@ -37,7 +37,7 @@ Retouche douce identique (réglages par défaut, aucun masquage nécessaire). Fi
 
 Section « Chantier » : aucune chronologie publiée tant qu'Arno ne l'a pas confirmée.
 
-## Page « Nos savoir-faire » (`/savoir-faire`, en cours de validation)
+## Page « Nos savoir-faire » (`/savoir-faire`, maquette validée le 05/11/2026)
 Retouche douce identique (P137 : numéro de maison flouté, chaleur +5 %, gamma 0,92). Fichiers dans `public/img/savoir-faire/`.
 Cartes : carré 1:1 (`-400`, `-640`, ordinateur et tablette) et 16:10 (`-m480`, `-m720`, téléphone).
 | Emplacement | Source | Fichiers | Remarque |
