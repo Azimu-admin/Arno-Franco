@@ -40,5 +40,6 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Projet Vercel : arno-franco (compte AZM, plan Hobby)
 - Adresse de production stable : https://arno-franco.vercel.app
 - Déploiement automatique vérifié le 05/11/2026 (commit d820b8c déployé)
-- À faire : relier arnofranco.be · passer au plan Pro ou changer d'hébergeur
-  (le plan Hobby de Vercel est réservé à un usage non commercial)
+- Décision (05/11/2026) : on reste sur Vercel.
+- À faire : relier arnofranco.be · prévoir le plan Pro pour l'usage professionnel
+  (le plan Hobby est réservé à un usage non commercial)
