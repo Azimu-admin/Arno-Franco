@@ -10,13 +10,23 @@
 - LinkedIn : https://www.linkedin.com/in/arno-franco-606a30115/
 - Domaine visé : arnofranco.be (aucun site existant trouvé)
 
-## Services (confirmés le 05/11/2026)
-Création de jardins · Entretien de jardins et d'espaces verts (particuliers et professionnels) ·
-Élagage · Abattage d'arbres dangereux · Terrassement · Terrasses et allées · Pierre naturelle ·
-Clôtures · Espaces piscine
-- Non confirmé, retiré du site le 05/11/2026 : intervention pour les professionnels (entreprises, copropriétés),
-  contrats d'entretien réguliers, devis gratuit, liste des communes desservies.
-- À demander à Arno : évacuation des déchets verts, broyage, dessouchage, pose de gazon, arrosage automatique ?
+## Activités (10 familles, toutes confirmées le 05/11/2026)
+1. **Création et aménagement de jardins** : création de jardins ; aménagement de jardins et d'espaces extérieurs ;
+   fourniture et plantation d'arbres et d'arbustes ; fourniture et pose de gazon en rouleaux ; réalisation de plans d'eau
+2. **Entretien de jardins et d'espaces verts** : entretien ponctuel ou sous contrat ; pour particuliers, entreprises et copropriétés
+3. **Travaux arboricoles** : élagage ; abattage d'arbres, y compris dangereux ; évacuation des chutes d'arbres ; fraisage de souches
+4. **Terrassement et travaux de sol** : terrassement ; préparation de terrains ; pose de citernes ; terrassements liés aux aménagements
+5. **Piscines et aménagements aquatiques** : réalisation et construction complète de piscines ; aménagement des abords ; plans d'eau
+6. **Terrasses, allées et pierre naturelle** : terrasses (dont terrasses Horeca) ; allées ; travaux et aménagements en pierre naturelle
+7. **Portails et clôtures** : pose de clôtures (fourniture à confirmer) ; pose de portails ; délimitation d'espaces extérieurs
+8. **Terrains de sport et aires de jeux** : pétanque ; tennis ; terrains de jeux ; fourniture et installation de plaines de jeux ; espaces de loisirs
+9. **Aménagements professionnels et travaux publics** : espaces publics ; travaux publics ; espaces extérieurs d'entreprises ;
+   espaces verts de copropriétés ; terrasses pour établissements Horeca
+10. **Aménagements intérieurs** : travaux d'aménagement intérieur
+
+- Encore à confirmer : la **fourniture** des clôtures (point 7) ; l'**égouttage** (écrit sur la camionnette, absent de la liste).
+- Toujours non confirmés : devis gratuit, liste des communes desservies, horaires.
+- Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
 
 ## Logo (fourni le 05/11/2026)
 - Source : logo-source/Arno_franco_Logo_final_10x10.pdf (Illustrator, 10 x 10 cm, vectoriel)
