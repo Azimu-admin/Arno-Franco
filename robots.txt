@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arno-franco.vercel.app/sitemap.xml

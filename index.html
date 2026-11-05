@@ -5,6 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arno Franco – Aménagement de jardins à Theux</title>
 <meta name="description" content="Arno Franco – Naturellement Professionnel. Création et entretien de jardins, abattage d'arbres, terrassement, pierre naturelle, clôtures et espaces piscine à Theux, La Reid et environs.">
+<!-- Adresse du site : remplacer arno-franco.vercel.app par arnofranco.be une fois le domaine relié -->
+<link rel="canonical" href="https://arno-franco.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:site_name" content="Arno Franco – Naturellement Professionnel">
+<meta property="og:title" content="Arno Franco – Aménagement et entretien de jardins à Theux">
+<meta property="og:description" content="Création et entretien de jardins, abattage d'arbres, terrassement, pierre naturelle, clôtures et espaces piscine à Theux, La Reid et environs.">
+<meta property="og:url" content="https://arno-franco.vercel.app/">
+<meta property="og:image" content="https://arno-franco.vercel.app/img/logo-arno-franco.png">
+<meta name="theme-color" content="#153e35">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Arno Franco – Naturellement Professionnel",
+  "description": "Aménagement et entretien de jardins : création, entretien, abattage d'arbres dangereux, terrassement, pierre naturelle, clôtures, espaces piscine.",
+  "url": "https://arno-franco.vercel.app/",
+  "logo": "https://arno-franco.vercel.app/img/logo-arno-franco.png",
+  "image": "https://arno-franco.vercel.app/img/logo-arno-franco.png",
+  "telephone": "+32479184282",
+  "email": "info@arnofranco.be",
+  "founder": {"@type": "Person", "name": "Arno Franco"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Theux", "addressRegion": "Liège", "addressCountry": "BE"},
+  "areaServed": "Province de Liège",
+  "sameAs": [
+    "https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/",
+    "https://www.linkedin.com/in/arno-franco-606a30115/"
+  ]
+}
+</script>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +68,24 @@
   .photo::before{content:"";position:absolute;inset:0;background:
      radial-gradient(circle at 20% 30%,rgba(255,255,255,.12) 0 18%,transparent 19%),
      radial-gradient(circle at 75% 65%,rgba(255,255,255,.08) 0 25%,transparent 26%)}
-  .photo span{position:relative;font-size:.8rem;padding:.6rem .9rem;background:rgba(0,0,0,.35);border-top-right-radius:10px}
+  .photo span{position:relative;z-index:1;font-size:.8rem;padding:.6rem .9rem;background:rgba(0,0,0,.35);border-top-right-radius:10px}
+  /* Quand une vraie photo est ajoutée : <div class="photo"><img src="..." alt="..."><span>légende</span></div> */
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .galerie .photo{cursor:zoom-in}
+  .visionneuse{position:fixed;inset:0;z-index:50;background:rgba(10,25,20,.92);display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px}
+  .visionneuse.ouverte{display:flex}
+  #v-contenu{width:min(1100px,100%);display:flex;justify-content:center}
+  .visionneuse img{max-width:min(1100px,100%);max-height:80vh;border-radius:10px}
+  .visionneuse p{color:#fff;font-size:.95rem}
+  .visionneuse .zone-vide{width:min(700px,100%);aspect-ratio:4/3;border-radius:10px;background:linear-gradient(135deg,#609e4b,#2c6a4a 55%,#153e35);display:grid;place-items:center;color:#fff}
+  .visionneuse button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+  .visionneuse button:hover{background:rgba(255,255,255,.25)}
+  .v-fermer{top:16px;right:16px}.v-prec{left:16px;top:50%}.v-suiv{right:16px;top:50%}
+  .consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;color:var(--gris)}
+  .consent input{width:auto;margin-top:.3rem}
+  .pot{position:absolute;left:-9999px}
+  .form-statut{font-size:.92rem;font-weight:600}
+  .form-statut.ok{color:var(--vert)}.form-statut.erreur{color:#a33}
 
   /* En-tête */
   header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e1e6dc}
@@ -290,18 +337,23 @@
       </div>
       <p style="margin-top:1.2rem;font-size:.92rem;opacity:.85">Horaires : <span class="a-completer" style="color:var(--encre)">à compléter</span></p>
     </div>
-    <form id="form-devis">
-      <div><label for="nom">Nom</label><input id="nom" required></div>
-      <div><label for="tel">Téléphone</label><input id="tel" type="tel" required></div>
-      <div><label for="commune">Commune</label><input id="commune"></div>
-      <div><label for="service">Service</label>
-        <select id="service">
+    <!-- Formspree : mettre l'identifiant du formulaire dans data-formspree (ex. data-formspree="xyzabcd").
+         Tant qu'il est vide, l'envoi ouvre un e-mail prérempli. -->
+    <form id="form-devis" data-formspree="" novalidate>
+      <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+      <div><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" autocomplete="tel" required></div>
+      <div><label for="email">E-mail <span style="font-weight:400;color:var(--gris)">(facultatif)</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div><label for="commune">Commune</label><input id="commune" name="commune" autocomplete="address-level2"></div>
+      <div class="plein"><label for="service">Service</label>
+        <select id="service" name="service">
           <option>Création de jardin</option><option>Entretien</option><option>Abattage d'arbre</option>
           <option>Terrassement</option><option>Pierre naturelle</option><option>Clôture</option><option>Espace piscine</option><option>Autre</option>
         </select></div>
-      <div class="plein"><label for="msg">Votre projet</label><textarea id="msg" placeholder="Surface, type de travaux, délai souhaité…"></textarea></div>
-      <p class="plein rgpd">Vos données servent uniquement à répondre à votre demande.</p>
+      <div class="plein"><label for="msg">Votre projet</label><textarea id="msg" name="message" placeholder="Surface, type de travaux, délai souhaité…"></textarea></div>
+      <input class="pot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="plein consent"><input type="checkbox" id="consent" required> <span>J'accepte que mes données soient utilisées pour répondre à ma demande (<a href="/vie-privee">vie privée</a>).</span></label>
       <div class="plein"><button class="btn btn-plein" type="submit">Envoyer ma demande</button></div>
+      <p class="plein form-statut" id="form-statut" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -309,9 +361,17 @@
 <footer>
   <div class="wrap">
     <div class="footer-marque"><img src="img/logo-arno-franco.png" alt="Logo Arno Franco – Naturellement Professionnel"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège<br>N° d'entreprise : <span class="a-completer" style="color:var(--encre)">BE 0xxx.xxx.xxx</span></div></div>
-    <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="#">Mentions légales</a> · <a href="#">Vie privée</a></div>
+    <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
 </footer>
+
+<div class="visionneuse" id="visionneuse" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+  <button class="v-fermer" aria-label="Fermer">✕</button>
+  <button class="v-prec" aria-label="Photo précédente">‹</button>
+  <div id="v-contenu"></div>
+  <p id="v-legende"></p>
+  <button class="v-suiv" aria-label="Photo suivante">›</button>
+</div>
 
 <a class="appel-mobile" href="tel:+32479184282">📞 Appeler Arno</a>
 
@@ -324,12 +384,60 @@
       p.style.display = (b.dataset.f === 'tout' || p.dataset.c === b.dataset.f) ? '' : 'none';
     });
   });
-  // Formulaire : en attendant un vrai service d'envoi, ouvre un e-mail prérempli
-  document.getElementById('form-devis').addEventListener('submit', e => {
+  // Visionneuse de la galerie
+  const vis = document.getElementById('visionneuse');
+  let courant = 0;
+  const visibles = () => [...document.querySelectorAll('#galerie .photo')].filter(p => p.style.display !== 'none');
+  function montrer(i) {
+    const liste = visibles(); if (!liste.length) return;
+    courant = (i + liste.length) % liste.length;
+    const p = liste[courant], img = p.querySelector('img'), leg = p.querySelector('span');
+    const zone = document.getElementById('v-contenu');
+    zone.innerHTML = '';
+    if (img) { const g = document.createElement('img'); g.src = img.src; g.alt = img.alt; zone.appendChild(g); }
+    else { const d = document.createElement('div'); d.className = 'zone-vide'; d.textContent = 'Photo à venir'; zone.appendChild(d); }
+    document.getElementById('v-legende').textContent = leg ? leg.textContent : '';
+    vis.classList.add('ouverte');
+  }
+  const fermer = () => vis.classList.remove('ouverte');
+  document.getElementById('galerie').addEventListener('click', e => {
+    const p = e.target.closest('.photo'); if (p) montrer(visibles().indexOf(p));
+  });
+  vis.querySelector('.v-fermer').onclick = fermer;
+  vis.querySelector('.v-prec').onclick = () => montrer(courant - 1);
+  vis.querySelector('.v-suiv').onclick = () => montrer(courant + 1);
+  vis.addEventListener('click', e => { if (e.target === vis) fermer(); });
+  document.addEventListener('keydown', e => {
+    if (!vis.classList.contains('ouverte')) return;
+    if (e.key === 'Escape') fermer();
+    if (e.key === 'ArrowLeft') montrer(courant - 1);
+    if (e.key === 'ArrowRight') montrer(courant + 1);
+  });
+
+  // Formulaire de devis : Formspree si configuré, sinon e-mail prérempli
+  const form = document.getElementById('form-devis');
+  const statut = document.getElementById('form-statut');
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const v = id => document.getElementById(id).value;
-    const corps = `Nom : ${v('nom')}\nTéléphone : ${v('tel')}\nCommune : ${v('commune')}\nService : ${v('service')}\n\n${v('msg')}`;
-    location.href = `mailto:info@arnofranco.be?subject=${encodeURIComponent('Demande de devis – ' + v('service'))}&body=${encodeURIComponent(corps)}`;
+    statut.className = 'plein form-statut';
+    const v = id => document.getElementById(id).value.trim();
+    if (!v('nom') || !v('tel')) { statut.textContent = 'Merci d\'indiquer votre nom et votre téléphone.'; statut.classList.add('erreur'); return; }
+    if (!document.getElementById('consent').checked) { statut.textContent = 'Merci de cocher la case d\'accord.'; statut.classList.add('erreur'); return; }
+    const id = form.dataset.formspree;
+    if (!id) {
+      const corps = `Nom : ${v('nom')}\nTéléphone : ${v('tel')}\nE-mail : ${v('email')}\nCommune : ${v('commune')}\nService : ${v('service')}\n\n${v('msg')}`;
+      location.href = `mailto:info@arnofranco.be?subject=${encodeURIComponent('Demande de devis – ' + v('service'))}&body=${encodeURIComponent(corps)}`;
+      return;
+    }
+    const bouton = form.querySelector('button[type=submit]');
+    bouton.disabled = true; statut.textContent = 'Envoi en cours…';
+    try {
+      const r = await fetch('https://formspree.io/f/' + id, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (!r.ok) throw new Error(r.status);
+      form.reset(); statut.textContent = 'Merci ! Votre demande est bien envoyée, Arno vous recontacte rapidement.'; statut.classList.add('ok');
+    } catch {
+      statut.innerHTML = 'L\'envoi n\'a pas fonctionné. Appelez le <a href="tel:+32479184282">0479 18 42 82</a> ou écrivez à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>.'; statut.classList.add('erreur');
+    } finally { bouton.disabled = false; }
   });
 </script>
 </body>

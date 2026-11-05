@@ -33,7 +33,22 @@ Photos de chantiers (originaux, avant/après) · texte de présentation · horai
 zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
 
 ## Fichiers
-- index.html : maquette une page (zones jaunes = à compléter)
+- index.html : le site, une page (zones jaunes = à compléter)
+- mentions-legales.html, vie-privee.html : pages légales (BCE, TVA, adresse, forme juridique à compléter)
+- 404.html : page introuvable
+- vercel.json (adresses sans .html), robots.txt, sitemap.xml
+- Les adresses https://arno-franco.vercel.app sont à remplacer par https://arnofranco.be une fois le domaine relié
+  (index.html : canonical, og:*, JSON-LD ; robots.txt ; sitemap.xml)
+
+## Formulaire de devis
+- Prêt pour Formspree : mettre l'identifiant dans `data-formspree="..."` sur `<form id="form-devis">`.
+- Tant qu'il est vide, l'envoi ouvre un e-mail prérempli vers info@arnofranco.be.
+
+## Ajouter une photo de réalisation
+1. Mettre le fichier dans `img/realisations/` (JPG, ~1600 px de large, < 400 Ko).
+2. Dans la galerie de index.html, remplacer un cadre par :
+   `<div class="photo" data-c="jardin"><img src="img/realisations/xxx.jpg" alt="description" loading="lazy"><span>Légende – commune</span></div>`
+   (data-c : jardin, pierre, abattage, cloture, piscine)
 
 ## Hébergement
 - Vercel, relié au dépôt GitHub Azimu-admin/Arno-Franco (branche main : chaque push redéploie)
