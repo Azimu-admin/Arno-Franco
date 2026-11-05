@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arno Franco – Aménagement de jardins à Theux</title>
+<meta name="description" content="Arno Franco – Naturellement Professionnel. Création et entretien de jardins, abattage d'arbres, terrassement, pierre naturelle, clôtures et espaces piscine à Theux, La Reid et environs.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Couleurs du logo : #153e35 (foncé), #609e4b (moyen), #b8eea4 (clair) */
+    --vert:#3f7a32; --vert-fonce:#153e35; --vert-moyen:#1f4f43; --mousse:#609e4b; --clair:#b8eea4; --pierre:#ece6da;
+    --sable:#f6f7f2; --encre:#16231f; --gris:#56625d; --blanc:#fff; --note:#c8873a;
+    --rayon:14px; --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.6;font-size:17px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:700}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:84px 0}
+  .surtitre{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--mousse);margin-bottom:.5rem}
+  .intro{color:var(--gris);max-width:640px;margin-bottom:2.5rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;transition:.2s;cursor:pointer;font-size:1rem}
+  .btn-plein{background:var(--clair);color:var(--vert-fonce)}
+  .btn-plein:hover{background:#a3df8c}
+  .btn-contour{border-color:#fff;color:#fff}
+  .btn-contour:hover{background:#fff;color:var(--vert-fonce)}
+
+  /* Placeholder photo : à remplacer par les vraies photos d'Arno */
+  .photo{position:relative;background:linear-gradient(135deg,#609e4b,#2c6a4a 55%,#153e35);border-radius:var(--rayon);overflow:hidden;display:flex;align-items:flex-end;color:#fff}
+  .photo::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(circle at 20% 30%,rgba(255,255,255,.12) 0 18%,transparent 19%),
+     radial-gradient(circle at 75% 65%,rgba(255,255,255,.08) 0 25%,transparent 26%)}
+  .photo span{position:relative;font-size:.8rem;padding:.6rem .9rem;background:rgba(0,0,0,.35);border-top-right-radius:10px}
+
+  /* En-tête */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e1e6dc}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:.65rem;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;line-height:1.1;text-decoration:none;color:var(--vert-fonce)}
+  .logo img{height:46px;width:auto}
+  .logo small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse)}
+  .nav ul{display:flex;gap:1.8rem;list-style:none}
+  .nav ul a{text-decoration:none;font-weight:500;font-size:.95rem}
+  .nav ul a:hover{color:var(--vert)}
+  .tel-nav{background:var(--vert-fonce);color:#fff;padding:.55rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
+
+  /* Hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;padding:0;color:#fff;background:linear-gradient(120deg,rgba(21,62,53,.92),rgba(21,62,53,.5)),linear-gradient(135deg,#609e4b,#2c6a4a 50%,#153e35)}
+  .hero .wrap{padding-top:60px;padding-bottom:60px}
+  .hero h1{font-size:clamp(2.3rem,6vw,4.2rem);max-width:780px;margin:.4rem 0 1.2rem}
+  .hero p{font-size:1.15rem;max-width:560px;opacity:.92;margin-bottom:2rem}
+  .hero .surtitre{color:var(--clair)}
+  .boutons{display:flex;flex-wrap:wrap;gap:1rem}
+  .hero-note{position:absolute;right:20px;bottom:20px;font-size:.75rem;opacity:.7}
+
+  /* Atouts */
+  .atouts{background:var(--vert-fonce);color:#fff;padding:36px 0}
+  .atouts .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .atouts strong{display:block;font-family:Fraunces,serif;font-size:1.15rem}
+  .atouts span{opacity:.8;font-size:.92rem}
+
+  /* Services */
+  .services-grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+  .carte{background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 2px 0 #e3ddd0;transition:.25s;display:flex;flex-direction:column}
+  .carte:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,63,39,.12)}
+  .carte .photo{height:180px;border-radius:0}
+  .carte div.txt{padding:22px 24px 26px}
+  .carte h3{font-size:1.3rem;margin-bottom:.4rem;color:var(--vert-fonce)}
+  .carte p{color:var(--gris);font-size:.96rem}
+
+  /* Réalisations */
+  #realisations{background:var(--pierre)}
+  .filtres{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+  .filtres button{border:1px solid #cfc6b4;background:transparent;padding:.45rem 1rem;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer}
+  .filtres button.actif{background:var(--vert);color:#fff;border-color:var(--vert)}
+  .galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .galerie .photo{aspect-ratio:4/3}
+  .galerie .photo.haut{grid-row:span 2;aspect-ratio:auto}
+
+  /* À propos */
+  .apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+  .apropos .photo{aspect-ratio:4/5}
+  .apropos p{margin-bottom:1rem;color:#3b443c}
+  .signature{font-family:Fraunces,serif;font-size:1.3rem;color:var(--vert)}
+  .a-completer{color:var(--encre);background:#fff4d6;border-left:3px solid var(--note);padding:.15rem .4rem;font-size:.92em}
+
+  /* Méthode */
+  #methode{background:#fff}
+  .etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+  .etape{position:relative;padding-top:56px}
+  .etape::before{counter-increment:e;content:counter(e);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--pierre);color:var(--vert-fonce);font-family:Fraunces,serif;font-weight:700;display:grid;place-items:center;font-size:1.2rem}
+  .etape h3{font-size:1.15rem;margin-bottom:.3rem}
+  .etape p{color:var(--gris);font-size:.95rem}
+
+  /* Avis */
+  .avis-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .avis{background:#fff;border:2px dashed #cfc6b4;border-radius:var(--rayon);padding:26px;color:var(--gris);font-size:.95rem}
+  .avis .etoiles{color:var(--mousse);letter-spacing:.1em;margin-bottom:.6rem}
+
+  /* Zone */
+  .zone{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+  .zone li{list-style:none;background:#fff;border-radius:999px;padding:.4rem 1rem;font-size:.92rem;border:1px solid #e3ddd0}
+
+  /* Contact */
+  #contact{background:var(--vert-moyen);color:#fff}
+  #contact .intro{color:#d3e9cc}
+  .contact-grille{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+  .coord a{display:flex;gap:.8rem;align-items:center;text-decoration:none;font-size:1.1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .coord a:hover{color:var(--clair)}
+  .coord .ico{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex-shrink:0}
+  form{background:#fff;color:var(--encre);border-radius:var(--rayon);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .plein{grid-column:1/-1}
+  label{font-size:.85rem;font-weight:600;display:block;margin-bottom:.25rem}
+  input,select,textarea{width:100%;padding:.75rem .9rem;border:1px solid #d6d0c3;border-radius:10px;font:inherit;font-size:.95rem;background:var(--sable)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--mousse);border-color:transparent}
+  textarea{min-height:120px;resize:vertical}
+  .rgpd{font-size:.78rem;color:var(--gris)}
+
+  footer{background:var(--vert-fonce);color:#c9d6c0;padding:40px 0;font-size:.88rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+  .footer-marque{display:flex;align-items:center;gap:18px}
+  .footer-marque img{width:96px;background:#fff;border-radius:12px;padding:8px}
+  footer a{color:#fff}
+
+  /* Bouton d'appel mobile */
+  .appel-mobile{display:none}
+
+  @media (max-width:900px){
+    .nav ul{display:none}
+    .atouts .grille,.etapes{grid-template-columns:1fr 1fr}
+    .galerie{grid-template-columns:1fr 1fr}
+    .apropos,.contact-grille{grid-template-columns:1fr;gap:32px}
+    .avis-grille{grid-template-columns:1fr}
+    section{padding:64px 0}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .services-grille{grid-template-columns:1fr}
+    .atouts .grille,.etapes{grid-template-columns:1fr}
+    form{grid-template-columns:1fr;padding:22px}
+    .tel-nav{display:none}
+    .appel-mobile{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;background:var(--clair);color:var(--vert-fonce);text-decoration:none;font-weight:700;padding:1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    footer{padding-bottom:90px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><img src="img/monogramme.png" alt="" width="40" height="46"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="tel-nav" href="tel:+32479184282">📞 0479 18 42 82</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="surtitre">Theux · La Reid · Province de Liège</p>
+    <h1>Votre jardin, aménagé et entretenu avec soin.</h1>
+    <p>Création, entretien, abattage, terrassement, pierre naturelle, clôtures et abords de piscine : un seul interlocuteur pour tout votre extérieur.</p>
+    <div class="boutons">
+      <a href="#contact" class="btn btn-plein">Demander un devis</a>
+      <a href="tel:+32479184282" class="btn btn-contour">Appeler Arno</a>
+    </div>
+  </div>
+  <span class="hero-note">[Grande photo d'une réalisation à placer ici]</span>
+</section>
+
+<div class="atouts">
+  <div class="wrap grille">
+    <div><strong>Artisan local</strong><span>Basé à Theux / La Reid</span></div>
+    <div><strong>Un seul interlocuteur</strong><span>Du premier contact à la fin du chantier</span></div>
+    <div><strong>Tous travaux extérieurs</strong><span>Du jardin à la clôture</span></div>
+    <div><strong>Devis sur place</strong><span class="a-completer">gratuit ? à confirmer</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="surtitre">Services</p>
+    <h2>Ce que je fais pour votre extérieur</h2>
+    <p class="intro">Que ce soit pour créer un nouveau jardin, l'entretenir au fil des saisons ou réaliser des travaux plus lourds, chaque chantier est mené de bout en bout avec le même soin.</p>
+    <div class="services-grille">
+      <article class="carte"><div class="photo"><span>Photo : création de jardin</span></div><div class="txt"><h3>Création de jardins</h3><p>Conception et aménagement complet : plantations, pelouses, massifs et allées, pensés selon votre terrain et vos envies.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : entretien</span></div><div class="txt"><h3>Entretien de jardins</h3><p>Tonte, taille des haies et arbustes, désherbage, nettoyage de saison. Ponctuel ou régulier.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : abattage</span></div><div class="txt"><h3>Abattage d'arbres dangereux</h3><p>Abattage et démontage d'arbres qui menacent votre maison, une route ou une ligne, en toute sécurité.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : terrassement</span></div><div class="txt"><h3>Terrassement</h3><p>Préparation du terrain, nivellement, déblais et remblais avant vos aménagements.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : pierre naturelle</span></div><div class="txt"><h3>Pierre naturelle</h3><p>Murets, dallages, escaliers et bordures en pierre pour un extérieur durable et élégant.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : clôture</span></div><div class="txt"><h3>Clôtures</h3><p>Pose de clôtures et portails adaptés à votre terrain, pour délimiter et sécuriser votre propriété.</p></div></article>
+      <article class="carte"><div class="photo"><span>Photo : espace piscine</span></div><div class="txt"><h3>Espaces piscine</h3><p>Aménagement des abords : terrasses, plantations et finitions autour de votre piscine.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="realisations">
+  <div class="wrap">
+    <p class="surtitre">Réalisations</p>
+    <h2>Quelques chantiers</h2>
+    <p class="intro">Un aperçu de travaux réalisés dans la région. <span class="a-completer">Photos d'Arno à intégrer, idéalement des avant/après.</span></p>
+    <div class="filtres" id="filtres">
+      <button class="actif" data-f="tout">Tout</button>
+      <button data-f="jardin">Jardins</button>
+      <button data-f="pierre">Pierre naturelle</button>
+      <button data-f="abattage">Abattage</button>
+      <button data-f="cloture">Clôtures</button>
+      <button data-f="piscine">Piscines</button>
+    </div>
+    <div class="galerie" id="galerie">
+      <div class="photo haut" data-c="jardin"><span>Jardin – commune</span></div>
+      <div class="photo" data-c="pierre"><span>Muret en pierre – commune</span></div>
+      <div class="photo" data-c="abattage"><span>Abattage – commune</span></div>
+      <div class="photo" data-c="piscine"><span>Abords piscine – commune</span></div>
+      <div class="photo" data-c="cloture"><span>Clôture – commune</span></div>
+      <div class="photo" data-c="jardin"><span>Avant / après – commune</span></div>
+      <div class="photo" data-c="pierre"><span>Terrasse en pierre – commune</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap apropos">
+    <div class="photo"><span>Photo d'Arno sur un chantier</span></div>
+    <div>
+      <p class="surtitre">À propos</p>
+      <h2>Arno Franco, fondateur et gérant</h2>
+      <p>Installé à Theux / La Reid, Arno a fondé son entreprise avec une idée simple : travailler <em>naturellement professionnel</em>, avec le respect du terrain, du végétal et des gens chez qui il intervient.</p>
+      <p><span class="a-completer">[À compléter avec Arno : depuis quand il exerce, sa formation, ses passions, ce qui le distingue.]</span></p>
+      <p>Chaque chantier est suivi personnellement, du premier rendez-vous jusqu'aux finitions.</p>
+      <p class="signature">— Arno</p>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <p class="surtitre">Comment ça se passe</p>
+    <h2>Simple, du premier appel à la fin du chantier</h2>
+    <p class="intro">Un déroulement clair, pour savoir à quoi vous attendre.</p>
+    <div class="etapes">
+      <div class="etape"><h3>Prise de contact</h3><p>Par téléphone, e-mail ou via le formulaire.</p></div>
+      <div class="etape"><h3>Visite sur place</h3><p>On regarde ensemble le terrain et vos envies.</p></div>
+      <div class="etape"><h3>Devis clair</h3><p>Une proposition détaillée, sans surprise.</p></div>
+      <div class="etape"><h3>Réalisation</h3><p>Travail soigné et chantier laissé propre.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <p class="surtitre">Avis clients</p>
+    <h2>Ils m'ont fait confiance</h2>
+    <p class="intro">Emplacements réservés : à remplir avec de vrais avis de clients, avec leur accord.</p>
+    <div class="avis-grille">
+      <div class="avis"><div class="etoiles">★★★★★</div>[Avis client 1 – prénom, commune]</div>
+      <div class="avis"><div class="etoiles">★★★★★</div>[Avis client 2 – prénom, commune]</div>
+      <div class="avis"><div class="etoiles">★★★★★</div>[Avis client 3 – prénom, commune]</div>
+    </div>
+    <h3 style="margin-top:3rem;font-size:1.4rem">Zone d'intervention</h3>
+    <ul class="zone">
+      <li>Theux</li><li>La Reid</li><li>Spa</li><li>Pepinster</li><li>Verviers</li><li>Jalhay</li><li>Sprimont</li><li class="a-completer">liste à confirmer</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grille">
+    <div>
+      <p class="surtitre" style="color:var(--clair)">Contact</p>
+      <h2>Parlons de votre projet</h2>
+      <p class="intro">Décrivez votre projet en quelques mots, Arno vous recontacte rapidement.</p>
+      <div class="coord">
+        <a href="tel:+32479184282"><span class="ico">📞</span>+32 479 18 42 82</a>
+        <a href="https://wa.me/32479184282"><span class="ico">💬</span>WhatsApp</a>
+        <a href="mailto:info@arnofranco.be"><span class="ico">✉️</span>info@arnofranco.be</a>
+        <a href="https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/" target="_blank" rel="noopener"><span class="ico">f</span>Facebook</a>
+        <a href="https://www.linkedin.com/in/arno-franco-606a30115/" target="_blank" rel="noopener"><span class="ico">in</span>LinkedIn</a>
+      </div>
+      <p style="margin-top:1.2rem;font-size:.92rem;opacity:.85">Horaires : <span class="a-completer" style="color:var(--encre)">à compléter</span></p>
+    </div>
+    <form id="form-devis">
+      <div><label for="nom">Nom</label><input id="nom" required></div>
+      <div><label for="tel">Téléphone</label><input id="tel" type="tel" required></div>
+      <div><label for="commune">Commune</label><input id="commune"></div>
+      <div><label for="service">Service</label>
+        <select id="service">
+          <option>Création de jardin</option><option>Entretien</option><option>Abattage d'arbre</option>
+          <option>Terrassement</option><option>Pierre naturelle</option><option>Clôture</option><option>Espace piscine</option><option>Autre</option>
+        </select></div>
+      <div class="plein"><label for="msg">Votre projet</label><textarea id="msg" placeholder="Surface, type de travaux, délai souhaité…"></textarea></div>
+      <p class="plein rgpd">Vos données servent uniquement à répondre à votre demande.</p>
+      <div class="plein"><button class="btn btn-plein" type="submit">Envoyer ma demande</button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-marque"><img src="img/logo-arno-franco.png" alt="Logo Arno Franco – Naturellement Professionnel"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège<br>N° d'entreprise : <span class="a-completer" style="color:var(--encre)">BE 0xxx.xxx.xxx</span></div></div>
+    <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="#">Mentions légales</a> · <a href="#">Vie privée</a></div>
+  </div>
+</footer>
+
+<a class="appel-mobile" href="tel:+32479184282">📞 Appeler Arno</a>
+
+<script>
+  // Filtres de la galerie
+  document.getElementById('filtres').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll('#filtres button').forEach(x => x.classList.toggle('actif', x === b));
+    document.querySelectorAll('#galerie .photo').forEach(p => {
+      p.style.display = (b.dataset.f === 'tout' || p.dataset.c === b.dataset.f) ? '' : 'none';
+    });
+  });
+  // Formulaire : en attendant un vrai service d'envoi, ouvre un e-mail prérempli
+  document.getElementById('form-devis').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value;
+    const corps = `Nom : ${v('nom')}\nTéléphone : ${v('tel')}\nCommune : ${v('commune')}\nService : ${v('service')}\n\n${v('msg')}`;
+    location.href = `mailto:info@arnofranco.be?subject=${encodeURIComponent('Demande de devis – ' + v('service'))}&body=${encodeURIComponent(corps)}`;
+  });
+</script>
+</body>
+</html>
