@@ -37,6 +37,23 @@ Retouche douce identique (réglages par défaut, aucun masquage nécessaire). Fi
 
 Section « Chantier » : aucune chronologie publiée tant qu'Arno ne l'a pas confirmée.
 
+## Page « Nos savoir-faire » (`/savoir-faire`, en cours de validation)
+Retouche douce identique (P137 : numéro de maison flouté, chaleur +5 %, gamma 0,92). Fichiers dans `public/img/savoir-faire/`.
+Cartes : carré 1:1 (`-400`, `-640`, ordinateur et tablette) et 16:10 (`-m480`, `-m720`, téléphone).
+| Emplacement | Source | Fichiers | Remarque |
+|---|---|---|---|
+| Bandeau | P125 | `bandeau-p125-{520,768}` | recadrage du haut de la photo (feuillage et soleil) : voiture et maison exclues ; 768 px max |
+| Jardins & plantations | P132 | `jardins-plantations-p132-*` | |
+| Entretien des espaces verts | P191 | `entretien-espaces-verts-p191-*` | |
+| Élagage & abattage | P202 | `elagage-abattage-p202-*` | |
+| Piscines & abords | P256 | `piscines-p256-*` | |
+| Terrassement & soutènement | P194 | `terrassement-soutenement-p194-*` | |
+| Terrasses & allées | P109 | `terrasses-allees-p109-*` | |
+| Portails & clôtures | P137 | `portails-clotures-p137-*` | numéro de maison masqué |
+| Sports & loisirs | **illustration générée (IA)** | `sports-loisirs-illustration-ia-*` | **exception validée par l'équipe (05/11/2026)** : pas une photo de chantier ; texte alternatif « Illustration… » ; ne jamais la légender comme une réalisation d'Arno ni la placer dans une galerie de chantiers |
+| Espaces publics & professionnels | P134 | `espaces-professionnels-publics-p134-*` | personne de dos, non identifiable |
+| Aménagements intérieurs | P223 | `amenagements-interieurs-p223-*` | |
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.
