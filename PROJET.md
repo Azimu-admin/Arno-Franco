@@ -37,6 +37,8 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 
 ## Hébergement
 - Vercel, relié au dépôt GitHub Azimu-admin/Arno-Franco (branche main : chaque push redéploie)
-- URL d'un déploiement (05/11/2026) : https://arno-franco-18q2y9err-azm27.vercel.app
-  (adresse propre à ce déploiement : prendre l'adresse de production stable dans Vercel → Domains)
-- À faire : relier arnofranco.be · vérifier les conditions du plan Hobby (usage commercial)
+- Projet Vercel : arno-franco (compte AZM, plan Hobby)
+- Adresse de production stable : https://arno-franco.vercel.app
+- Déploiement automatique vérifié le 05/11/2026 (commit d820b8c déployé)
+- À faire : relier arnofranco.be · passer au plan Pro ou changer d'hébergeur
+  (le plan Hobby de Vercel est réservé à un usage non commercial)
