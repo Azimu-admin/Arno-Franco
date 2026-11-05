@@ -44,12 +44,14 @@
 <style>
   :root{
     /* Couleurs du logo : #153e35 (foncé), #609e4b (moyen), #b8eea4 (clair) */
-    --vert:#3f7a32; --vert-fonce:#153e35; --vert-moyen:#1f4f43; --mousse:#609e4b; --clair:#b8eea4; --pierre:#ece6da;
+    --vert:#3f7a32; --vert-fonce:#153e35; --vert-moyen:#1f4f43; --mousse:#609e4b; --mousse-texte:#38712d; --clair:#b8eea4;
+    /* --mousse-texte : vert du logo assombri pour le petit texte (contraste ≥ 4,5:1 sur blanc, sable et pierre) */ --pierre:#ece6da;
     --sable:#f6f7f2; --encre:#16231f; --gris:#56625d; --blanc:#fff; --note:#c8873a;
     --rayon:14px; --max:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:86px} /* 70 px d'en-tête + marge : les ancres ne passent plus sous l'en-tête */
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{font-family:Inter,system-ui,sans-serif;color:var(--encre);background:var(--sable);line-height:1.6;font-size:17px}
   img{max-width:100%;display:block}
   a{color:inherit}
@@ -57,7 +59,7 @@
   h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
   section{padding:84px 0}
-  .surtitre{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--mousse);margin-bottom:.5rem}
+  .surtitre{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--mousse-texte);margin-bottom:.5rem}
   .intro{color:var(--gris);max-width:640px;margin-bottom:2.5rem}
   .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;transition:.2s;cursor:pointer;font-size:1rem}
   .btn-plein{background:var(--clair);color:var(--vert-fonce)}
@@ -94,10 +96,22 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
   .logo{display:flex;align-items:center;gap:.65rem;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;line-height:1.1;text-decoration:none;color:var(--vert-fonce)}
   .logo img{height:46px;width:auto}
-  .logo small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse)}
+  .logo small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mousse-texte)}
   .nav ul{display:flex;gap:1.8rem;list-style:none}
   .nav ul a{text-decoration:none;font-weight:500;font-size:.95rem}
   .nav ul a:hover{color:var(--vert)}
+  .lien-evitement{position:absolute;left:12px;top:-60px;z-index:60;background:var(--vert-fonce);color:#fff;padding:.7rem 1rem;border-radius:8px;font-weight:600;text-decoration:none}
+  .lien-evitement:focus{top:12px}
+  main:focus{outline:none}
+  .nav a:focus-visible,.menu-bouton:focus-visible,.tel-nav:focus-visible{outline:3px solid var(--vert);outline-offset:3px;border-radius:6px}
+  .menu-bouton{display:none;align-items:center;gap:.55rem;min-height:44px;padding:0 1rem;border:1.5px solid var(--vert-fonce);border-radius:999px;background:#fff;color:var(--vert-fonce);font:inherit;font-weight:600;font-size:.95rem;cursor:pointer}
+  .burger,.burger::before,.burger::after{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;transition:transform .2s,opacity .2s}
+  .burger{position:relative}
+  .burger::before,.burger::after{content:"";position:absolute;left:0}
+  .burger::before{top:-6px}.burger::after{top:6px}
+  .menu-bouton[aria-expanded="true"] .burger{background:transparent}
+  .menu-bouton[aria-expanded="true"] .burger::before{transform:translateY(6px) rotate(45deg)}
+  .menu-bouton[aria-expanded="true"] .burger::after{transform:translateY(-6px) rotate(-45deg)}
   .tel-nav{background:var(--vert-fonce);color:#fff;padding:.55rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
 
   /* Hero */
@@ -174,13 +188,20 @@
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
   .footer-marque{display:flex;align-items:center;gap:18px}
   .footer-marque img{width:96px;background:#fff;border-radius:12px;padding:8px}
-  footer a{color:#fff}
+  footer a{color:#fff;display:inline-block;padding:.35rem 0} /* zones tactiles ≥ 24 px */
 
   /* Bouton d'appel mobile */
   .appel-mobile{display:none}
+  .nav-actions{display:flex;align-items:center;gap:.6rem}
 
   @media (max-width:900px){
-    .nav ul{display:none}
+    .menu-bouton{display:inline-flex}
+    .nav-actions{display:flex;align-items:center;gap:.6rem}
+    .menu{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid #e1e6dc;box-shadow:0 14px 24px rgba(21,62,53,.12)}
+    header.menu-ouvert .menu{display:block}
+    .nav .menu ul{flex-direction:column;gap:0;padding:.4rem 0 .8rem}
+    .nav .menu a{display:flex;align-items:center;min-height:48px;padding:0 20px;font-size:1.05rem;font-weight:600;color:var(--vert-fonce)}
+    .nav .menu a:hover{background:var(--sable)}
     .atouts .grille,.etapes{grid-template-columns:1fr 1fr}
     .galerie{grid-template-columns:1fr 1fr}
     .apropos,.contact-grille{grid-template-columns:1fr;gap:32px}
@@ -193,25 +214,34 @@
     .atouts .grille,.etapes{grid-template-columns:1fr}
     form{grid-template-columns:1fr;padding:22px}
     .tel-nav{display:none}
-    .appel-mobile{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;background:var(--clair);color:var(--vert-fonce);text-decoration:none;font-weight:700;padding:1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .appel-mobile{display:flex;gap:.45rem;align-items:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;background:var(--clair);color:var(--vert-fonce);text-decoration:none;font-weight:700;padding:1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
     footer{padding-bottom:90px}
   }
 </style>
 </head>
 <body>
 
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><img src="img/monogramme.png" alt="" width="40" height="46"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#realisations">Réalisations</a></li>
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="tel-nav" href="tel:+32479184282">📞 0479 18 42 82</a>
+    <a href="#contenu" class="logo"><img src="img/monogramme.png" alt="" width="40" height="46"><span>Arno Franco<small>Naturellement Professionnel</small></span></a>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="tel-nav" href="tel:+32479184282"><span aria-hidden="true">📞 </span>0479 18 42 82</a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span>Menu</button>
+    </div>
   </div>
 </header>
+
+<main id="contenu" tabindex="-1">
 
 <section class="hero">
   <div class="wrap">
@@ -328,11 +358,13 @@
         <a href="https://www.linkedin.com/in/arno-franco-606a30115/" target="_blank" rel="noopener"><span class="ico">in</span>LinkedIn</a>
       </div>
     </div>
-    <!-- Formspree : mettre l'identifiant du formulaire dans data-formspree (ex. data-formspree="xyzabcd").
-         Tant qu'il est vide, l'envoi ouvre un e-mail prérempli. -->
-    <form id="form-devis" data-formspree="" novalidate>
-      <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
-      <div><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" autocomplete="tel" required></div>
+    <!-- FORMSPREE : un seul réglage, l'attribut action (voir LANCEMENT.md).
+         Aujourd'hui  : action="mailto:info@arnofranco.be" → le formulaire ouvre la messagerie du visiteur.
+         Après Formspree : action="https://formspree.io/f/IDENTIFIANT" (identifiant fourni par Formspree, ne pas l'inventer).
+         Le script détecte automatiquement l'adresse Formspree ; sans JavaScript, le navigateur envoie directement vers l'action. -->
+    <form id="form-devis" action="mailto:info@arnofranco.be" method="post" enctype="text/plain" novalidate aria-describedby="form-statut">
+      <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required aria-required="true"></div>
+      <div><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true"></div>
       <div><label for="email">E-mail <span style="font-weight:400;color:var(--gris)">(facultatif)</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
       <div><label for="commune">Commune</label><input id="commune" name="commune" autocomplete="address-level2"></div>
       <div class="plein"><label for="service">Service</label>
@@ -341,19 +373,22 @@
           <option>Terrassement</option><option>Terrasse / allée</option><option>Pierre naturelle</option><option>Clôture</option><option>Espace piscine</option><option>Autre</option>
         </select></div>
       <div class="plein"><label for="msg">Votre projet</label><textarea id="msg" name="message" placeholder="Surface, type de travaux, délai souhaité…"></textarea></div>
+      <input type="hidden" name="_subject" value="Demande de devis – site Arno Franco">
       <input class="pot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="plein consent"><input type="checkbox" id="consent" required> <span>J'accepte que mes données soient utilisées pour répondre à ma demande (<a href="/vie-privee">vie privée</a>).</span></label>
+      <label class="plein consent"><input type="checkbox" id="consent" name="consentement" value="oui" required aria-required="true"> <span>J'accepte que mes données soient utilisées pour répondre à ma demande (<a href="/vie-privee">vie privée</a>).</span></label>
       <div class="plein"><button class="btn btn-plein" type="submit">Envoyer ma demande</button></div>
       <p class="plein form-statut" id="form-statut" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
     <div class="footer-marque"><img src="img/logo-arno-franco.png" alt="Logo Arno Franco – Naturellement Professionnel"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège</div></div>
     <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
+  <a class="appel-mobile" href="tel:+32479184282"><span aria-hidden="true">📞 </span>Appeler Arno</a>
 </footer>
 
 <div class="visionneuse" id="visionneuse" role="dialog" aria-modal="true" aria-label="Photo agrandie">
@@ -364,7 +399,6 @@
   <button class="v-suiv" aria-label="Photo suivante">›</button>
 </div>
 
-<a class="appel-mobile" href="tel:+32479184282">📞 Appeler Arno</a>
 
 <script>
   // Filtres de la galerie
@@ -405,27 +439,61 @@
     if (e.key === 'ArrowRight') montrer(courant + 1);
   });
 
-  // Formulaire de devis : Formspree si configuré, sinon e-mail prérempli
+  // Navigation mobile (sous 900 px)
+  const entete = document.querySelector('header');
+  const boutonMenu = document.querySelector('.menu-bouton');
+  const liensMenu = [...document.querySelectorAll('#menu a')];
+  function basculerMenu(ouvrir, rendreFocus) {
+    entete.classList.toggle('menu-ouvert', ouvrir);
+    boutonMenu.setAttribute('aria-expanded', String(ouvrir));
+    if (ouvrir) liensMenu[0].focus();
+    else if (rendreFocus) boutonMenu.focus();
+  }
+  boutonMenu.addEventListener('click', () => basculerMenu(boutonMenu.getAttribute('aria-expanded') !== 'true'));
+  liensMenu.forEach(a => a.addEventListener('click', () => basculerMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && entete.classList.contains('menu-ouvert')) basculerMenu(false, true);
+  });
+  document.addEventListener('click', e => {
+    if (entete.classList.contains('menu-ouvert') && !entete.contains(e.target)) basculerMenu(false);
+  });
+  // Fermer le menu si on quitte le menu au clavier (Tab après le dernier lien)
+  entete.addEventListener('focusout', e => {
+    if (entete.classList.contains('menu-ouvert') && e.relatedTarget && !entete.contains(e.relatedTarget)) basculerMenu(false);
+  });
+  matchMedia('(min-width:901px)').addEventListener('change', e => { if (e.matches) basculerMenu(false); });
+
+  // Formulaire de devis : Formspree si l'action pointe vers formspree.io, sinon e-mail prérempli
   const form = document.getElementById('form-devis');
   const statut = document.getElementById('form-statut');
+  const FORMSPREE = /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/;
+  function erreur(champ, message) {
+    statut.textContent = message; statut.classList.add('erreur');
+    if (champ) { champ.setAttribute('aria-invalid', 'true'); champ.focus(); }
+  }
   form.addEventListener('submit', async e => {
     e.preventDefault();
     statut.className = 'plein form-statut';
-    const v = id => document.getElementById(id).value.trim();
-    if (!v('nom') || !v('tel')) { statut.textContent = 'Merci d\'indiquer votre nom et votre téléphone.'; statut.classList.add('erreur'); return; }
-    if (!document.getElementById('consent').checked) { statut.textContent = 'Merci de cocher la case d\'accord.'; statut.classList.add('erreur'); return; }
-    const id = form.dataset.formspree;
-    if (!id) {
+    form.querySelectorAll('[aria-invalid]').forEach(c => c.removeAttribute('aria-invalid'));
+    const champ = id => document.getElementById(id);
+    const v = id => champ(id).value.trim();
+    if (!v('nom')) return erreur(champ('nom'), 'Merci d\'indiquer votre nom.');
+    if (v('tel').replace(/\D/g, '').length < 8) return erreur(champ('tel'), 'Merci d\'indiquer un numéro de téléphone valide.');
+    if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) return erreur(champ('email'), 'L\'adresse e-mail ne semble pas valide.');
+    if (!champ('consent').checked) return erreur(champ('consent'), 'Merci de cocher la case d\'accord.');
+    const action = form.getAttribute('action') || '';
+    if (!FORMSPREE.test(action)) {
       const corps = `Nom : ${v('nom')}\nTéléphone : ${v('tel')}\nE-mail : ${v('email')}\nCommune : ${v('commune')}\nService : ${v('service')}\n\n${v('msg')}`;
       location.href = `mailto:info@arnofranco.be?subject=${encodeURIComponent('Demande de devis – ' + v('service'))}&body=${encodeURIComponent(corps)}`;
+      statut.textContent = 'Votre logiciel de messagerie va s\'ouvrir avec votre demande. Si rien ne s\'ouvre, écrivez à info@arnofranco.be ou appelez le 0479 18 42 82.';
       return;
     }
     const bouton = form.querySelector('button[type=submit]');
     bouton.disabled = true; statut.textContent = 'Envoi en cours…';
     try {
-      const r = await fetch('https://formspree.io/f/' + id, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const r = await fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (!r.ok) throw new Error(r.status);
-      form.reset(); statut.textContent = 'Merci ! Votre demande est bien envoyée, Arno vous recontacte rapidement.'; statut.classList.add('ok');
+      form.reset(); statut.textContent = 'Merci ! Votre demande a bien été envoyée à Arno.'; statut.classList.add('ok');
     } catch {
       statut.innerHTML = 'L\'envoi n\'a pas fonctionné. Appelez le <a href="tel:+32479184282">0479 18 42 82</a> ou écrivez à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>.'; statut.classList.add('erreur');
     } finally { bouton.disabled = false; }

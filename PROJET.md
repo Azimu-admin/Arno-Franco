@@ -49,8 +49,8 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
   (public/index.html : canonical, og:*, JSON-LD ; public/sitemap.xml ; ligne Sitemap de robots.txt)
 
 ## Formulaire de devis
-- Prêt pour Formspree : mettre l'identifiant dans `data-formspree="..."` sur `<form id="form-devis">`.
-- Tant qu'il est vide, l'envoi ouvre un e-mail prérempli vers info@arnofranco.be.
+- Prêt pour Formspree : un seul réglage, l'attribut `action` de `<form id="form-devis">` (procédure : LANCEMENT.md, section Formspree).
+- Tant qu'il vaut `mailto:info@arnofranco.be`, l'envoi ouvre la messagerie du visiteur (avec ou sans JavaScript).
 
 ## Ajouter une photo de réalisation
 1. Mettre le fichier dans `public/img/realisations/` (JPG, ~1600 px de large, < 400 Ko).
