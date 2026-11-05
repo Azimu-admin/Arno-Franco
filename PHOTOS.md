@@ -23,6 +23,20 @@ saturation ×1,10, accentuation légère à l'export. Exports WebP sans métadon
 `public/img/cartes/carte-pXXX-{480,640,800}.webp` : P132, P191, P202, P194, P256, P109, P082, P137 (numéro flouté),
 P179, P175, P129, P223.
 
+## Page « Piscines & abords » (`/savoir-faire/piscines`, validée le 05/11/2026)
+Retouche douce identique (réglages par défaut, aucun masquage nécessaire). Fichiers dans `public/img/piscines/`.
+| Emplacement | Photo | Fichiers | Recadrage | Chantier (inventaire) |
+|---|---|---|---|---|
+| Bandeau | P254 | `p254-bandeau-{960,1440}`, `p254-mobile16x10-{750,1080}` | 16:9 (ordinateur), 16:10 (téléphone/tablette) | B, piscine corten |
+| Galerie 1 | P243 | `p243-mosaique-{720,1080}` | 3:4 (case haute) | A, grandes dalles |
+| Galerie 2 | P142 | `p142-mosaique-large-{800,1200}` | 12:5 (case large) | C (probable, à confirmer) |
+| Galerie 3 | P120 | `p120-mosaique-carre-{720,1080}` | 4:3 | D |
+| Galerie 4 | P140 | `p140-mosaique-720` | 4:3 (768 px max, pas d'agrandissement) | E |
+| Chantier | P256 | `p256-chantier-{480,720}` | 1:1 | B |
+| Chantier | P260 | `p260-chantier-{480,720}` | 1:1 | B |
+
+Section « Chantier » : aucune chronologie publiée tant qu'Arno ne l'a pas confirmée.
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.

@@ -16,14 +16,17 @@ contient des informations provisoires. Fichier interne (non publié).
 Remplacer `https://arno-franco.vercel.app` par `https://arnofranco.be` dans :
 - `public/index.html` : `<link rel="canonical">`, balises `og:url` et `og:image`, bloc JSON-LD (`url`, `logo`, `image`)
 - `public/sitemap.xml` : toutes les balises `<loc>`
+- `public/savoir-faire/*.html` : `<link rel="canonical">`
 
 Contrôle : `grep -rn "vercel.app" public/` ne doit plus rien renvoyer.
 
 ## 3. Réactiver l'indexation (les 3 éléments, dans le même commit)
 1. **Balises meta** : supprimer le commentaire « PRÉ-LANCEMENT » et la ligne
-   `<meta name="robots" content="noindex">` dans `public/index.html`, `public/mentions-legales.html` et `public/vie-privee.html`.
+   `<meta name="robots" content="noindex">` dans `public/index.html`, `public/mentions-legales.html`, `public/vie-privee.html`
+   et toutes les pages de `public/savoir-faire/`.
    ⚠️ Ne PAS la retirer de `public/404.html` (la page d'erreur doit rester non indexée).
-2. **En-tête HTTP** : dans `vercel.json`, supprimer tout le bloc `"headers": [ ... ]` (X-Robots-Tag: noindex).
+2. **En-tête HTTP** : dans `vercel.json`, supprimer uniquement l'entrée `"source": "/(.*)"` qui ajoute `X-Robots-Tag: noindex`
+   (garder l'entrée `/fonts/(.*)` qui gère le cache des polices).
 3. **robots.txt** : remplacer le contenu de `public/robots.txt` par :
    ```
    User-agent: *

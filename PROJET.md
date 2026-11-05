@@ -67,6 +67,15 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Téléphone : 6 cartes « Nos savoir-faire » puis « Voir les 12 services » ; bouton fixe « Appeler Arno » masqué tant que les
   boutons du bandeau sont visibles.
 
+## Page « Piscines & abords » (validée le 05/11/2026)
+- `public/savoir-faire/piscines.html` : bandeau P254, 4 prestations (Construction de piscines, Terrasses et plages,
+  Aménagements paysagers, Aménagement des abords), mosaïque P243 · P142 · P120 · P140, section « Chantier » P256 + P260
+  sans chronologie, bloc « Un projet de piscine ? ». Photos : voir PHOTOS.md.
+- **Cette validation ne vaut que pour cette page** : ce n'est pas un modèle obligatoire pour les 9 autres catégories,
+  dont la présentation et les photos seront validées séparément.
+- Page générale « Nos savoir-faire » : maquette spécifique en préparation par l'équipe ; ne rien concevoir sans ses instructions.
+- En attendant, les liens « Nos savoir-faire » pointent vers la section de l'accueil (`/#services`).
+
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
   - index.html : page d'accueil
