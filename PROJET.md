@@ -27,6 +27,8 @@
 - Encore à confirmer : la **fourniture** des clôtures (point 7) ; l'**égouttage** (écrit sur la camionnette, absent de la liste).
 - Toujours non confirmés : devis gratuit, liste des communes desservies, horaires.
 - Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
+- Attribution confirmée par l'équipe (05/11/2026) : les 261 photos sont des réalisations d'Arno. Restent à vérifier : nature exacte
+  des interventions (intérieur, Horeca, travaux publics, entreprises), accord des clients, personnes et plaques visibles.
 - Photos confirmées : P124, P129, P134 = passerelle en bois (caillebotis) en fagne → famille 9, « espaces publics » (05/11/2026).
 
 ## Logo (fourni le 05/11/2026)
