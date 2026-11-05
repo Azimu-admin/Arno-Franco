@@ -408,6 +408,10 @@
   /* ================= Page « Nos savoir-faire » ================= */
   section.sf-hero,section.sf-grille{padding-top:0;padding-bottom:0}
   .menu a[aria-current]{color:var(--vert)}
+  /* En-tête avec l'entrée « Travaux publics » : aucun retour à la ligne */
+  .nav ul a,.logo small,.logo span{white-space:nowrap}
+  @media (min-width:1001px){.nav ul{gap:1.5rem}}
+  @media (min-width:1001px) and (max-width:1280px){.nav ul{gap:1rem}.nav ul a{font-size:.9rem}.logo{font-size:1.25rem}.logo small{font-size:.82rem}.logo img{height:42px}.cta-entete{padding:0 .9rem;font-size:.92rem}}
   .sf-hero{position:relative;overflow:hidden;background:var(--foret);color:#fff;min-height:clamp(190px,14.5vw,230px);display:flex;align-items:center}
   .sf-photo{position:absolute;top:0;right:0;bottom:0;width:36%;clip-path:polygon(23% 0,100% 0,100% 100%,0 100%);background:#2b5e36}
   .sf-photo img{display:block;width:100%;height:100%;object-fit:cover}
