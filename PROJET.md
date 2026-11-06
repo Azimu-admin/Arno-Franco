@@ -4,8 +4,9 @@
 - Nom : Arno Franco – Naturellement Professionnel
 - Gérant : Arno Franco (fondateur et gérant)
 - Lieu : Theux / La Reid, province de Liège
-- GSM : +32 479 18 42 82 (appels et WhatsApp : https://wa.me/32479184282)
-- Téléphone fixe : 087 71 16 00 (confirmé le 06/11/2026, lien tel:+3287711600)
+- Téléphone principal (fixe) : 087 71 16 00, lien tel:+3287711600 (confirmé le 06/11/2026) – numéro affiché pour les appels
+- WhatsApp : GSM 0479 18 42 82, lien https://wa.me/32479184282 (le GSM n'est plus proposé en lien d'appel, sauf dans
+  les messages du formulaire et les mentions légales, laissés tels quels)
 - Horaires (confirmés le 06/11/2026) : lundi au vendredi 07h30–18h00 · samedi 07h30–17h00 · dimanche fermé
 - E-mail : info@arnofranco.be
 - Facebook : https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/
@@ -121,8 +122,12 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
 - Le projet Vercel `arno_franco` est un doublon relié au même dépôt : ne pas l'utiliser (à supprimer ou déconnecter).
 - Pages : accueil, Nos savoir-faire, 9 pages de services (`/savoir-faire/<catégorie>`), Réalisations, À propos & Contact,
   Travaux publics, mentions légales, vie privée. Non-indexation toujours active (balise + en-tête).
-- Coordonnées harmonisées (06/11/2026) dans tous les pieds de page, le bloc contact de l'accueil et « À propos & Contact » :
-  GSM, fixe, WhatsApp, e-mail, horaires, zone. Formulaire, mentions légales (contenu) et non-indexation inchangés.
+- Pied de page commun : une seule source, `outils/pied-de-page.html` (+ version courte pour pages légales et 404),
+  recopiée dans toutes les pages par `python3 outils/pied-de-page.py` ; contrôle : `--verifier`. Ne pas éditer un
+  pied de page directement dans une page. Contenu : fixe, WhatsApp, e-mail, zone, lien Horaires, pages légales.
+- Horaires complets uniquement sur « À propos & Contact » (tableau, ancre `#horaires`).
+- Accueil (06/11/2026) : galerie « Quelques chantiers » = 10 vraies photos (voir PHOTOS.md), photo « À propos » = P262,
+  carte Espaces publics = P134 (passerelle terminée). Plus aucun bloc provisoire.
 
 ## Pages de services (`/savoir-faire/<catégorie>`, 06/11/2026)
 - Modèle commun : bandeau photo, 3 ou 4 prestations (reprises uniquement de la liste confirmée), galeries variées

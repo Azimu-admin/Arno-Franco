@@ -444,8 +444,15 @@
   .ap-liste a,.ap-liste span.l{display:flex;align-items:center;gap:22px;min-height:48px;text-decoration:none;font-size:clamp(1.1rem,1.6vw,1.4rem);color:#16231f;padding:4px 0 4px 20px}
   .ap-liste a:hover{color:var(--vert)}
   .ap-liste a:focus-visible{outline:3px solid var(--vert);outline-offset:3px;border-radius:6px}
-  .ap-liste small{font-size:.7em;color:var(--gris)}
-  .ap-liste .horaires{align-items:flex-start;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.55;padding-top:10px}
+  .ap-liste small{display:block;font-size:.62em;color:var(--gris);margin-top:2px}
+  .ap-ligne{display:block;line-height:1.2}
+  .ap-h3{font-family:Merriweather,Georgia,serif;font-size:clamp(1.2rem,1.7vw,1.45rem);color:#16231f;margin:26px 0 10px 20px}
+  .ap-h3:focus{outline:none}
+  .ap-horaires{border-collapse:collapse;margin-left:20px;width:calc(100% - 20px);max-width:400px;font-size:clamp(1rem,1.25vw,1.1rem)}
+  .ap-horaires th,.ap-horaires td{padding:7px 0;border-bottom:1px solid #e1d9c7;text-align:left}
+  .ap-horaires th{font-weight:600;color:#16231f;padding-right:16px}
+  .ap-horaires td{color:#25352b;text-align:right;font-variant-numeric:tabular-nums}
+  .ap-horaires tr.ferme td{color:var(--gris)}
   .ap-liste svg{width:34px;height:34px;flex-shrink:0;fill:none;stroke:var(--vert);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
   #form-devis{background:transparent;padding:0;border-radius:0;gap:12px}
   #form-devis h2{grid-column:1/-1;margin-bottom:.6rem}
@@ -471,6 +478,7 @@
     .ap-coord{border-right:0;padding-right:0}
   }
   @media (max-width:700px){
+    .ap-h3{margin-left:0}.ap-horaires{margin-left:0;width:100%}
     .ap-photo{aspect-ratio:1/1}
     .ap-texte{padding:40px 20px 34px}
     .ap-liste a,.ap-liste span.l{padding-left:0;gap:16px}
@@ -521,13 +529,24 @@
     <div class="ap-coord">
       <h2>Contactez-nous</h2>
       <ul class="ap-liste">
-        <li><a href="tel:+32479184282"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.9 6.9l1.5-2.3L21 15.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>0479 18 42 82 <small>(GSM)</small></a></li>
-        <li><a href="tel:+3287711600"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5c0-2.5 3.6-4.5 8-4.5s8 2 8 4.5v1.5h-4V9h-8v2H4Z"/><path d="M6.5 11 5 19.5h14L17.5 11"/><circle cx="12" cy="15" r="2"/></svg>087 71 16 00 <small>(fixe)</small></a></li>
-        <li><a href="https://wa.me/32479184282"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20.5l1.3-4A8.5 8.5 0 1 1 8.6 19.4Z"/><path d="M9 8.8c0 3.3 2.9 6.2 6.2 6.2l1.3-1.6-2-1.1-1 .8a4.4 4.4 0 0 1-2.6-2.6l.8-1-1.1-2Z"/></svg>WhatsApp</a></li>
+        <li><a href="tel:+3287711600"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5c0-2.5 3.6-4.5 8-4.5s8 2 8 4.5v1.5h-4V9h-8v2H4Z"/><path d="M6.5 11 5 19.5h14L17.5 11"/><circle cx="12" cy="15" r="2"/></svg><span class="ap-ligne">087 71 16 00<small>Appeler l'entreprise</small></span></a></li>
+        <li><a href="https://wa.me/32479184282"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20.5l1.3-4A8.5 8.5 0 1 1 8.6 19.4Z"/><path d="M9 8.8c0 3.3 2.9 6.2 6.2 6.2l1.3-1.6-2-1.1-1 .8a4.4 4.4 0 0 1-2.6-2.6l.8-1-1.1-2Z"/></svg><span class="ap-ligne">0479 18 42 82<small>Contacter Arno sur WhatsApp</small></span></a></li>
         <li><a href="mailto:info@arnofranco.be"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>info@arnofranco.be</a></li>
         <li><span class="l"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>Theux, Spa, Jalhay et toute la province de Liège</span></li>
-        <li><span class="l horaires"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg><span>Lundi au vendredi : 07h30–18h00<br>Samedi : 07h30–17h00<br>Dimanche : fermé</span></span></li>
       </ul>
+      <h3 class="ap-h3" id="horaires" tabindex="-1">Horaires</h3>
+      <table class="ap-horaires">
+        <caption class="sr-only">Horaires d'ouverture</caption>
+        <tbody>
+          <tr><th scope="row">Lundi</th><td>07h30 – 18h00</td></tr>
+          <tr><th scope="row">Mardi</th><td>07h30 – 18h00</td></tr>
+          <tr><th scope="row">Mercredi</th><td>07h30 – 18h00</td></tr>
+          <tr><th scope="row">Jeudi</th><td>07h30 – 18h00</td></tr>
+          <tr><th scope="row">Vendredi</th><td>07h30 – 18h00</td></tr>
+          <tr><th scope="row">Samedi</th><td>07h30 – 17h00</td></tr>
+          <tr class="ferme"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+        </tbody>
+      </table>
     </div>
     <!-- FORMSPREE : même réglage que l'accueil (voir LANCEMENT.md) : seul l'attribut action change. -->
     <form id="form-devis" action="mailto:info@arnofranco.be" method="post" enctype="text/plain" aria-describedby="form-statut">
@@ -549,9 +568,9 @@
 <footer>
   <div class="wrap">
     <div class="footer-marque"><img src="/img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux, Spa, Jalhay et toute la province de Liège</div></div>
-    <div><a href="tel:+32479184282">GSM +32 479 18 42 82</a> · <a href="tel:+3287711600">Fixe 087 71 16 00</a><br><a href="https://wa.me/32479184282">WhatsApp</a> · <a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br>Lundi au vendredi : 07h30–18h00 · Samedi : 07h30–17h00 · Dimanche : fermé<br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
+    <div><a href="tel:+3287711600">Tél. 087 71 16 00</a> · <a href="https://wa.me/32479184282">WhatsApp 0479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/a-propos-contact#horaires">Horaires</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
-  <a class="appel-mobile" href="tel:+32479184282"><span aria-hidden="true">📞 </span>Appeler Arno</a>
+  <a class="appel-mobile" href="tel:+3287711600"><span aria-hidden="true">📞 </span>Appeler Arno Franco</a>
 </footer>
 
 <script>

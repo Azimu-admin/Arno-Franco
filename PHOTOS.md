@@ -126,6 +126,15 @@ P137 : numéro de maison masqué (flou). Ordre : bandeau, puis galeries dans l'o
 (ombre du photographe), P173/P204 (voiture), P177 (capture d'écran), P106 (soudure), P221 (= P216), P209 (travail non
 identifiable), P013 et P170 (intervention non lisible ou prestation non confirmée). Réserve Piscines : P257, P259, P047, P084.
 
+## Accueil – compléments (06/11/2026)
+- Galerie « Quelques chantiers » (`img/accueil/`, retouche douce) : P154 (jardin, haute), P058 (pierre), P006 (abattage),
+  P047 (piscine), P012 (clôture), P052 (jardin), P238 (terrasse), P196 (élagage, haute), P153 (terrasse), P105 (pierre).
+  Aucun « avant/après » : pas de paire confirmée retenue.
+- « À propos » : P262 = « Arno sur chantier.jpg » (ajoutée à la photothèque le 06/11/2026), recadrage 4:5, sans retouche.
+- Carte « Espaces publics » : P134 (passerelle terminée, même chantier TP2) remplace P129 (état antérieur).
+- Terrassement & soutènement, encart « Notre matériel » : P263 = « 789446273_…_n (1).jpg » (pelle Takeuchi), recadrée sous
+  la vitre arrière (l'inscription « location de conteneurs », prestation non confirmée, n'est pas visible), sans retouche.
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.
