@@ -620,7 +620,6 @@
       <p class="intro">Décrivez votre projet en quelques mots : nous vous recontactons.</p>
       <div class="coord">
         <a href="tel:+3287711600"><span class="ico">📞</span>Appeler : 087 71 16 00</a>
-        <a href="https://wa.me/32479184282"><span class="ico">💬</span>WhatsApp : 0479 18 42 82</a>
         <a href="mailto:info@arnofranco.be"><span class="ico">✉️</span>info@arnofranco.be</a>
         <a href="https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/" target="_blank" rel="noopener"><span class="ico">f</span>Facebook</a>
       </div>
@@ -653,7 +652,7 @@
 <footer>
   <div class="wrap">
     <div class="footer-marque"><img src="/img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux, Spa, Jalhay et toute la province de Liège</div></div>
-    <div><a href="tel:+3287711600">Tél. 087 71 16 00</a> · <a href="https://wa.me/32479184282">WhatsApp 0479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/a-propos-contact#horaires">Horaires</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
+    <div><a href="tel:+3287711600">Tél. 087 71 16 00</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/a-propos-contact#horaires">Horaires</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
   <a class="appel-mobile" href="tel:+3287711600"><span aria-hidden="true">📞 </span>Appeler Arno Franco</a>
 </footer>
@@ -784,7 +783,7 @@
     if (!FORMSPREE.test(action)) {
       const corps = `Nom : ${v('nom')}\nTéléphone : ${v('tel')}\nE-mail : ${v('email')}\nCommune : ${v('commune')}\nService : ${v('service')}\n\n${v('msg')}`;
       location.href = `mailto:info@arnofranco.be?subject=${encodeURIComponent('Demande de devis – ' + v('service'))}&body=${encodeURIComponent(corps)}`;
-      statut.textContent = 'Votre logiciel de messagerie va s\'ouvrir avec votre demande. Si rien ne s\'ouvre, écrivez à info@arnofranco.be ou appelez le 0479 18 42 82.';
+      statut.textContent = 'Votre logiciel de messagerie va s\'ouvrir avec votre demande. Si rien ne s\'ouvre, écrivez à info@arnofranco.be ou appelez le 087 71 16 00.';
       return;
     }
     const bouton = form.querySelector('button[type=submit]');
@@ -794,7 +793,7 @@
       if (!r.ok) throw new Error(r.status);
       form.reset(); statut.textContent = 'Merci ! Votre demande nous a bien été transmise.'; statut.classList.add('ok');
     } catch {
-      statut.innerHTML = 'L\'envoi n\'a pas fonctionné. Appelez le <a href="tel:+32479184282">0479 18 42 82</a> ou écrivez à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>.'; statut.classList.add('erreur');
+      statut.innerHTML = 'L\'envoi n\'a pas fonctionné. Appelez le <a href="tel:+3287711600">087 71 16 00</a> ou écrivez à <a href="mailto:info@arnofranco.be">info@arnofranco.be</a>.'; statut.classList.add('erreur');
     } finally { bouton.disabled = false; }
   });
 </script>

@@ -7,8 +7,8 @@
 - Siège social : Chaufheid 40, BP 4, 4910 Theux, Belgique · créée le 16/02/2015 · TVA BE 0598.686.572
   (n° d'entreprise BCE 0598.686.572) · administrateur : Arnô Franco Tornero · forme juridique : SRL
 - Téléphone principal (fixe) : 087 71 16 00, lien tel:+3287711600 (confirmé le 06/11/2026) – numéro affiché pour les appels
-- WhatsApp : GSM 0479 18 42 82, lien https://wa.me/32479184282 (le GSM n'est plus proposé en lien d'appel, sauf dans
-  les messages du formulaire et les mentions légales, laissés tels quels)
+- GSM personnel d'Arno : +32 479 18 42 82 – **confidentiel, ne jamais le publier sur le site** (décision du 06/11/2026).
+  WhatsApp retiré du site. Contacts publics : fixe 087 71 16 00, info@arnofranco.be, formulaire de devis.
 - Horaires (confirmés le 06/11/2026) : lundi au vendredi 07h30–18h00 · samedi 07h30–17h00 · dimanche fermé
 - E-mail : info@arnofranco.be
 - Facebook : https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/
@@ -125,7 +125,7 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
   Travaux publics, mentions légales, vie privée. Non-indexation toujours active (balise + en-tête).
 - Pied de page commun : une seule source, `outils/pied-de-page.html` (+ version courte pour pages légales et 404),
   recopiée dans toutes les pages par `python3 outils/pied-de-page.py` ; contrôle : `--verifier`. Ne pas éditer un
-  pied de page directement dans une page. Contenu : fixe, WhatsApp, e-mail, zone, lien Horaires, pages légales.
+  pied de page directement dans une page. Contenu : fixe, e-mail, zone, lien Horaires, pages légales (pas de GSM ni de WhatsApp).
 - Horaires complets uniquement sur « À propos & Contact » (tableau, ancre `#horaires`).
 - Accueil (06/11/2026) : galerie « Quelques chantiers » = 10 vraies photos (voir PHOTOS.md), photo « À propos » = P262,
   carte Espaces publics = P134 (passerelle terminée). Plus aucun bloc provisoire.
