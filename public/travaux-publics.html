@@ -487,6 +487,13 @@
     .v-prec,.v-suiv{top:auto;bottom:16px;margin-top:0}.v-prec{left:calc(50% - 64px)}.v-suiv{right:calc(50% - 64px)}
     .re-vis img{max-height:calc(100vh - 190px)}
   }
+
+  /* Onglet « Travaux publics » : encadrement vert discret (sans fond) */
+  .nav ul a.nav-tp{border:1.5px solid var(--vert);border-radius:8px;padding:.25rem .55rem;color:var(--foret)}
+  @media (min-width:1281px){.nav ul{gap:1.2rem}}
+  .nav ul a.nav-tp:hover{border-color:var(--foret);color:var(--foret)}
+  .nav ul a.nav-tp[aria-current]{border-width:2px;box-shadow:none;padding-bottom:.25rem;font-weight:600}
+  @media (max-width:900px){.nav .menu a.nav-tp{margin:6px 20px 0;padding:0 14px;min-height:44px}}
 </style>
 </head>
 <body>
@@ -502,7 +509,7 @@
         <li><a href="/savoir-faire">Nos savoir-faire</a></li>
         <li><a href="/realisations">Réalisations</a></li>
         <li><a href="/a-propos-contact">À propos &amp; Contact</a></li>
-        <li><a href="/travaux-publics" aria-current="page">Travaux publics</a></li>
+        <li><a href="/travaux-publics" class="nav-tp" aria-current="page">Travaux publics</a></li>
       </ul>
     </nav>
     <div class="nav-actions">

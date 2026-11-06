@@ -5,7 +5,7 @@
 - Gérant : Arno Franco (fondateur et gérant)
 - Lieu : Theux / La Reid, province de Liège
 - Siège social : Chaufheid 40, BP 4, 4910 Theux, Belgique · créée le 16/02/2015 · TVA BE 0598.686.572
-  (n° d'entreprise BCE 0598.686.572) · administrateur : Arnô Franco Tornero · forme juridique : à obtenir
+  (n° d'entreprise BCE 0598.686.572) · administrateur : Arnô Franco Tornero · forme juridique : SRL
 - Téléphone principal (fixe) : 087 71 16 00, lien tel:+3287711600 (confirmé le 06/11/2026) – numéro affiché pour les appels
 - WhatsApp : GSM 0479 18 42 82, lien https://wa.me/32479184282 (le GSM n'est plus proposé en lien d'appel, sauf dans
   les messages du formulaire et les mentions légales, laissés tels quels)
