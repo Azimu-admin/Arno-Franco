@@ -71,10 +71,10 @@ sans IA. Originaux intacts (contrôle MD5). Ordre = ordre d'affichage ; la 1re p
 | 10 – Jardin avec grand saule, clôture et piscine | P160, P156, P141 |  |
 | 10b – Piscine en cours de réalisation | P163, P162 |  |
 | 07 – Portail anthracite et piliers en pierre | P137, P126, P123 | P137 numéro masqué (flou); P126 recadrée (haut retiré : voitures et plaques) |
-| 09 – Allées drainantes, maison contemporaine | P206, P198, P205 |  |
+| 09 – Allées drainantes | P206, P198, P205 |  |
 | 11 – Terrasse, pergola et gabions | P017, P018 |  |
-| 12 – Maison blanche, empierrement et dalles alvéolées | P065, P063, P067, P068 |  |
-| 13 – Massifs devant bardage bois | P118, P114 |  |
+| 12 – Maison contemporaine, empierrement et dalles alvéolées | P065, P063, P067, P068 |  |
+| 13 – Plantation de massif sur talus | P118, P114 |  |
 | 14 – Cour en pavés anciens | P151, P155, P158 |  |
 | 15 – Clôture composite et arbres palissés | P216, P221 |  |
 | 16 – Cour gravillonnée et pas en dalles | P234, P232, P233 | P234 recadrée (bord droit retiré : voitures); P232 recadrée (gauche retirée : voitures) |
