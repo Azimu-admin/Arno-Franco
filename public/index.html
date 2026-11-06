@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arno Franco – Aménagement de jardins à Theux</title>
-<meta name="description" content="Arno Franco – Naturellement Professionnel. Création et entretien de jardins et d'espaces verts, élagage et abattage d'arbres, terrassement, terrasses et allées, pierre naturelle, clôtures et espaces piscine à Theux, La Reid et environs.">
+<meta name="description" content="Arno Franco – Naturellement Professionnel. Création et entretien de jardins et d'espaces verts, élagage et abattage d'arbres, terrassement, terrasses et allées, pierre naturelle, clôtures et espaces piscine à Theux, Spa, Jalhay et toute la province de Liège.">
 <!-- PRÉ-LANCEMENT : indexation bloquée. À retirer au lancement (voir LANCEMENT.md). -->
 <meta name="robots" content="noindex">
 <!-- Adresse du site : remplacer arno-franco.vercel.app par arnofranco.be une fois le domaine relié -->
@@ -14,7 +14,7 @@
 <meta property="og:locale" content="fr_BE">
 <meta property="og:site_name" content="Arno Franco – Naturellement Professionnel">
 <meta property="og:title" content="Arno Franco – Aménagement et entretien de jardins à Theux">
-<meta property="og:description" content="Création et entretien de jardins et d'espaces verts, élagage et abattage d'arbres, terrassement, terrasses et allées, pierre naturelle, clôtures et espaces piscine à Theux, La Reid et environs.">
+<meta property="og:description" content="Création et entretien de jardins et d'espaces verts, élagage et abattage d'arbres, terrassement, terrasses et allées, pierre naturelle, clôtures et espaces piscine à Theux, Spa, Jalhay et toute la province de Liège.">
 <meta property="og:url" content="https://arno-franco.vercel.app/">
 <meta property="og:image" content="https://arno-franco.vercel.app/img/logo-arno-franco.png">
 <meta name="theme-color" content="#153e35">
@@ -33,11 +33,14 @@
   "address": {"@type": "PostalAddress", "addressLocality": "Theux", "addressRegion": "Liège", "addressCountry": "BE"},
   "areaServed": [
     {"@type": "City", "name": "Theux"}, {"@type": "City", "name": "Spa"}, {"@type": "City", "name": "Jalhay"},
-    {"@type": "AdministrativeArea", "name": "Arrondissement de Verviers"}, {"@type": "AdministrativeArea", "name": "Province de Liège"}
+    {"@type": "AdministrativeArea", "name": "Province de Liège"}
+  ],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "18:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:30", "closes": "17:00"}
   ],
   "sameAs": [
-    "https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/",
-    "https://www.linkedin.com/in/arno-franco-606a30115/"
+    "https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/"
   ]
 }
 </script>
@@ -260,6 +263,7 @@
   .contact-grille{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
   .coord a{display:flex;gap:.8rem;align-items:center;text-decoration:none;font-size:1.1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
   .coord a:hover{color:var(--clair)}
+  .coord .horaires{display:flex;gap:.8rem;align-items:center;font-size:1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.15);line-height:1.5}
   .coord .ico{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex-shrink:0}
   form{background:#fff;color:var(--encre);border-radius:var(--rayon);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
   form .plein{grid-column:1/-1}
@@ -425,6 +429,7 @@
     .zone-liste{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
     .zone-liste li+li:not(.zone-clients){border-left:0;padding-left:0}
     .zone-clients{grid-column:1/-1}
+    .zone-liste li.zone-texte{grid-column:1/-1}
   }
   @media (max-width:700px){
     .ac-texte{padding:52px 20px 28px}
@@ -499,9 +504,7 @@
 <div class="zone-bandeau">
   <div class="wrap">
     <ul class="zone-liste" aria-label="Zone d'intervention et clientèle">
-      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></svg><span><span class="sr-only">Basés à </span>Theux <span aria-hidden="true">•</span> Spa <span aria-hidden="true">•</span> Jalhay</span></li>
-      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6.2 9 4l6 2.2L21 4v13.8L15 20l-6-2.2L3 20Z"/><path d="M9 4v13.8M15 6.2V20"/></svg><span><span class="sr-only">Zone principale : </span>Arrondissement de Verviers</span></li>
-      <li><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 9.5 7 6.2l3.4.6 2.4-2.2 3.3 1.6 3.6-.4 1.1 3.4-1.6 2.6 1.3 3-2.7 2.2-3.6-.5-2.4 2.3-3.4-1.3-3.4.7-1.2-3.3 1.6-2.6Z"/></svg><span><span class="sr-only">Rayonnement : </span>Toute la province de Liège</span></li>
+      <li class="zone-texte"><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></svg><span><span class="sr-only">Zone d'intervention : </span>Theux, Spa, Jalhay et toute la province de Liège</span></li>
       <li class="zone-clients"><svg class="zone-picto" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.5-3.6 2.8-5.6 6-5.6s5.5 2 6 5.6"/><circle cx="16.8" cy="9" r="2.6"/><path d="M15.6 14.2c3-.4 5 1.4 5.4 4.8"/></svg><span><span class="sr-only">Pour les </span>Particuliers <span aria-hidden="true">•</span> Entreprises <span aria-hidden="true">•</span> Collectivités</span></li>
     </ul>
   </div>
@@ -587,7 +590,7 @@
   <div class="wrap">
     <p class="surtitre">Zone d'intervention</p>
     <h2>Theux, Spa, Jalhay et toute la province de Liège</h2>
-    <p class="intro" style="margin-bottom:0">Basés à Theux, nous intervenons principalement dans l'arrondissement de Verviers et dans toute la province de Liège, pour les particuliers, les entreprises et les collectivités.</p>
+    <p class="intro" style="margin-bottom:0">Basés à Theux, nous intervenons pour les particuliers, les entreprises et les collectivités.</p>
   </div>
 </section>
 
@@ -598,11 +601,12 @@
       <h2>Parlons de votre projet</h2>
       <p class="intro">Décrivez votre projet en quelques mots : nous vous recontactons.</p>
       <div class="coord">
-        <a href="tel:+32479184282"><span class="ico">📞</span>+32 479 18 42 82</a>
+        <a href="tel:+32479184282"><span class="ico">📞</span>GSM +32 479 18 42 82</a>
+        <a href="tel:+3287711600"><span class="ico">☎️</span>Fixe 087 71 16 00</a>
         <a href="https://wa.me/32479184282"><span class="ico">💬</span>WhatsApp</a>
         <a href="mailto:info@arnofranco.be"><span class="ico">✉️</span>info@arnofranco.be</a>
+        <p class="horaires"><span class="ico">🕒</span><span>Lundi au vendredi : 07h30–18h00<br>Samedi : 07h30–17h00<br>Dimanche : fermé</span></p>
         <a href="https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/" target="_blank" rel="noopener"><span class="ico">f</span>Facebook</a>
-        <a href="https://www.linkedin.com/in/arno-franco-606a30115/" target="_blank" rel="noopener"><span class="ico">in</span>LinkedIn</a>
       </div>
     </div>
     <!-- FORMSPREE : un seul réglage, l'attribut action (voir LANCEMENT.md).
@@ -632,8 +636,8 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-marque"><img src="img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux / La Reid, province de Liège</div></div>
-    <div><a href="tel:+32479184282">+32 479 18 42 82</a><br><a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
+    <div class="footer-marque"><img src="img/logo-arno-franco-192.webp" alt="Logo Arno Franco – Naturellement Professionnel" width="96" height="85" loading="lazy" decoding="async"><div><strong style="color:#fff">Arno Franco – Naturellement Professionnel</strong><br>Theux, Spa, Jalhay et toute la province de Liège</div></div>
+    <div><a href="tel:+32479184282">GSM +32 479 18 42 82</a> · <a href="tel:+3287711600">Fixe 087 71 16 00</a><br><a href="https://wa.me/32479184282">WhatsApp</a> · <a href="mailto:info@arnofranco.be">info@arnofranco.be</a><br>Lundi au vendredi : 07h30–18h00 · Samedi : 07h30–17h00 · Dimanche : fermé<br><a href="/mentions-legales">Mentions légales</a> · <a href="/vie-privee">Vie privée</a></div>
   </div>
   <a class="appel-mobile" href="tel:+32479184282"><span aria-hidden="true">📞 </span>Appeler Arno</a>
 </footer>

@@ -107,6 +107,25 @@ Retouche douce standard sur les originaux ; plaques masquées (flou) : P227. Ban
 Montages P181–P188 : aucun original séparé trouvé (dépôt et fichiers accessibles, comparaison d'empreintes). Les vues
 extraites sont des recadrages des photos réelles d'Arno (conforme à la règle photo). À remplacer par les originaux HD dès réception.
 
+## Pages de services (`/savoir-faire/<catégorie>`, 06/11/2026)
+Retouche douce standard, recadrage seul, aucune IA ; images dans `public/img/<catégorie>/` (jardins : `img/jardins/`).
+P137 : numéro de maison masqué (flou). Ordre : bandeau, puis galeries dans l'ordre d'affichage.
+
+| Page | Bandeau | Photos |
+|---|---|---|
+| jardins-plantations | P146 | P154, P087, P052, P049, P043, P059 ; plan d'eau P008 |
+| entretien-espaces-verts | P191 | P190, P127, P189, P171 |
+| elagage-abattage | P202 | P196, P203, P230, P005, P009, P006, P004, P007, P010, P168, P172 |
+| terrassement-soutenement | P200 | P194, P197, P058, P199, P030, P096, P082, P081 |
+| terrasses-allees | P139 | P144, P165, P150, P153, P027, P025, P166, P113, P108, P195, P068 |
+| portails-clotures | P128 | P137, P012, P123, P037, P216, P214, P046 |
+| sports-loisirs | P179 | P062, P056, P180, P176, P178, P175 |
+| amenagements-interieurs | P223 | P213, P220, P219, P211 |
+
+Écartées : P125 (haie, pas une souche), P124/P134 (passerelle publique), P048 (pas une pétanque), P040 (gazon), P028
+(ombre du photographe), P173/P204 (voiture), P177 (capture d'écran), P106 (soudure), P221 (= P216), P209 (travail non
+identifiable), P013 et P170 (intervention non lisible ou prestation non confirmée). Réserve Piscines : P257, P259, P047, P084.
+
 ## Décisions
 - P132 écartée du bandeau (05/11/2026) ; P147 non retenue ; P238 envisagée pour une future page « Terrasses ».
 - Les visuels IA de la référence graphique (maquette D) ne sont jamais une source photographique.

@@ -4,10 +4,12 @@
 - Nom : Arno Franco – Naturellement Professionnel
 - Gérant : Arno Franco (fondateur et gérant)
 - Lieu : Theux / La Reid, province de Liège
-- GSM : +32 479 18 42 82
+- GSM : +32 479 18 42 82 (appels et WhatsApp : https://wa.me/32479184282)
+- Téléphone fixe : 087 71 16 00 (confirmé le 06/11/2026, lien tel:+3287711600)
+- Horaires (confirmés le 06/11/2026) : lundi au vendredi 07h30–18h00 · samedi 07h30–17h00 · dimanche fermé
 - E-mail : info@arnofranco.be
 - Facebook : https://www.facebook.com/p/Arno-Franco-Naturellement-Professionnel-100064242990785/
-- LinkedIn : https://www.linkedin.com/in/arno-franco-606a30115/
+- LinkedIn : retiré du site le 06/11/2026 (aucun lien ni icône)
 - Domaine visé : arnofranco.be (aucun site existant trouvé)
 
 ## Activités (10 familles, toutes confirmées le 05/11/2026)
@@ -25,9 +27,9 @@
 10. **Aménagements intérieurs** : travaux d'aménagement intérieur
 
 - Encore à confirmer : la **fourniture** des clôtures (point 7) ; l'**égouttage** (écrit sur la camionnette, absent de la liste).
-- Zone d'intervention (confirmée le 05/11/2026) : ancrage Theux, Spa, Jalhay ; zone principale arrondissement de Verviers ;
-  rayonnement toute la province de Liège. Clientèles : particuliers, entreprises, collectivités.
-- Toujours non confirmés : devis gratuit, horaires.
+- Zone d'intervention (formulation définitive du 06/11/2026, à utiliser telle quelle partout) :
+  « Theux, Spa, Jalhay et toute la province de Liège ». Clientèles : particuliers, entreprises, collectivités.
+- Toujours non confirmé : devis gratuit.
 - Règle photo : uniquement les vraies photos d'Arno, retouches légères seulement (voir CLAUDE.md). Les visuels IA de la
   maquette D sont une référence de design, jamais une source photographique.
 - Inventaire photo (261 photos, présélection de 29) : réalisé le 05/11/2026, hors dépôt (livré à l'équipe).
@@ -45,15 +47,13 @@
 - Couleurs : vert foncé #153e35 · vert moyen #609e4b · vert clair #b8eea4
 
 ## Infos à confirmer (reçues via une autre session, non vérifiées)
-- Téléphone fixe : 087 71 16 00
 - Code postal : 4910 Theux
 - Intro Facebook (activités confirmées, texte lui-même non utilisé tel quel) : « Spécialiste en aménagement
   extérieur et entretien d'espaces verts. Création de jardins, terrasses, allées, clôtures, élagage et
   entretien : nous valorisons vos extérieurs avec expertise et passion. »
 
 ## Encore à obtenir d'Arno
-Photos de chantiers (originaux, avant/après) · texte de présentation · horaires ·
-zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
+Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte de présentation · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
 
 ## Page d'accueil (validée le 05/11/2026 – maquette E)
 - Direction graphique « C + B » : bandeau photo à droite, bloc vert forêt incliné à gauche, mosaïque de 6 vignettes inclinées
@@ -83,9 +83,7 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Menu de cette page : entrée « Travaux publics » après « Contact » (demande d'Arno) ; lien provisoire vers la carte
   « Espaces publics & professionnels » de la page (aucune page dédiée pour l'instant). L'accueil et la page Piscines n'ont
   pas encore cette entrée : à harmoniser sur demande.
-- **Non publiable en l'état** : 9 cartes sur 10 pointent vers des pages détaillées pas encore créées
-  (`/savoir-faire/<catégorie>`, routes prêtes). Seule `/savoir-faire/piscines` existe. La navigation de ces cartes sera
-  décidée par l'équipe avant la mise en ligne (aucun lien vers une page 404 ne doit être publié).
+- Les 10 cartes mènent à des pages existantes (06/11/2026).
 
 ## Page « Réalisations » (`/realisations`, direction artistique validée le 05/11/2026 – non publiée)
 - `public/realisations.html` : bandeau vert forêt « Nos réalisations », puis 23 mosaïques asymétriques, une par chantier
@@ -106,9 +104,7 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - Pages validées intégrées : `/a-propos-contact` (direction artistique validée), `/realisations`, `/travaux-publics` (V3 validée).
 - Accueil, Nos savoir-faire, Piscines : seuls les liens et le menu ont changé (+ règle CSS d'en-tête sans retour à la ligne,
   identique à celle des autres pages). Composition, photos, textes inchangés (comparaison avant/après au pixel).
-- **Provisoire, à décider par l'équipe** : les 9 cartes de `/savoir-faire` sans page détaillée ne mènent plus à une 404 :
-  « Espaces publics & professionnels » → `/travaux-publics` ; les 8 autres → `/realisations`. Remplacer par
-  `/savoir-faire/<catégorie>` quand les pages détaillées existeront.
+- Cartes de `/savoir-faire` : chacune mène à sa page détaillée ; « Espaces publics & professionnels » → `/travaux-publics`.
 - L'accueil garde ses sections internes (#realisations, #apropos, #contact avec formulaire) : elles ne sont plus dans le menu.
 
 ## Page « Travaux publics » (`/travaux-publics`, V3 validée le 05/11/2026)
@@ -117,6 +113,24 @@ zone d'intervention · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vra
 - À confirmer avec Arno : contexte ferroviaire du mur (TP1), commanditaire des plantations (TP3), nom exact de l'ensemble
   patrimonial (« ancienne abbaye » ?), accord des personnes visibles ; obtenir les originaux HD de l'ensemble patrimonial
   et des photos en 960 px.
+
+## Version en ligne (06/11/2026)
+- Production Vercel (projet `arno-franco`, https://arno-franco.vercel.app) déployée **depuis la branche `feat/page-jardins`**
+  via l'API Vercel, sans passer par `main`. `main` contient toujours l'ancien site : **tout push sur `main` republierait
+  l'ancienne version**. Fusionner toute la chaîne de branches en une fois avant le moindre push sur `main`.
+- Le projet Vercel `arno_franco` est un doublon relié au même dépôt : ne pas l'utiliser (à supprimer ou déconnecter).
+- Pages : accueil, Nos savoir-faire, 9 pages de services (`/savoir-faire/<catégorie>`), Réalisations, À propos & Contact,
+  Travaux publics, mentions légales, vie privée. Non-indexation toujours active (balise + en-tête).
+- Coordonnées harmonisées (06/11/2026) dans tous les pieds de page, le bloc contact de l'accueil et « À propos & Contact » :
+  GSM, fixe, WhatsApp, e-mail, horaires, zone. Formulaire, mentions légales (contenu) et non-indexation inchangés.
+
+## Pages de services (`/savoir-faire/<catégorie>`, 06/11/2026)
+- Modèle commun : bandeau photo, 3 ou 4 prestations (reprises uniquement de la liste confirmée), galeries variées
+  (mosaïque, mosaïque inversée, trio, grande + petite), encarts, appel au devis. Photos chargées à l'approche de l'écran.
+- Pages : jardins-plantations, entretien-espaces-verts, elagage-abattage (+ dessouchage), piscines (page validée antérieure),
+  terrassement-soutenement, terrasses-allees, portails-clotures, sports-loisirs (+ pétanque), amenagements-interieurs
+  (un seul chantier confirmé : sol en béton dans un bâtiment ancien). Photos : voir PHOTOS.md.
+- À confirmer avec Arno : chantiers d'origine de P087 et P008, contexte des courts de tennis, relecture des textes.
 
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.
