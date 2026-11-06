@@ -4,6 +4,8 @@
 - Nom : Arno Franco – Naturellement Professionnel
 - Gérant : Arno Franco (fondateur et gérant)
 - Lieu : Theux / La Reid, province de Liège
+- Siège social : Chaufheid 40, BP 4, 4910 Theux, Belgique · créée le 16/02/2015 · TVA BE 0598.686.572
+  (n° d'entreprise BCE 0598.686.572) · administrateur : Arnô Franco Tornero · forme juridique : à obtenir
 - Téléphone principal (fixe) : 087 71 16 00, lien tel:+3287711600 (confirmé le 06/11/2026) – numéro affiché pour les appels
 - WhatsApp : GSM 0479 18 42 82, lien https://wa.me/32479184282 (le GSM n'est plus proposé en lien d'appel, sauf dans
   les messages du formulaire et les mentions légales, laissés tels quels)
@@ -48,13 +50,12 @@
 - Couleurs : vert foncé #153e35 · vert moyen #609e4b · vert clair #b8eea4
 
 ## Infos à confirmer (reçues via une autre session, non vérifiées)
-- Code postal : 4910 Theux
 - Intro Facebook (activités confirmées, texte lui-même non utilisé tel quel) : « Spécialiste en aménagement
   extérieur et entretien d'espaces verts. Création de jardins, terrasses, allées, clôtures, élagage et
   entretien : nous valorisons vos extérieurs avec expertise et passion. »
 
 ## Encore à obtenir d'Arno
-Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte de présentation · devis gratuit ? · n° d'entreprise BCE/TVA · 3 à 5 vrais avis clients
+Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte de présentation · devis gratuit ? · forme juridique · 3 à 5 vrais avis clients
 
 ## Page d'accueil (validée le 05/11/2026 – maquette E)
 - Direction graphique « C + B » : bandeau photo à droite, bloc vert forêt incliné à gauche, mosaïque de 6 vignettes inclinées

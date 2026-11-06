@@ -6,7 +6,7 @@ contient des informations provisoires. Fichier interne (non publié).
 ## 1. Prérequis avant de réactiver l'indexation
 - [ ] Plus aucune zone jaune `a-completer` visible : `grep -rn 'a-completer"' public/` ne renvoie que la définition CSS
 - [ ] Vraies photos intégrées (bandeau, services, réalisations, portrait)
-- [ ] Mentions légales complètes : adresse, n° BCE, n° TVA, forme juridique
+- [ ] Mentions légales complètes : adresse, BCE, TVA, administrateur faits (06/11/2026) ; reste la forme juridique
 - [ ] Durée de conservation des données validée (vie-privee.html)
 - [ ] Formulaire relié à Formspree et testé (voir la section « Formspree » ci-dessous)
 - [ ] Domaine arnofranco.be relié dans Vercel (Settings → Domains)
