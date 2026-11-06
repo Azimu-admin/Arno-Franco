@@ -3,6 +3,10 @@
 Règle (voir CLAUDE.md) : uniquement de vraies photos de chantiers d'Arno ; retouches légères seulement ; originaux intacts
 dans `photos-originales/` (branche `photos/originales`). Numérotation Pxxx : inventaire photo du 05/11/2026.
 
+**06/11/2026 – noms de fichiers web descriptifs** : les copies web ont été renommées (code Pxxx conservé en tête, ex.
+`bandeau-p021-1280.webp` → `p021-terrasse-pelouse-amenagees-autour-grands-oliviers-1280.webp`). Les noms cités plus bas
+sont les anciens : la table complète ancien → nouveau est dans `outils/correspondance-images.csv`.
+
 ## Retouche douce appliquée (validée le 05/11/2026)
 Identique pour toutes les photos de l'accueil, sans modification du contenu :
 niveaux sur la luminance (0,6 % écrêté), gamma automatique pour les photos ternes, chaleur +3,5 %, contraste ×1,06,

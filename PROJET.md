@@ -130,6 +130,22 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
 - Accueil (06/11/2026) : galerie « Quelques chantiers » = 10 vraies photos (voir PHOTOS.md), photo « À propos » = P262,
   carte Espaces publics = P134 (passerelle terminée). Plus aucun bloc provisoire.
 
+## Référencement (SEO invisible, 06/11/2026)
+- Aucun changement visible (captures avant/après identiques au pixel sur les 17 pages, ordinateur et mobile).
+- `lang="fr-BE"` ; un `<title>` et une meta description uniques par page (≤ 60 et ≤ 160 caractères) ; pas de meta keywords.
+- Mots-clés retenus : aménagement extérieur, création et entretien de jardins, élagage / abattage, terrassement, soutènement,
+  terrasses et allées, portails et clôtures, construction de piscines et abords (construction confirmée par la page Piscines).
+  Localités : Theux (siège) dans les titres de l'accueil et du contact ; zone officielle « Theux, Spa, Jalhay et toute la
+  province de Liège » inchangée. Verviers non utilisé (pas mentionné sur le site). Pas de pages locales.
+- Open Graph + Twitter (`summary_large_image`) sur toutes les pages, avec une vraie photo de chantier par page.
+- JSON-LD : accueil `HomeAndConstructionBusiness` (nom, adresse, téléphone fixe, e-mail, TVA, date de création, horaires,
+  zone, Facebook, photos) ; fil d'Ariane `BreadcrumbList` sur Nos savoir-faire, les 9 services, Réalisations, Travaux publics.
+  Aucun avis, note, prix ni certification.
+- Photos web renommées en noms descriptifs avec le code Pxxx (ex. `p023-oliviers-bacs-autour-piscine-640.webp`) ;
+  originaux intacts ; correspondance complète dans `outils/correspondance-images.csv` (673 fichiers).
+- Sitemap avec photos (`python3 outils/sitemap.py`, sans fausse date, illustration IA de pétanque exclue).
+- Bascule de domaine préparée, non exécutée : `outils/lancement.py` (voir LANCEMENT.md).
+
 ## Pages de services (`/savoir-faire/<catégorie>`, 06/11/2026)
 - Modèle commun : bandeau photo, 3 ou 4 prestations (reprises uniquement de la liste confirmée), galeries variées
   (mosaïque, mosaïque inversée, trio, grande + petite), encarts, appel au devis. Photos chargées à l'approche de l'écran.

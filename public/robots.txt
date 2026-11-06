@@ -1,6 +1,8 @@
 # PRÉ-LANCEMENT : l'indexation est bloquée par la balise <meta name="robots" content="noindex">
 # et l'en-tête HTTP X-Robots-Tag (vercel.json). On laisse volontairement le crawl autorisé ici :
 # un "Disallow: /" empêcherait Google de lire le noindex, et les pages pourraient quand même apparaître.
-# Au lancement : ajouter la ligne Sitemap (voir LANCEMENT.md).
+# Au lancement, outils/lancement.py remplace ce fichier et l'adresse du sitemap (voir LANCEMENT.md).
 User-agent: *
 Allow: /
+
+Sitemap: https://arno-franco.vercel.app/sitemap.xml

@@ -9,43 +9,58 @@ contient des informations provisoires. Fichier interne (non publié).
 - [x] Mentions légales complètes : adresse, BCE, TVA, administrateur, forme juridique (SRL) faits (06/11/2026)
 - [ ] Durée de conservation des données validée (vie-privee.html)
 - [ ] Formulaire relié à Formspree et testé (voir la section « Formspree » ci-dessous)
-- [ ] Domaine arnofranco.be relié dans Vercel (Settings → Domains)
+- [ ] Domaine arnofranco.be relié dans Vercel (voir section 2)
 - [ ] Plan Vercel adapté à un usage commercial
 
-- [ ] Aucun lien vers une page 404 (contrôle : explorer le site depuis `/`) ; décider la cible définitive des cartes de `/savoir-faire`
-  (provisoirement `/realisations` et `/travaux-publics`)
+- [x] Aucun lien vers une page 404 (exploration complète le 06/11/2026) ; les cartes de `/savoir-faire` mènent aux pages de services
 - [x] `/a-propos-contact` intégrée ; menu des cinq onglets harmonisé (branche `feat/integration-site`)
 
-## 2. Remplacer l'adresse provisoire par le domaine
-Remplacer `https://arno-franco.vercel.app` par `https://arnofranco.be` dans :
-- `public/index.html` : `<link rel="canonical">`, balises `og:url` et `og:image`, bloc JSON-LD (`url`, `logo`, `image`)
-- `public/sitemap.xml` : toutes les balises `<loc>`
-- `public/savoir-faire/*.html`, `public/realisations.html`, `public/a-propos-contact.html`, `public/travaux-publics.html` : `<link rel="canonical">`
+## 2. Relier le domaine arnofranco.be (sans encore réactiver l'indexation)
+État au 06/11/2026 : le domaine n'est relié à aucun projet Vercel (le projet `arno-franco` n'a que `arno-franco.vercel.app`).
+L'état DNS public n'a pas pu être lu depuis l'environnement de Claude (réseau restreint) : à vérifier chez le gestionnaire du domaine.
 
-Contrôle : `grep -rn "vercel.app" public/` ne doit plus rien renvoyer.
+1. **Identifier le gestionnaire du domaine** (registrar) : recherche sur https://www.dnsbelgium.be/fr/whois → « arnofranco.be ».
+   Il faut un accès au compte de ce gestionnaire (Arno ou son prestataire actuel, qui gère aussi la messagerie info@arnofranco.be).
+2. **Vercel** → projet **arno-franco** (pas `arno_franco`) → Settings → Domains → *Add* → `arnofranco.be`.
+   Accepter l'ajout de `www.arnofranco.be` avec **redirection 308 vers arnofranco.be** (domaine principal : `arnofranco.be`).
+   Vérifier que le domaine n'est pas déjà rattaché au projet `arno_franco` (sinon l'en retirer d'abord).
+3. **Chez le gestionnaire du domaine**, zone DNS : créer exactement les enregistrements affichés par Vercel, en général
+   - `A` pour `@` (arnofranco.be) → l'adresse IP indiquée par Vercel (par ex. `76.76.21.21`) ;
+   - `CNAME` pour `www` → la valeur indiquée par Vercel (par ex. `cname.vercel-dns.com`).
+   Supprimer seulement les anciens `A`/`AAAA`/`CNAME` de `@` et `www` qui pointent vers l'ancien site.
+   ⚠️ **Ne pas toucher aux enregistrements `MX` et `TXT`** (SPF, DKIM…) : ils font fonctionner les e-mails info@arnofranco.be.
+4. Attendre que Vercel affiche « Valid Configuration » et que le certificat HTTPS soit émis (quelques minutes à 48 h).
+5. Contrôler : https://arnofranco.be affiche le nouveau site, https://www.arnofranco.be redirige vers https://arnofranco.be,
+   et le site est toujours en `noindex` à ce stade (normal).
 
-## 3. Réactiver l'indexation (les 3 éléments, dans le même commit)
-1. **Balises meta** : supprimer le commentaire « PRÉ-LANCEMENT » et la ligne
-   `<meta name="robots" content="noindex">` dans `public/index.html`, `public/mentions-legales.html`, `public/vie-privee.html`
-   `public/realisations.html`, `public/a-propos-contact.html`, `public/travaux-publics.html` et toutes les pages de `public/savoir-faire/`.
-   ⚠️ Ne PAS la retirer de `public/404.html` (la page d'erreur doit rester non indexée).
-2. **En-tête HTTP** : dans `vercel.json`, supprimer uniquement l'entrée `"source": "/(.*)"` qui ajoute `X-Robots-Tag: noindex`
-   (garder l'entrée `/fonts/(.*)` qui gère le cache des polices).
-3. **robots.txt** : remplacer le contenu de `public/robots.txt` par :
-   ```
-   User-agent: *
-   Allow: /
-
-   Sitemap: https://arnofranco.be/sitemap.xml
-   ```
-
-Contrôle avant commit : `grep -rn noindex public/ vercel.json` ne doit renvoyer que `public/404.html`.
+## 3. Basculer vers le domaine et réactiver l'indexation (script, un seul commit)
+Quand les prérequis de la section 1 sont remplis ET que https://arnofranco.be répond correctement :
+```
+python3 outils/lancement.py              # simulation : liste les fichiers qui seront modifiés
+python3 outils/lancement.py --appliquer  # applique
+```
+Le script, testé sur une copie le 06/11/2026 (configuration validée par `vercel build`) :
+- remplace `https://arno-franco.vercel.app` par `https://arnofranco.be` partout dans `public/` (canonical, Open Graph, JSON-LD, sitemap, robots.txt) ;
+- retire `<meta name="robots" content="noindex">` de toutes les pages **sauf `404.html`** ;
+- `vercel.json` : l'en-tête `X-Robots-Tag: noindex` ne s'applique plus qu'aux adresses `*.vercel.app` (aperçus non indexables) ;
+  ajoute les redirections permanentes `www.arnofranco.be → arnofranco.be` et `arno-franco.vercel.app → arnofranco.be` ;
+- écrit le robots.txt définitif (`Allow: /` + `Sitemap: https://arnofranco.be/sitemap.xml`) et régénère le sitemap (`outils/sitemap.py`).
+Il affiche à la fin les contrôles : aucun `vercel.app` restant, `noindex` seulement dans `public/404.html`.
+Puis : commit sur la branche de travail, déploiement en production du projet `arno-franco`.
 
 ## 4. Après le déploiement
 - `curl -sI https://arnofranco.be/ | grep -i x-robots-tag` → aucune ligne
-- Le code source de la page d'accueil ne contient plus `noindex`
-- https://arnofranco.be/robots.txt affiche la ligne Sitemap
-- Google Search Console : ajouter le domaine, envoyer `sitemap.xml`, demander l'indexation de la page d'accueil
+- `curl -sI https://arno-franco-<hash>.vercel.app/` (aperçu) → `x-robots-tag: noindex`
+- `curl -sI https://www.arnofranco.be/realisations` → 308 vers `https://arnofranco.be/realisations`
+- Le code source de la page d'accueil ne contient plus `noindex` ; https://arnofranco.be/robots.txt affiche la ligne Sitemap
+- https://arnofranco.be/sitemap.xml : 16 pages et leurs photos, toutes en `https://arnofranco.be`
+- Test des résultats enrichis : https://search.google.com/test/rich-results (accueil : `HomeAndConstructionBusiness` ; pages : fil d'Ariane)
+- **Google Search Console** : ajouter une propriété « Domaine » `arnofranco.be` (validation par un enregistrement TXT chez le gestionnaire),
+  envoyer `sitemap.xml`, demander l'indexation de la page d'accueil
+- **Fiche Google Business Profile** (à créer ou revendiquer par Arno lui-même) : nom « Arno Franco », catégorie
+  « Paysagiste » / « Entreprise d'aménagement paysager », adresse Chaufheid 40, 4910 Theux, téléphone 087 71 16 00,
+  site https://arnofranco.be, horaires identiques au site (lun–ven 07h30–18h00, sam 07h30–17h00, dim fermé),
+  zone desservie Theux, Spa, Jalhay, province de Liège. Ne pas y mettre le GSM. Ajouter de vraies photos de chantiers.
 - Vérifier https://arnofranco.be/PROJET.md → doit renvoyer 404
 
 ## Formspree (formulaire de devis)
