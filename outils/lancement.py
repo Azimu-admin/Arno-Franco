@@ -4,9 +4,13 @@
   python3 outils/lancement.py              → simulation : affiche ce qui serait modifié, ne touche à rien
   python3 outils/lancement.py --appliquer  → applique les modifications (à faire UNIQUEMENT quand
                                              https://arnofranco.be répond et affiche le bon site, voir LANCEMENT.md)
+  option --bloquer-entrainement            → robots.txt refuse en plus les robots d'ENTRAÎNEMENT des modèles d'IA
+                                             (GPTBot, ClaudeBot, Google-Extended, CCBot…) ; les robots de recherche
+                                             (Google, Bing, OAI-SearchBot, PerplexityBot, Claude-SearchBot…) restent autorisés.
+                                             À n'utiliser qu'avec l'accord explicite d'Arno. Sans l'option : tout reste autorisé.
 
 Ce que fait --appliquer :
- 1. remplace https://arno-franco.vercel.app par https://arnofranco.be (canonical, Open Graph, JSON-LD, sitemap, robots.txt) ;
+ 1. remplace https://arno-franco.vercel.app par https://arnofranco.be (canonical, Open Graph, JSON-LD, sitemap, robots.txt, llms.txt) ;
  2. retire <meta name="robots" content="noindex"> et le commentaire PRÉ-LANCEMENT de toutes les pages, sauf 404.html ;
  3. vercel.json : l'en-tête X-Robots-Tag: noindex ne s'applique plus qu'aux adresses *.vercel.app (aperçus) ;
     ajoute les redirections permanentes www.arnofranco.be → arnofranco.be et arno-franco.vercel.app → arnofranco.be ;
@@ -30,8 +34,15 @@ for f in sorted(glob.glob(PUB + '/**/*.html', recursive=True)):
     t = t.replace('\n<meta name="robots" content="noindex">', '')
   ecrire(f, s, t)
 
+f = os.path.join(PUB, 'llms.txt'); s = open(f).read(); ecrire(f, s, s.replace(ANCIEN, NOUVEAU))
+
+ENTRAINEMENT = ['GPTBot', 'ClaudeBot', 'Google-Extended', 'Applebot-Extended', 'CCBot', 'meta-externalagent', 'Bytespider']
 f = os.path.join(PUB, 'robots.txt'); s = open(f).read()
-ecrire(f, s, f'User-agent: *\nAllow: /\n\nSitemap: {NOUVEAU}/sitemap.xml\n')
+robots = 'User-agent: *\nAllow: /\n'
+if '--bloquer-entrainement' in sys.argv:
+  robots = ('# Robots d\'entraînement des modèles d\'IA refusés (décision d\'Arno) ; moteurs de recherche et assistants autorisés.\n'
+            + ''.join(f'User-agent: {b}\n' for b in ENTRAINEMENT) + 'Disallow: /\n\n' + robots)
+ecrire(f, s, robots + f'\nSitemap: {NOUVEAU}/sitemap.xml\n')
 
 f = os.path.join(RACINE, 'vercel.json'); s = open(f).read(); cfg = json.loads(s)
 for h in cfg['headers']:

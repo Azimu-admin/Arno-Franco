@@ -146,6 +146,15 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
 - Sitemap avec photos (`python3 outils/sitemap.py`, sans fausse date, illustration IA de pétanque exclue).
 - Bascule de domaine préparée, non exécutée : `outils/lancement.py` (voir LANCEMENT.md).
 
+## Moteurs IA (GEO / AEO, 07/11/2026)
+- Aucun changement visible. Contenu déjà lisible en HTML statique (sans JavaScript), zone et téléphone sur toutes les pages.
+- Données structurées régénérées par `python3 outils/donnees-structurees.py` (à relancer si un titre H1 ou une phrase
+  d'introduction de service change) : accueil = `WebSite` + entreprise avec catalogue des 10 pages de services ;
+  chaque page de service et Travaux publics = `Service` relié à l'entreprise (`@id …/#entreprise`).
+- `public/llms.txt` créé (à tenir à jour à la main). Robots d'entraînement : non bloqués, décision d'Arno attendue (LANCEMENT.md).
+- Démarches gratuites possibles plus tard (par Arno) : fiche Google Business Profile, Bing Places, Bing Webmaster Tools,
+  Search Console, page Facebook à jour avec le même nom / adresse / téléphone / horaires que le site.
+
 ## Pages de services (`/savoir-faire/<catégorie>`, 06/11/2026)
 - Modèle commun : bandeau photo, 3 ou 4 prestations (reprises uniquement de la liste confirmée), galeries variées
   (mosaïque, mosaïque inversée, trio, grande + petite), encarts, appel au devis. Photos chargées à l'approche de l'écran.

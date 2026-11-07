@@ -54,7 +54,10 @@ Puis : commit sur la branche de travail, déploiement en production du projet `a
 - `curl -sI https://www.arnofranco.be/realisations` → 308 vers `https://arnofranco.be/realisations`
 - Le code source de la page d'accueil ne contient plus `noindex` ; https://arnofranco.be/robots.txt affiche la ligne Sitemap
 - https://arnofranco.be/sitemap.xml : 16 pages et leurs photos, toutes en `https://arnofranco.be`
-- Test des résultats enrichis : https://search.google.com/test/rich-results (accueil : `HomeAndConstructionBusiness` ; pages : fil d'Ariane)
+- Test des résultats enrichis : https://search.google.com/test/rich-results et https://validator.schema.org (accueil : `WebSite` +
+  `HomeAndConstructionBusiness` ; services : `Service` ; pages : fil d'Ariane)
+- https://arnofranco.be/llms.txt : liens en `https://arnofranco.be`
+- Bing Webmaster Tools (gratuit) : importer le site depuis Search Console et envoyer le sitemap (Bing alimente Copilot et une partie de ChatGPT)
 - **Google Search Console** : ajouter une propriété « Domaine » `arnofranco.be` (validation par un enregistrement TXT chez le gestionnaire),
   envoyer `sitemap.xml`, demander l'indexation de la page d'accueil
 - **Fiche Google Business Profile** (à créer ou revendiquer par Arno lui-même) : nom « Arno Franco », catégorie
@@ -62,6 +65,25 @@ Puis : commit sur la branche de travail, déploiement en production du projet `a
   site https://arnofranco.be, horaires identiques au site (lun–ven 07h30–18h00, sam 07h30–17h00, dim fermé),
   zone desservie Theux, Spa, Jalhay, province de Liège. Ne pas y mettre le GSM. Ajouter de vraies photos de chantiers.
 - Vérifier https://arnofranco.be/PROJET.md → doit renvoyer 404
+
+## Robots des moteurs IA (décision à prendre avec Arno avant le lancement)
+Aujourd'hui `robots.txt` autorise **tous** les robots (`User-agent: *` / `Allow: /`) ; rien n'a été modifié sans accord.
+Deux familles à distinguer :
+- **Recherche / réponse** (ils citent et renvoient vers le site) : Googlebot (Google, y compris AI Overviews), Bingbot
+  (Bing, Copilot), OAI-SearchBot et ChatGPT-User (ChatGPT), PerplexityBot et Perplexity-User, Claude-SearchBot et Claude-User,
+  Applebot. **À laisser autorisés**, sinon l'entreprise ne peut pas apparaître dans ces réponses.
+- **Entraînement des modèles** (ils ne renvoient pas de visiteurs) : GPTBot, ClaudeBot, Google-Extended (n'a aucun effet
+  sur Google Search ni AI Overviews), Applebot-Extended, CCBot, meta-externalagent, Bytespider.
+Choix A (par défaut) : tout autoriser → `python3 outils/lancement.py --appliquer`.
+Choix B : refuser seulement l'entraînement → `python3 outils/lancement.py --appliquer --bloquer-entrainement`.
+`robots.txt` est une consigne respectée par les robots déclarés, pas une protection technique.
+Contrôle du 07/11/2026 sur arno-franco.vercel.app : tous ces robots reçoivent la page complète (HTTP 200, HTML lisible),
+aucune protection Vercel ne les bloque (pas de mode « challenge », pas de pare-feu anti-robots ; aperçus protégés par SSO).
+
+## llms.txt
+`public/llms.txt` : présentation courte, zone, liens vers les pages principales, coordonnées publiques. Convention récente,
+lue par peu d'assistants : utile mais sans garantie. Ses adresses sont basculées par `outils/lancement.py`.
+À mettre à jour à la main si une page, un service ou une coordonnée change (comme le pied de page).
 
 ## Formspree (formulaire de devis)
 Aujourd'hui, le formulaire ouvre la messagerie du visiteur (`action="mailto:info@arnofranco.be"`). Pour l'envoi en ligne :
