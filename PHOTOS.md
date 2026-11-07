@@ -26,6 +26,11 @@ saturation ×1,10, accentuation légère à l'export. Exports WebP sans métadon
 ## Section « Nos savoir-faire » (cartes, sans retouche couleur)
 `public/img/cartes/carte-pXXX-{480,640,800}.webp` : P132, P191, P202, P194, P256, P109, P082, P137 (numéro flouté),
 P179, P175, P129, P223.
+- 07/11/2026 : carte « Création et aménagement de jardins » → **P008** (plan d'eau bordé de pierre, massif fleuri,
+  jardin arboré) à la place de P132 (terrasse, pots et mobilier). Recadrage 4:3 (x = 330 sur 1316), sans retouche couleur,
+  netteté légère à l'export ; même cadrage ordinateur et mobile (la carte affiche la photo en `object-fit: cover`).
+  Fichiers `p008-plan-eau-borde-pierre-massif-fleuri-{480,640,800}.webp` ; anciens fichiers P132 de la carte supprimés.
+  Original de 1316 × 640 px légèrement flou : acceptable en carte, à remplacer si Arno fournit une photo plus nette.
 
 ## Page « Piscines & abords » (`/savoir-faire/piscines`, validée le 05/11/2026)
 Retouche douce identique (réglages par défaut, aucun masquage nécessaire). Fichiers dans `public/img/piscines/`.
