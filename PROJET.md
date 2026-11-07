@@ -161,7 +161,7 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
 - Pages : jardins-plantations, entretien-espaces-verts, elagage-abattage (+ dessouchage), piscines (page validée antérieure),
   terrassement-soutenement, terrasses-allees, portails-clotures, sports-loisirs (+ pétanque), amenagements-interieurs
   (un seul chantier confirmé : sol en béton dans un bâtiment ancien). Photos : voir PHOTOS.md.
-- À confirmer avec Arno : chantiers d'origine de P087 et P008, contexte des courts de tennis, relecture des textes.
+- À confirmer avec Arno : chantiers d'origine de P087 et P008 (P008 vient vraisemblablement du chantier d'abattage P006–P010 : le plan d'eau est-il une réalisation d'Arno ?), contexte des courts de tennis, relecture des textes.
 
 ## Fichiers
 - `public/` : **seul dossier publié par Vercel** (vercel.json → outputDirectory). Tout ce qui est hors de public/ reste interne.

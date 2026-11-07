@@ -26,11 +26,14 @@ saturation ×1,10, accentuation légère à l'export. Exports WebP sans métadon
 ## Section « Nos savoir-faire » (cartes, sans retouche couleur)
 `public/img/cartes/carte-pXXX-{480,640,800}.webp` : P132, P191, P202, P194, P256, P109, P082, P137 (numéro flouté),
 P179, P175, P129, P223.
-- 07/11/2026 : carte « Création et aménagement de jardins » → **P008** (plan d'eau bordé de pierre, massif fleuri,
-  jardin arboré) à la place de P132 (terrasse, pots et mobilier). Recadrage 4:3 (x = 330 sur 1316), sans retouche couleur,
-  netteté légère à l'export ; même cadrage ordinateur et mobile (la carte affiche la photo en `object-fit: cover`).
-  Fichiers `p008-plan-eau-borde-pierre-massif-fleuri-{480,640,800}.webp` ; anciens fichiers P132 de la carte supprimés.
-  Original de 1316 × 640 px légèrement flou : acceptable en carte, à remplacer si Arno fournit une photo plus nette.
+- 07/11/2026 : carte « Création et aménagement de jardins » → **P051** (massif bordé d'acier planté d'arbres tiges,
+  pelouse, rangée d'arbres palissés ; chantier « Grande propriété paysagée », série C05 avec panneau Arno Franco P060),
+  à la place de P132 (terrasse, pots et mobilier). Recadrage : bande gauche retirée (arroseur posé au sol), puis 4:3 ;
+  sans retouche couleur ni masquage (le dévidoir turquoise au pied du massif est laissé tel quel) ; netteté légère à l'export.
+  Même cadrage ordinateur et mobile (`object-fit: cover`). Fichiers `p051-massif-acier-pelouse-arbres-palisses-{480,640,800}.webp`.
+  P008 envisagée puis écartée : photo floue (bougé) et attribution douteuse — elle appartient à la série C02 (abattage d'un
+  cèdre dans la même propriété), le plan d'eau est probablement le jardin existant du client. **P008 reste utilisée dans la
+  section « Plans d'eau » de /savoir-faire/jardins-plantations : à confirmer avec Arno.**
 
 ## Page « Piscines & abords » (`/savoir-faire/piscines`, validée le 05/11/2026)
 Retouche douce identique (réglages par défaut, aucun masquage nécessaire). Fichiers dans `public/img/piscines/`.
