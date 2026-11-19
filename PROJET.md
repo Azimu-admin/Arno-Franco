@@ -117,10 +117,10 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
   et des photos en 960 px.
 
 ## Version en ligne (06/11/2026)
-- Production Vercel (projet `arno-franco`, https://arno-franco.vercel.app) déployée **depuis la branche `feat/page-jardins`**
-  via l'API Vercel, sans passer par `main`. `main` contient toujours l'ancien site : **tout push sur `main` republierait
-  l'ancienne version**. Fusionner toute la chaîne de branches en une fois avant le moindre push sur `main`.
-- Le projet Vercel `arno_franco` est un doublon relié au même dépôt : ne pas l'utiliser (à supprimer ou déconnecter).
+- **Depuis le 19/11/2026, `main` contient la version actuelle** (fusion de `feat/page-jardins`) : c'est la branche de
+  référence, à donner à Nicolas Mazy, qui assure la mise en ligne finale chez son hébergeur. Les deux projets Vercel
+  (`arno-franco` et `arno_franco`) publient automatiquement `main` (toujours en noindex).
+- Le projet Vercel `arno_franco` est un doublon relié au même dépôt (arnofranco.vercel.app) : à supprimer ou déconnecter.
 - Pages : accueil, Nos savoir-faire, 9 pages de services (`/savoir-faire/<catégorie>`), Réalisations, À propos & Contact,
   Travaux publics, mentions légales, vie privée. Non-indexation toujours active (balise + en-tête).
 - Pied de page commun : une seule source, `outils/pied-de-page.html` (+ version courte pour pages légales et 404),
