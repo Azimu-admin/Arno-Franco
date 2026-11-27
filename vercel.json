@@ -4,7 +4,7 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": "public",
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
     {
@@ -13,6 +13,12 @@
         {
           "key": "X-Robots-Tag",
           "value": "noindex"
+        }
+      ],
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<sousdomaine>.*)\\.vercel\\.app"
         }
       ]
     },
@@ -24,6 +30,30 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:chemin*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.arnofranco.be"
+        }
+      ],
+      "destination": "https://arnofranco.be/:chemin*",
+      "permanent": true
+    },
+    {
+      "source": "/:chemin*",
+      "has": [
+        {
+          "type": "host",
+          "value": "arno-franco.vercel.app"
+        }
+      ],
+      "destination": "https://arnofranco.be/:chemin*",
+      "permanent": true
     }
   ]
 }

@@ -116,7 +116,9 @@ Photos de chantiers (originaux HD, avant/après, ensemble patrimonial) · texte 
   patrimonial (« ancienne abbaye » ?), accord des personnes visibles ; obtenir les originaux HD de l'ensemble patrimonial
   et des photos en 960 px.
 
-## Version en ligne (06/11/2026)
+## Version en ligne
+- **27/11/2026 : site lancé sur https://arnofranco.be** (hébergement NiProject, Nicolas Mazy ; indexation Google active,
+  robots IA tous autorisés). arno-franco.vercel.app redirige désormais vers arnofranco.be.
 - **Depuis le 19/11/2026, `main` contient la version actuelle** (fusion de `feat/page-jardins`) : c'est la branche de
   référence, à donner à Nicolas Mazy, qui assure la mise en ligne finale chez son hébergeur. Le projet Vercel
   `arno-franco` publie automatiquement `main` (toujours en noindex).

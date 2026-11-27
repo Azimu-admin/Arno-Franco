@@ -15,4 +15,6 @@
   PHOTOS.md. Ne jamais la présenter comme une réalisation d'Arno ni l'utiliser ailleurs sans accord.
 - Couleurs : #153e35 (foncé), #609e4b (moyen), #b8eea4 (clair). Le logo est dans `public/img/` et `logo-source/`.
 - **Seul `public/` est publié** (vercel.json → outputDirectory). Ne jamais mettre de fichier interne dans `public/`.
-- Le site est en pré-lancement (noindex). Pour lancer : suivre `LANCEMENT.md`.
+- **Site lancé le 27/11/2026** sur https://arnofranco.be, hébergé par NiProject (Nicolas Mazy), qui publie le contenu de
+  `public/` de la branche `main`. Leur hébergement n'exécute aucun script et ne réécrit pas les adresses : tous les liens
+  internes pointent vers les fichiers `.html` (ne jamais revenir aux adresses sans extension). Indexation Google active.

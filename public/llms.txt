@@ -6,25 +6,25 @@ Toutes les informations ci-dessous proviennent des pages du site. Les photos pub
 
 ## Savoir-faire
 
-- [Nos savoir-faire](https://arno-franco.vercel.app/savoir-faire): vue d'ensemble des métiers de l'entreprise
-- [Jardins & plantations](https://arno-franco.vercel.app/savoir-faire/jardins-plantations): création et aménagement de jardins, plantations d'arbres et d'arbustes, pose de gazon en rouleaux, plans d'eau
-- [Entretien des espaces verts](https://arno-franco.vercel.app/savoir-faire/entretien-espaces-verts): entretien ponctuel ou sous contrat, pour les particuliers, les entreprises et les copropriétés
-- [Élagage & abattage](https://arno-franco.vercel.app/savoir-faire/elagage-abattage): élagage, abattage (y compris d'arbres dangereux), évacuation des chutes, fraisage de souches
-- [Piscines & abords](https://arno-franco.vercel.app/savoir-faire/piscines): construction de piscines et aménagement de leurs abords
-- [Terrassement & soutènement](https://arno-franco.vercel.app/savoir-faire/terrassement-soutenement): terrassement, préparation de terrains, pose de citernes, murs de soutènement
-- [Terrasses & allées](https://arno-franco.vercel.app/savoir-faire/terrasses-allees): terrasses, allées et aménagements en pierre naturelle
-- [Portails & clôtures](https://arno-franco.vercel.app/savoir-faire/portails-clotures): pose de portails et de clôtures
-- [Sports & loisirs](https://arno-franco.vercel.app/savoir-faire/sports-loisirs): terrains de pétanque et de tennis, aires de jeux, espaces de loisirs
-- [Aménagements intérieurs](https://arno-franco.vercel.app/savoir-faire/amenagements-interieurs): travaux intérieurs ponctuels, par exemple un sol en béton dans un bâtiment ancien
+- [Nos savoir-faire](https://arnofranco.be/savoir-faire/): vue d'ensemble des métiers de l'entreprise
+- [Jardins & plantations](https://arnofranco.be/savoir-faire/jardins-plantations.html): création et aménagement de jardins, plantations d'arbres et d'arbustes, pose de gazon en rouleaux, plans d'eau
+- [Entretien des espaces verts](https://arnofranco.be/savoir-faire/entretien-espaces-verts.html): entretien ponctuel ou sous contrat, pour les particuliers, les entreprises et les copropriétés
+- [Élagage & abattage](https://arnofranco.be/savoir-faire/elagage-abattage.html): élagage, abattage (y compris d'arbres dangereux), évacuation des chutes, fraisage de souches
+- [Piscines & abords](https://arnofranco.be/savoir-faire/piscines.html): construction de piscines et aménagement de leurs abords
+- [Terrassement & soutènement](https://arnofranco.be/savoir-faire/terrassement-soutenement.html): terrassement, préparation de terrains, pose de citernes, murs de soutènement
+- [Terrasses & allées](https://arnofranco.be/savoir-faire/terrasses-allees.html): terrasses, allées et aménagements en pierre naturelle
+- [Portails & clôtures](https://arnofranco.be/savoir-faire/portails-clotures.html): pose de portails et de clôtures
+- [Sports & loisirs](https://arnofranco.be/savoir-faire/sports-loisirs.html): terrains de pétanque et de tennis, aires de jeux, espaces de loisirs
+- [Aménagements intérieurs](https://arnofranco.be/savoir-faire/amenagements-interieurs.html): travaux intérieurs ponctuels, par exemple un sol en béton dans un bâtiment ancien
 
 ## Réalisations
 
-- [Réalisations](https://arno-franco.vercel.app/realisations): 23 chantiers en photos (jardins, piscines et abords, terrasses, allées, clôtures, soutènement, entretien)
-- [Travaux publics](https://arno-franco.vercel.app/travaux-publics): mur de soutènement, restauration d'un ensemble patrimonial, passerelle en bois dans la fagne, plantations en voirie
+- [Réalisations](https://arnofranco.be/realisations.html): 23 chantiers en photos (jardins, piscines et abords, terrasses, allées, clôtures, soutènement, entretien)
+- [Travaux publics](https://arnofranco.be/travaux-publics.html): mur de soutènement, restauration d'un ensemble patrimonial, passerelle en bois dans la fagne, plantations en voirie
 
 ## Contact
 
-- [À propos et contact](https://arno-franco.vercel.app/a-propos-contact): présentation de l'équipe, formulaire de demande de devis, horaires
+- [À propos et contact](https://arnofranco.be/a-propos-contact.html): présentation de l'équipe, formulaire de demande de devis, horaires
 - Téléphone : 087 71 16 00 (+32 87 71 16 00)
 - E-mail : info@arnofranco.be
 - Adresse : Chaufheid 40, BP 4, 4910 Theux, Belgique
@@ -32,4 +32,4 @@ Toutes les informations ci-dessous proviennent des pages du site. Les photos pub
 
 ## Informations légales
 
-- [Mentions légales](https://arno-franco.vercel.app/mentions-legales): société à responsabilité limitée (SRL), numéro d'entreprise BE 0598.686.572, créée le 16/02/2015
+- [Mentions légales](https://arnofranco.be/mentions-legales.html): société à responsabilité limitée (SRL), numéro d'entreprise BE 0598.686.572, créée le 16/02/2015

@@ -1,5 +1,10 @@
 # Procédure de lancement – arno-franco
 
+> **Lancement effectué le 27/11/2026** (commit « Lancement arnofranco.be »). Le site est hébergé par NiProject
+> (Nicolas Mazy), sans exécution de script : `outils/lancement.py` a été lancé de notre côté et le résultat est dans
+> `public/`. Liens internes en `.html` (l'hébergement ne gère pas les adresses sans extension). Robots : tous autorisés.
+> Pour toute mise à jour : modifier `public/` sur `main`, puis demander à NiProject de recopier le dossier.
+
 Le site est actuellement en **pré-lancement** : il est en ligne, mais **exclu des moteurs de recherche** tant qu'il
 contient des informations provisoires. Fichier interne (non publié).
 
